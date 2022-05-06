@@ -1,0 +1,30 @@
+@import "./base/colors.scss";
+@import "./base/layout.scss";
+@import "./base/fonts.scss";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    width: 100vw;
+    color: $white;
+    background-color: $darker-blue;
+    font-family: proxima-nova;
+    line-height: 1.4;
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+main {
+    padding: 0 3em;
+}

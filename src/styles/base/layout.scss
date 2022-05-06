@@ -1,0 +1,24 @@
+/*
+ * Gaps.
+ * The space between elements.
+ */
+$gaps: (
+    1: rem(4),
+    2: rem(8),
+    3: rem(12),
+    4: rem(16),
+    5: rem(20),
+    6: rem(24),
+    7: rem(28),
+    8: rem(32),
+    9: rem(36),
+    10: rem(48),
+    11: rem(60),
+    12: rem(72),
+    13: rem(96),
+    14: rem(120),
+);
+
+@function gap($size) {
+    @return map-get($gaps, $size);
+}
