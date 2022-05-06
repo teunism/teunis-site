@@ -1,8 +1,11 @@
 @import "../../../styles/global.scss";
 
-.globe-intro {
+.globe-intro__logo {
+    @include constrain(small);
+    width: 100%;
+    margin-bottom: padding(small);
 }
 
 .globe-intro__text {
-    max-width: 20em;
+    @include constrain(tiny);
 }
