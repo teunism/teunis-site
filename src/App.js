@@ -1,13 +1,13 @@
 import React from "react";
 
-import GlobeIntro from "./components/GlobeIntro/GlobeIntro";
+import HomeIntro from "./components/Organisms/HomeIntro/HomeIntro";
 
 import "App.scss";
 
 const App = () => {
     return (
-        <div>
-            <GlobeIntro />
+        <div className="app">
+            <HomeIntro />
         </div>
     );
 };

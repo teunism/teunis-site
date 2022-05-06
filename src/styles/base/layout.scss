@@ -3,22 +3,56 @@
  * The space between elements.
  */
 $gaps: (
-    1: rem(4),
-    2: rem(8),
-    3: rem(12),
-    4: rem(16),
-    5: rem(20),
-    6: rem(24),
-    7: rem(28),
-    8: rem(32),
-    9: rem(36),
-    10: rem(48),
-    11: rem(60),
-    12: rem(72),
-    13: rem(96),
-    14: rem(120),
+    1: 5px,
+    2: 10px,
+    3: 20px,
+    4: 30px,
+    5: 50px,
+    6: 70px,
+    7: 100px,
+    8: 120px,
+    9: 150px,
 );
 
 @function gap($size) {
     @return map-get($gaps, $size);
+}
+
+/*
+ * Paddings.
+ * The space inside elements.
+ */
+$paddings: (
+    1: 5px,
+    2: 10px,
+    3: 20px,
+    4: 30px,
+    5: 50px,
+    6: 70px,
+    7: 100px,
+    8: 120px,
+    9: 150px,
+);
+
+@function padding($size) {
+    @return map-get($gaps, $size);
+}
+
+/*
+ * Constrains.
+ * The maximum size of elements.
+ */
+$constrains: (
+    tiny: rem(450),
+    small: rem(660),
+    small-medium: rem(800),
+    medium: rem(940),
+    medium-large: rem(1035),
+    large: rem(1440),
+);
+@function constrain($size) {
+    @return map-get($constrains, $size);
+}
+@mixin constrain($size) {
+    max-width: constrain($size);
 }
