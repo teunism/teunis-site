@@ -1,6 +1,5 @@
 /*
  * Gaps.
- * The space between elements.
  */
 $gaps: (
     1: 5px,
@@ -20,7 +19,6 @@ $gaps: (
 
 /*
  * Paddings.
- * The space inside elements.
  */
 $paddings: (
     tiny: 5px,
@@ -35,7 +33,6 @@ $paddings: (
 
 /*
  * Constrains.
- * The maximum size of elements.
  */
 $constrains: (
     tiny: 320px,
@@ -50,4 +47,25 @@ $constrains: (
 }
 @mixin constrain($size) {
     max-width: constrain($size);
+}
+
+/**
+ * Breakpoints
+ */
+$breakpoints: (
+    tiny: 480px,
+    small: 640px,
+    small-medium: 750px,
+    medium: 960px,
+    medium-large: 1100px,
+    large: 1280px,
+    huge: 1680px,
+);
+@function breakpoint($size) {
+    @return map-get($breakpoints, $size);
+}
+@mixin bp-min($size) {
+    @media (min-width: breakpoint($size)) {
+        @content;
+    }
 }
