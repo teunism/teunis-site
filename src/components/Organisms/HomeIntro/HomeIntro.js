@@ -8,8 +8,8 @@ import "./HomeIntro.scss";
 const HomeIntro = () => {
     return (
         <section className="home-intro">
-            <GlobeIntro />
-            <Globe />
+            <GlobeIntro className="home-intro__globe-intro" />
+            <Globe className="home-intro__globe" />
         </section>
     );
 };
