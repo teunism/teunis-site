@@ -9,7 +9,7 @@ import "./HomeIntro.scss";
 const HomeIntro = () => {
     return (
         <section className="home-intro">
-            <div>
+            <div className="home-intro__text">
                 <GlobeIntro />
                 <GlobeOverlay />
             </div>

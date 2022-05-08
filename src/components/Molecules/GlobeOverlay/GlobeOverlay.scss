@@ -2,12 +2,13 @@
 
 .globe-overlay {
     @include constrain(small);
-    padding: gap(3);
     width: 100%;
+    padding: gap(3);
     border: 2px solid $blue;
 }
 .globe-overlay__title {
     @include heading-medium;
+    margin-bottom: gap(1);
 }
 .globe-overlay__sub-title {
     @include sub-title-small;

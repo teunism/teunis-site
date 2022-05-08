@@ -4,15 +4,15 @@
 
 @mixin heading-medium {
     font-weight: 900;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     color: $blue;
-    line-height: 0.9;
+    line-height: 0.85;
     text-transform: uppercase;
     @include bp-min(medium) {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
     @include bp-min(large) {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 }
 
@@ -21,7 +21,7 @@
  */
 @mixin sub-title-small {
     font-weight: 500;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     color: $white;
     line-height: 0.9;
     text-transform: uppercase;
