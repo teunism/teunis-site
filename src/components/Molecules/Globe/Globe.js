@@ -39,11 +39,13 @@ const Globe = () => {
 
 const GlobeModel = () => {
     const globeMap = useLoader(TextureLoader, BlueMap);
+    const { setActivePatch } = useContext(ActivePatchContext);
 
     return (
         <mesh
             onClick={(e) => {
                 e.stopPropagation();
+                setActivePatch("pacific");
             }}
         >
             <Patch />
@@ -54,13 +56,13 @@ const GlobeModel = () => {
 };
 
 const Patch = (name) => {
-    const { ActivePatch, setActivePatch } = useContext(ActivePatchContext);
+    const { setActivePatch } = useContext(ActivePatchContext);
 
     return (
         <mesh
             onClick={(e) => {
                 e.stopPropagation();
-                setActivePatch("test patch");
+                setActivePatch("test");
             }}
             position={[0.7, 0.56, 0.55]}
         >
