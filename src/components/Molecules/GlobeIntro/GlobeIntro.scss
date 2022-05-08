@@ -1,10 +1,11 @@
 @import "../../../styles/global.scss";
 
 .globe-intro {
-    @include constrain(tiny);
+    @include constrain(small);
+    margin-bottom: gap(5);
 }
 
 .globe-intro__logo {
     width: 100%;
-    margin-bottom: padding(small);
+    margin-bottom: gap(2);
 }
