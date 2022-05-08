@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useContext, useState } from "react";
+
+import { ActivePatchContext } from "../../../App";
 
 import { Canvas, useLoader } from "@react-three/fiber";
-import { Circle, OrbitControls, PerspectiveCamera } from "@react-three/drei";
+import {
+    Circle,
+    OrbitControls,
+    PerspectiveCamera,
+    useContextBridge,
+} from "@react-three/drei";
 import { TextureLoader } from "three/src/loaders/TextureLoader";
 
 import BlueMap from "../../../img/blue-world.png";
@@ -9,18 +16,22 @@ import BlueMap from "../../../img/blue-world.png";
 import "./Globe.scss";
 
 const Globe = () => {
+    const ContextBridge = useContextBridge(ActivePatchContext);
+
     return (
         <div className="globe">
-            <Canvas onPointerMissed={() => console.log("missed")}>
-                <ambientLight intensity={0.35} color="#ffffff" />
-                <OrbitControls
-                    rotateSpeed={0.1}
-                    autoRotate
-                    autoRotateSpeed={0.2}
-                    enableZoom={false}
-                />
-                <PerspectiveCamera makeDefault position={[1, 0, 2.2]} />
-                <GlobeModel />
+            <Canvas>
+                <ContextBridge>
+                    <ambientLight intensity={0.35} color="#ffffff" />
+                    <OrbitControls
+                        rotateSpeed={0.1}
+                        autoRotate
+                        autoRotateSpeed={0.2}
+                        enableZoom={false}
+                    />
+                    <PerspectiveCamera makeDefault position={[1, 0, 2.2]} />
+                    <GlobeModel />
+                </ContextBridge>
             </Canvas>
         </div>
     );
@@ -33,7 +44,6 @@ const GlobeModel = () => {
         <mesh
             onClick={(e) => {
                 e.stopPropagation();
-                console.log("yo");
             }}
         >
             <Patch />
@@ -44,11 +54,13 @@ const GlobeModel = () => {
 };
 
 const Patch = (name) => {
+    const { ActivePatch, setActivePatch } = useContext(ActivePatchContext);
+
     return (
         <mesh
             onClick={(e) => {
                 e.stopPropagation();
-                console.log("clicvk");
+                setActivePatch("test patch");
             }}
             position={[0.7, 0.56, 0.55]}
         >
