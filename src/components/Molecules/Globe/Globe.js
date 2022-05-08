@@ -19,7 +19,7 @@ const Globe = () => {
                     autoRotateSpeed={0.2}
                     enableZoom={false}
                 />
-                <PerspectiveCamera makeDefault position={[1, 0, 2.5]} />
+                <PerspectiveCamera makeDefault position={[1, 0, 2.2]} />
                 <GlobeModel />
             </Canvas>
         </div>
