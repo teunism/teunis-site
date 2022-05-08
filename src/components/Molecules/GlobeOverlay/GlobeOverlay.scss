@@ -3,6 +3,7 @@
 .globe-overlay {
     @include constrain(small);
     width: 100%;
+    min-width: 300px;
     padding: gap(4);
     border: 2px solid $blue;
 }

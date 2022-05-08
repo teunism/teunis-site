@@ -17,9 +17,7 @@ const OverlayGrid = () => {
                         alt=""
                     />
                 </figure>
-                <p className="overlay-grid__item-title">
-                    Pijltje can Mondriaan
-                </p>
+                <p className="overlay-grid__item-title">Plastic slipper</p>
             </li>
             <li className="overlay-grid__item">
                 <figure className="overlay-grid__item-figure">
@@ -29,21 +27,17 @@ const OverlayGrid = () => {
                         alt=""
                     />
                 </figure>
-                <p className="overlay-grid__item-title">
-                    Pijltje can Mondriaan
-                </p>
+                <p className="overlay-grid__item-title">Head of doll</p>
             </li>
             <li className="overlay-grid__item">
                 <figure className="overlay-grid__item-figure">
                     <img
                         className="overlay-grid__item-image"
-                        src={ExampleImageTwo}
+                        src={ExampleImageThree}
                         alt=""
                     />
                 </figure>
-                <p className="overlay-grid__item-title">
-                    Pijltje can Mondriaan
-                </p>
+                <p className="overlay-grid__item-title">Giant dart</p>
             </li>
         </ul>
     );

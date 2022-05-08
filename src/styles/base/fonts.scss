@@ -27,3 +27,14 @@
     text-transform: uppercase;
     letter-spacing: 0.1rem;
 }
+
+/**
+ * Text
+ */
+@mixin text-medium {
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: $white;
+    line-height: 1;
+    text-transform: uppercase;
+}

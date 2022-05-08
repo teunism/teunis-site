@@ -16,6 +16,7 @@
     display: block;
     position: relative;
     width: 100%;
+    margin-bottom: gap(1);
     padding-top: 100%;
 }
 .overlay-grid__item-image {
@@ -25,4 +26,8 @@
     height: 100%;
     object-fit: cover;
     object-position: 50% 50%;
+}
+
+.overlay-grid__item-title {
+    @include text-medium;
 }
