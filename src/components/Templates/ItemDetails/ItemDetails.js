@@ -1,6 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
-import { itemsData } from "../data/itemsData";
+import { itemsData } from "../../../data/itemsData";
+
+import "./ItemDetails.scss";
 
 const ItemDetails = () => {
     const { itemUrl } = useParams();

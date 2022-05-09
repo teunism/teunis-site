@@ -2,8 +2,8 @@ import React, { createContext, useContext, useState } from "react";
 
 import { Route, Routes } from "react-router-dom";
 
-import HomeIntro from "./components/Organisms/HomeIntro/HomeIntro";
-import ItemDetails from "./pages/ItemDetails";
+import HomeIntro from "./components/Templates/HomeIntro/HomeIntro";
+import ItemDetails from "./components/Templates/ItemDetails/ItemDetails";
 
 import "App.scss";
 
