@@ -18,7 +18,7 @@ const App = () => {
             >
                 <Routes>
                     <Route path="/" exact element={<HomeIntro />} />
-                    <Route path="item/:itemName" element={<ItemDetails />} />
+                    <Route path="item/:itemUrl" element={<ItemDetails />} />
                 </Routes>
             </ActivePatchContext.Provider>
         </div>

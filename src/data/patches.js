@@ -8,7 +8,7 @@ import { itemsData } from "./itemsData";
 
 // TODO get these patches in function
 const pacificPatchItems = itemsData.filter((item) => item.patch == "pacific");
-const restPatchItems = itemsData.filter((item) => item.patch == "rest");
+const restPatchItems = itemsData.filter((item) => item.patch == "test");
 
 export const patchesData = {
     pacific: {
@@ -20,5 +20,3 @@ export const patchesData = {
         items: restPatchItems,
     },
 };
-
-console.log(patchesData["pacific"]);
