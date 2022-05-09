@@ -1,6 +1,19 @@
 /**
  * Headings
  */
+@mixin heading-big {
+    font-weight: 900;
+    font-size: 3.3rem;
+    color: $blue;
+    line-height: 0.85;
+    text-transform: uppercase;
+    @include bp-min(medium) {
+        font-size: 3.5rem;
+    }
+    @include bp-min(large) {
+        font-size: 3.7rem;
+    }
+}
 
 @mixin heading-medium {
     font-weight: 900;
