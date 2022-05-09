@@ -9,6 +9,17 @@
     gap: gap(3) gap(4);
 }
 
+.overlay-grid__item-link {
+    display: block;
+}
+.overlay-grid__item-link:hover,
+.overlay-grid__item-link:focus {
+    text-decoration: underline;
+    color: $white;
+    text-decoration-thickness: 0.1rem;
+    text-underline-offset: 0.05rem;
+}
+
 .overlay-grid__item {
     width: calc(50% - #{gap(4)} / 2);
 }

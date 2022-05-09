@@ -19,7 +19,13 @@
     @include sub-title-small;
     margin-bottom: gap(4);
 }
+
 .globe-overlay__items {
     max-height: 400px;
     overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.globe-overlay__items::-webkit-scrollbar {
+    display: none;
 }
