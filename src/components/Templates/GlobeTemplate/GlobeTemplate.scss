@@ -1,6 +1,6 @@
 @import "../../../styles/global.scss";
 
-.home-intro {
+.globe-template {
     display: flex;
     justify-content: space-between;
     gap: gap(8);
@@ -9,12 +9,12 @@
     max-height: 100vh;
 }
 
-.home-intro__text {
+.globe-template__text {
     width: 40%;
     max-height: calc(100vh - #{gap(6)});
     height: 100%;
 }
 
-.home-intro__globe-overlay {
+.globe-template__globe-overlay {
     width: 100%;
 }

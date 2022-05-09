@@ -10,7 +10,7 @@ const OverlayGrid = ({ items }) => {
                 <li className="overlay-grid__item">
                     <Link
                         className="overlay-grid__item-link"
-                        to={`item/${item.url}`}
+                        to={`items/${item.url}`}
                     >
                         <figure className="overlay-grid__item-figure">
                             <img

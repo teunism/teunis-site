@@ -2,8 +2,8 @@ import React, { createContext, useContext, useState } from "react";
 
 import { Route, Routes } from "react-router-dom";
 
-import HomeIntro from "./components/Templates/HomeIntro/HomeIntro";
-import ItemDetails from "./components/Templates/ItemDetails/ItemDetails";
+import GlobeTemplate from "./components/Templates/GlobeTemplate/GlobeTemplate";
+import ItemDetailTemplate from "./components/Templates/ItemDetailTemplate/ItemDetailTemplate";
 
 import "App.scss";
 
@@ -17,8 +17,11 @@ const App = () => {
                 value={{ activePatch, setActivePatch }}
             >
                 <Routes>
-                    <Route path="/" exact element={<HomeIntro />} />
-                    <Route path="item/:itemUrl" element={<ItemDetails />} />
+                    <Route path="/" exact element={<GlobeTemplate />} />
+                    <Route
+                        path="items/:itemUrl"
+                        element={<ItemDetailTemplate />}
+                    />
                 </Routes>
             </ActivePatchContext.Provider>
         </div>

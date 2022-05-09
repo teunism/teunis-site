@@ -4,20 +4,20 @@ import GlobeIntro from "../../Molecules/GlobeIntro/GlobeIntro";
 import Globe from "../../Molecules/Globe/Globe";
 import GlobeOverlay from "../../Molecules/GlobeOverlay/GlobeOverlay";
 
-import "./HomeIntro.scss";
+import "./GlobeTemplate.scss";
 
-const HomeIntro = () => {
+const GlobeTemplate = () => {
     return (
-        <section className="home-intro">
-            <div className="home-intro__text">
+        <section className="globe-template">
+            <div className="globe-template__text">
                 <GlobeIntro />
                 <GlobeOverlay />
             </div>
-            <div className="home-intro__globe-overlay">
+            <div className="globe-template__globe-overlay">
                 <Globe />
             </div>
         </section>
     );
 };
 
-export default HomeIntro;
+export default GlobeTemplate;
