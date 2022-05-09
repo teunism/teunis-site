@@ -28,10 +28,14 @@
     width: 50%;
     padding-top: gap(5);
 }
+
+.item-details__text {
+    @include constrain(small-medium);
+}
 .item-details__title {
     @include heading-big;
     margin-bottom: gap(4);
 }
 .item-details__intro {
-    @include constrain(small-medium);
+    margin-bottom: gap(4);
 }

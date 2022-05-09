@@ -1,0 +1,26 @@
+@import "../../../styles/global.scss";
+
+.pinned-comment {
+    box-sizing: content-box;
+    padding: gap(3) gap(4);
+    border: 1px solid $blue;
+}
+
+.pinned-comment__supertitle {
+    display: flex;
+    color: $blue;
+    margin-bottom: gap(2);
+    font-size: 1rem;
+}
+.pinned-comment__pin-icon {
+    margin-right: gap(2);
+}
+
+.pinned-comment__comment-content {
+    margin-bottom: gap(2);
+}
+
+.pinned-comment__comment-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
