@@ -1,22 +1,22 @@
 @import "../../../styles/global.scss";
 
-.item-details {
+.item-detail-template {
     display: flex;
     gap: gap(6);
     padding: gap(6);
 }
 
-.item-details__images {
+.item-detail-template__images {
     width: 50%;
     position: sticky;
     top: 0;
 }
-.item-details__figure {
+.item-detail-template__figure {
     position: relative;
     width: 100%;
     padding-top: 100%;
 }
-.item-details__big-image {
+.item-detail-template__big-image {
     position: absolute;
     top: 0;
     object-fit: cover;
@@ -24,18 +24,18 @@
     height: 100%;
 }
 
-.item-details__info {
+.item-detail-template__info {
     width: 50%;
     padding-top: gap(5);
 }
 
-.item-details__text {
+.item-detail-template__text {
     @include constrain(small-medium);
 }
-.item-details__title {
+.item-detail-template__title {
     @include heading-big;
     margin-bottom: gap(4);
 }
-.item-details__intro {
+.item-detail-template__intro {
     margin-bottom: gap(4);
 }

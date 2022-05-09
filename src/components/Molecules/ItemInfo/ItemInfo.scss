@@ -1,0 +1,13 @@
+@import "../../../styles/global.scss";
+
+.item-info {
+}
+
+.item-info__title {
+    @include heading-medium;
+    font-weight: 800;
+}
+
+.item-info__category {
+    @include heading-small;
+}

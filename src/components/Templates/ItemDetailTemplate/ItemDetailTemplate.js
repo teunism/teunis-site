@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 
 import { itemsData } from "../../../data/itemsData";
 
+import ItemInfo from "../../Molecules/ItemInfo/ItemInfo";
 import PinnedComment from "../../Molecules/PinnedComment/PinnedComment";
 
 import "./ItemDetailTemplate.scss";
@@ -10,6 +11,7 @@ import "./ItemDetailTemplate.scss";
 const ItemDetailTemplate = () => {
     const { itemUrl } = useParams();
     const item = itemsData.find((item) => item.url == itemUrl);
+
     return (
         <div className="item-detail-template">
             <div className="item-detail-template__images">
@@ -23,9 +25,14 @@ const ItemDetailTemplate = () => {
             </div>
             <section className="item-detail-template__info">
                 <h1 className="item-detail-template__title">{item.title}</h1>
+
                 <div className="item-detail-template__text">
                     <p className="item-detail-template__intro">{item.intro}</p>
                     <PinnedComment />
+                </div>
+
+                <div className="item-detail-template__info">
+                    <ItemInfo />
                 </div>
             </section>
         </div>

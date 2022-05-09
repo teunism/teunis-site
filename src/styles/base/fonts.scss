@@ -29,6 +29,20 @@
     }
 }
 
+@mixin heading-small {
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: $blue;
+    line-height: 0.85;
+    text-transform: uppercase;
+    @include bp-min(medium) {
+        font-size: 1.4rem;
+    }
+    @include bp-min(large) {
+        font-size: 1.5rem;
+    }
+}
+
 /**
  * Sub titles
  */
