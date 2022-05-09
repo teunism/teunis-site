@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 
 import { patchesData } from "../../../data/patches";
+import { itemsData } from "../../../data/itemsData";
 
 import { ActivePatchContext } from "../../../App";
 
@@ -10,7 +11,9 @@ import "./GlobeOverlay.scss";
 
 const GlobeOverlay = () => {
     const { activePatch } = useContext(ActivePatchContext);
+
     const patch = patchesData[activePatch] || patchesData["pacific"];
+
     const classNames =
         patch.items.length > 4
             ? "globe-overlay globe-overlay--scroll"

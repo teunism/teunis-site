@@ -1,28 +1,24 @@
-import ExampleImageOne from "../img/example-1.jpg";
-import ExampleImageTwo from "../img/example-2.jpg";
-import ExampleImageThree from "../img/example-3.jpg";
+import { itemsData } from "./itemsData";
+
+// const getPatchitems = (patchName) => {
+//     return itemsData.filter((item) => {
+//         item.patch == patchName;
+//     });
+// };
+
+// TODO get these patches in function
+const pacificPatchItems = itemsData.filter((item) => item.patch == "pacific");
+const restPatchItems = itemsData.filter((item) => item.patch == "rest");
 
 export const patchesData = {
     pacific: {
         title: "Pacific patch",
-        items: [
-            { name: "Plastic slipper", image: ExampleImageOne },
-            { name: "Head of doll", image: ExampleImageTwo },
-            { name: "Giant arrow", image: ExampleImageThree },
-            { name: "Plastic slipper", image: ExampleImageOne },
-            { name: "Head of doll", image: ExampleImageTwo },
-            { name: "Giant arrow", image: ExampleImageThree },
-            { name: "Plastic slipper", image: ExampleImageOne },
-            { name: "Head of doll", image: ExampleImageTwo },
-            { name: "Giant arrow", image: ExampleImageThree },
-        ],
+        items: pacificPatchItems,
     },
     test: {
         title: "Test patch",
-        items: [
-            { name: "Head of doll", image: ExampleImageTwo },
-            { name: "Giant arrow", image: ExampleImageThree },
-            { name: "Plastic slipper", image: ExampleImageOne },
-        ],
+        items: restPatchItems,
     },
 };
+
+console.log(patchesData["pacific"]);
