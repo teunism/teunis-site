@@ -13,7 +13,9 @@ const HomeIntro = () => {
                 <GlobeIntro />
                 <GlobeOverlay />
             </div>
-            <Globe />
+            <div className="home-intro__globe-overlay">
+                <Globe />
+            </div>
         </section>
     );
 };
