@@ -22,7 +22,7 @@ const Globe = () => {
         <div className="globe">
             <Canvas>
                 <ContextBridge>
-                    <ambientLight intensity={0.35} color="#ffffff" />
+                    <ambientLight intensity={0.45} color="#ffffff" />
                     <OrbitControls
                         rotateSpeed={0.1}
                         autoRotate

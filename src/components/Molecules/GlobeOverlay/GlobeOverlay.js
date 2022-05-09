@@ -16,7 +16,9 @@ const GlobeOverlay = () => {
         <section className="globe-overlay">
             <h2 className="globe-overlay__title">{patch.title}</h2>
             <p className="globe-overlay__sub-title">Found items</p>
-            <OverlayGrid items={patch.items} />
+            <div className="globe-overlay__items">
+                <OverlayGrid items={patch.items} />
+            </div>
         </section>
     );
 };

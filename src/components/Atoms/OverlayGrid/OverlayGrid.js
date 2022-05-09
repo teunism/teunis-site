@@ -3,11 +3,10 @@ import React from "react";
 import "./OverlayGrid.scss";
 
 const OverlayGrid = ({ items }) => {
-    console.log("items: ", items);
     return (
         <ul className="overlay-grid">
             {items.map((item) => (
-                <li className="overlay-grid__item" key={`item-${item.name}`}>
+                <li className="overlay-grid__item">
                     <figure className="overlay-grid__item-figure">
                         <img
                             className="overlay-grid__item-image"

@@ -9,6 +9,12 @@ export const patchesData = {
             { name: "Plastic slipper", image: ExampleImageOne },
             { name: "Head of doll", image: ExampleImageTwo },
             { name: "Giant arrow", image: ExampleImageThree },
+            { name: "Plastic slipper", image: ExampleImageOne },
+            { name: "Head of doll", image: ExampleImageTwo },
+            { name: "Giant arrow", image: ExampleImageThree },
+            { name: "Plastic slipper", image: ExampleImageOne },
+            { name: "Head of doll", image: ExampleImageTwo },
+            { name: "Giant arrow", image: ExampleImageThree },
         ],
     },
     test: {
