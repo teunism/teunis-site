@@ -1,23 +1,29 @@
 @import "../../../styles/global.scss";
 
 .item-info {
+    @include constrain(small-medium);
 }
 .item-info__title {
     @include heading-medium;
     font-weight: 800;
-    margin-bottom: gap(4);
+    margin-bottom: gap(5);
 }
 
 .item-info__content {
-    display: flex;
-    gap: gap(3);
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: gap(5);
 }
 
-.item-info__category {
-    width: calc(50% - #{gap(3)});
+.item-info__location-image {
+    max-width: 200px;
 }
 
 .item-info__category-title {
     @include heading-small;
+    margin-bottom: gap(3);
+}
+
+.item-info__location-image {
+    width: 100%;
 }

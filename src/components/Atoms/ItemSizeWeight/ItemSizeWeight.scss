@@ -2,12 +2,12 @@
 
 .item-size-weight__title {
     @include heading-small;
-    margin-bottom: gap(2);
+    margin-bottom: gap(3);
 }
 
 .item-size-weight__data {
     display: grid;
-    grid-template-columns: 100px 100px;
+    grid-template-columns: 1fr 1fr;
 }
 .item-size-weight__data-pair {
     padding: gap(3) 0;

@@ -1,6 +1,9 @@
 import React from "react";
 
 import ItemSizeWeight from "../../Atoms/ItemSizeWeight/ItemSizeWeight";
+import ItemDataTable from "../../Atoms/ItemDataTable/ItemDataTable";
+
+import LocationImage from "../../../img/item-location.svg";
 
 import "./ItemInfo.scss";
 
@@ -15,14 +18,21 @@ const ItemInfo = () => {
 
                 <div className="item-info__category">
                     <h3 className="item-info__category-title">Location</h3>
+                    <figure>
+                        <img
+                            className="item-info__location-image"
+                            src={LocationImage}
+                            alt=""
+                        />
+                    </figure>
                 </div>
 
                 <div className="item-info__category">
-                    <h3 className="item-info__category-title">Material</h3>
+                    <ItemDataTable />
                 </div>
 
                 <div className="item-info__category">
-                    <h3 className="item-info__category-title">Rest</h3>
+                    <ItemDataTable />
                 </div>
             </div>
         </section>

@@ -1,0 +1,29 @@
+@import "../../../styles/global.scss";
+
+.item-data-table__title {
+    @include heading-small;
+    margin-bottom: gap(4);
+}
+
+.item-data-table__table {
+    width: 100%;
+}
+
+.item-data-table__data-pair:first-of-type {
+    padding-bottom: 15px;
+    border-bottom: 2px solid $blue-dark;
+}
+.item-data-table__data-pair:last-of-type {
+    padding-top: 15px;
+}
+
+.item-data-table__data-title {
+    @include heading-tiny;
+    margin-bottom: gap(2);
+}
+.item-data-table__data-value {
+    @include data-value-text;
+    @include bp-min(large) {
+        font-size: 1.3rem;
+    }
+}

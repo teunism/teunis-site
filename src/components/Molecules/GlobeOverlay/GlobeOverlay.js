@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 
 import { patchesData } from "../../../data/patches";
-import { itemsData } from "../../../data/itemsData";
 
 import { ActivePatchContext } from "../../../App";
 

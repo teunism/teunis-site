@@ -1,8 +1,9 @@
 @import "../../../styles/global.scss";
 
 .item-detail-template {
+    max-width: 100vw;
     display: flex;
-    gap: gap(6);
+    gap: gap(7);
     padding: gap(6);
 }
 
