@@ -43,6 +43,20 @@
     }
 }
 
+@mixin heading-tiny {
+    font-weight: 400;
+    font-size: 1rem;
+    color: $blue;
+    line-height: 0.85;
+    text-transform: uppercase;
+    @include bp-min(medium) {
+        font-size: 1.1rem;
+    }
+    @include bp-min(large) {
+        font-size: 1.1rem;
+    }
+}
+
 /**
  * Sub titles
  */
@@ -64,4 +78,18 @@
     color: $white;
     line-height: 1;
     text-transform: uppercase;
+}
+
+@mixin data-value-text {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: $white;
+    line-height: 0.85;
+    text-transform: uppercase;
+    @include bp-min(medium) {
+        font-size: 1.3rem;
+    }
+    @include bp-min(large) {
+        font-size: 1.4rem;
+    }
 }

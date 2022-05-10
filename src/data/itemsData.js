@@ -10,10 +10,10 @@ export const itemsData = [
         image: ExampleImageOne,
         intro: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.",
         sizes: {
-            height: "10 cm",
-            depth: "41cm",
-            width: "33cm",
-            weight: "40gr",
+            heightCm: "10",
+            depthCm: "41",
+            widthCm: "33",
+            weightGr: "40",
         },
         materials: {
             material: "plastic",
@@ -31,10 +31,10 @@ export const itemsData = [
         image: ExampleImageTwo,
         intro: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.",
         sizes: {
-            height: "10 cm",
-            depth: "41cm",
-            width: "33cm",
-            weight: "40gr",
+            heightCm: "10",
+            depthCm: "41",
+            widthCm: "33",
+            weightGr: "40",
         },
         materials: {
             material: "plastic",
@@ -52,10 +52,10 @@ export const itemsData = [
         image: ExampleImageThree,
         intro: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.",
         sizes: {
-            height: "10 cm",
-            depth: "41cm",
-            width: "33cm",
-            weight: "40gr",
+            heightCm: "10",
+            depthCm: "41",
+            widthCm: "33",
+            weightGr: "40",
         },
         materials: {
             material: "plastic",
