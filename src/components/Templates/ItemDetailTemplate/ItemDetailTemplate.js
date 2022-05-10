@@ -15,13 +15,15 @@ const ItemDetailTemplate = () => {
     return (
         <div className="item-detail-template">
             <div className="item-detail-template__images">
-                <figure className="item-detail-template__figure">
-                    <img
-                        className="item-detail-template__big-image"
-                        src={item.image}
-                        alt=""
-                    />
-                </figure>
+                <div className="item-detail-template__images-inner">
+                    <figure className="item-detail-template__figure">
+                        <img
+                            className="item-detail-template__big-image"
+                            src={item.image}
+                            alt=""
+                        />
+                    </figure>
+                </div>
             </div>
             <section className="item-detail-template__info">
                 <h1 className="item-detail-template__title">{item.title}</h1>
@@ -31,7 +33,7 @@ const ItemDetailTemplate = () => {
                     <PinnedComment />
                 </div>
 
-                <div className="item-detail-template__info">
+                <div className="item-detail-template__data">
                     <ItemInfo />
                 </div>
             </section>

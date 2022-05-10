@@ -2,12 +2,23 @@
 
 .item-info {
 }
-
 .item-info__title {
     @include heading-medium;
     font-weight: 800;
+    margin-bottom: gap(4);
+}
+
+.item-info__content {
+    display: flex;
+    gap: gap(3);
+    flex-wrap: wrap;
 }
 
 .item-info__category {
+    width: calc(50% - #{gap(3)});
+    margin-bottom: 500px;
+}
+
+.item-info__category-title {
     @include heading-small;
 }

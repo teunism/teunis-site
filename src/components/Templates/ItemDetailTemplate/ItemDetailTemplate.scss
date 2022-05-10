@@ -8,9 +8,14 @@
 
 .item-detail-template__images {
     width: 50%;
-    position: sticky;
+    position: relative;
     top: 0;
 }
+.item-detail-template__images-inner {
+    position: sticky;
+    top: gap(6);
+}
+
 .item-detail-template__figure {
     position: relative;
     width: 100%;
@@ -38,4 +43,8 @@
 }
 .item-detail-template__intro {
     margin-bottom: gap(4);
+}
+
+.item-detail-template__text {
+    margin-bottom: gap(7);
 }
