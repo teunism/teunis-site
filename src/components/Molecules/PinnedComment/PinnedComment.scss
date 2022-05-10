@@ -1,8 +1,10 @@
 @import "../../../styles/global.scss";
 
 .pinned-comment {
+    @include constrain(small-medium);
     box-sizing: content-box;
     padding: gap(3) gap(4);
+    margin: 0 0 gap(7) -#{gap(4)};
     border: 1px solid $blue;
 }
 

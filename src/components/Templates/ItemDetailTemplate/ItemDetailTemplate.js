@@ -25,17 +25,18 @@ const ItemDetailTemplate = () => {
                     </figure>
                 </div>
             </div>
+
             <section className="item-detail-template__info">
-                <h1 className="item-detail-template__title">{item.title}</h1>
-
                 <div className="item-detail-template__text">
+                    <h1 className="item-detail-template__title">
+                        {item.title}
+                    </h1>
                     <p className="item-detail-template__intro">{item.intro}</p>
-                    <PinnedComment />
                 </div>
 
-                <div className="item-detail-template__data">
-                    <ItemInfo />
-                </div>
+                <PinnedComment />
+
+                <ItemInfo />
             </section>
         </div>
     );
