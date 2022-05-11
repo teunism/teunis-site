@@ -55,18 +55,21 @@ export const itemsData = [
                     "This is actually not a plastic penguiño but a rare Malasian baby slipper. Around 2004 it was a limited edition release with 5000 items. Still very popular in Japan!",
                 name: "Brecon Philips",
                 pinned: false,
+                likes: 5,
             },
             {
                 content:
                     "This is actually not a plastic penguiño but a rare Malasian baby slipper. Around 2004 it was a limited edition release with 5000 items. Still very popular in Japan!",
                 name: "Mr. Pinned",
                 pinned: true,
+                likes: 31,
             },
             {
                 content:
                     "This item is very popular in my country. I own two of them. They make a funny sounds when you squeeze it",
-                name: "Mr. Pinned",
+                name: "Not pinned",
                 pinned: false,
+                likes: 19,
             },
         ],
     },
@@ -122,18 +125,21 @@ export const itemsData = [
                     "This is actually not a plastic penguiño but a rare Malasian baby slipper. Around 2004 it was a limited edition release with 5000 items. Still very popular in Japan!",
                 name: "Brecon Philips",
                 pinned: false,
+                likes: 5,
             },
             {
                 content:
                     "This is actually not a plastic penguiño but a rare Malasian baby slipper. Around 2004 it was a limited edition release with 5000 items. Still very popular in Japan!",
                 name: "Mr. Pinned",
                 pinned: true,
+                likes: 3,
             },
             {
                 content:
                     "This item is very popular in my country. I own two of them. They make a funny sounds when you squeeze it",
-                name: "Mr. Pinned",
+                name: "Not pinned",
                 pinned: false,
+                likes: 15,
             },
         ],
     },
@@ -189,18 +195,21 @@ export const itemsData = [
                     "This is actually not a plastic penguiño but a rare Malasian baby slipper. Around 2004 it was a limited edition release with 5000 items. Still very popular in Japan!",
                 name: "Brecon Philips",
                 pinned: false,
+                likes: 2,
             },
             {
                 content:
                     "This is actually not a plastic penguiño but a rare Malasian baby slipper. Around 2004 it was a limited edition release with 5000 items. Still very popular in Japan!",
                 name: "Mr. Pinned",
                 pinned: true,
+                likes: 43,
             },
             {
                 content:
                     "This item is very popular in my country. I own two of them. They make a funny sounds when you squeeze it",
-                name: "Mr. Pinned",
+                name: "Not pinned",
                 pinned: false,
+                likes: 38,
             },
         ],
     },

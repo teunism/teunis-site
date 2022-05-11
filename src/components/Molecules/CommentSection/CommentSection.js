@@ -4,7 +4,7 @@ import Comments from "../../Atoms/Comments/Comments";
 
 import "./CommentSection.scss";
 
-const CommentSection = (e) => {
+const CommentSection = ({ allComments }) => {
     const resizeTextArea = (e) => {
         e.target.style.height = "auto";
         e.target.style.height = e.target.scrollHeight + "px";
@@ -22,7 +22,7 @@ const CommentSection = (e) => {
                 onChange={(e) => resizeTextArea(e)}
             ></textarea>
 
-            <Comments />
+            <Comments allComments={allComments} />
         </section>
     );
 };

@@ -37,6 +37,7 @@
 
 .item-detail-template__text {
     @include constrain(small-medium);
+    margin-bottom: gap(7);
 }
 
 .item-detail-template__title {

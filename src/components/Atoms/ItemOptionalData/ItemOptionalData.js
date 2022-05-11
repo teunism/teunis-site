@@ -3,7 +3,6 @@ import React from "react";
 import "./ItemOptionalData.scss";
 
 const ItemOptionalData = ({ optionalData }) => {
-    console.log(optionalData);
     return (
         <>
             <h3 className="item-optional-data__title">{optionalData.title}</h3>

@@ -13,6 +13,8 @@ const ItemDetailTemplate = () => {
     const { itemUrl } = useParams();
     const item = itemsData.find((item) => item.url == itemUrl);
 
+    const pinnedComment = item.comments.find((comment) => comment.pinned);
+
     return (
         <div className="item-detail-template">
             <div className="item-detail-template__images">
@@ -33,13 +35,15 @@ const ItemDetailTemplate = () => {
                         {item.title}
                     </h1>
                     <p className="item-detail-template__intro">{item.intro}</p>
-                </div>
 
-                <PinnedComment />
+                    {pinnedComment && (
+                        <PinnedComment commentContent={pinnedComment} />
+                    )}
+                </div>
 
                 <ItemInfo itemData={item.data} />
 
-                <CommentSection />
+                <CommentSection allComments={item.comments} />
             </section>
         </div>
     );
