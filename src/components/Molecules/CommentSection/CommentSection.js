@@ -1,6 +1,6 @@
 import React from "react";
 
-import PinIcon from "../../../img/pin.svg";
+import Comments from "../../Atoms/Comments/Comments";
 
 import "./CommentSection.scss";
 
@@ -21,6 +21,8 @@ const CommentSection = (e) => {
                 placeholder="About this object..."
                 onChange={(e) => resizeTextArea(e)}
             ></textarea>
+
+            <Comments />
         </section>
     );
 };
