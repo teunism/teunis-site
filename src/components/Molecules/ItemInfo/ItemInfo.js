@@ -1,19 +1,19 @@
 import React from "react";
 
 import ItemSizeWeight from "../../Atoms/ItemSizeWeight/ItemSizeWeight";
-import ItemDataTable from "../../Atoms/ItemDataTable/ItemDataTable";
+import ItemOptionalData from "../../Atoms/ItemOptionalData/ItemOptionalData";
 
 import LocationImage from "../../../img/item-location.svg";
 
 import "./ItemInfo.scss";
 
-const ItemInfo = () => {
+const ItemInfo = ({ itemData }) => {
     return (
         <section className="item-info">
             <h2 className="item-info__title">Data about</h2>
             <div className="item-info__content">
                 <div className="item-info__category">
-                    <ItemSizeWeight />
+                    <ItemSizeWeight itemSizes={itemData.sizes} />
                 </div>
 
                 <div className="item-info__category">
@@ -27,13 +27,11 @@ const ItemInfo = () => {
                     </figure>
                 </div>
 
-                <div className="item-info__category">
-                    <ItemDataTable />
-                </div>
-
-                <div className="item-info__category">
-                    <ItemDataTable />
-                </div>
+                {itemData.optional.map((data) => (
+                    <div className="item-info__category">
+                        <ItemOptionalData optionalData={data} />
+                    </div>
+                ))}
             </div>
         </section>
     );

@@ -2,7 +2,7 @@ import React from "react";
 
 import "./ItemSizeWeight.scss";
 
-const ItemSizeWeight = ({ data }) => {
+const ItemSizeWeight = ({ itemSizes }) => {
     return (
         <>
             <h3 className="item-size-weight__title">Size & Weight</h3>
@@ -10,7 +10,7 @@ const ItemSizeWeight = ({ data }) => {
                 <div className="item-size-weight__data-pair">
                     <dd className="item-size-weight__data-title">Height</dd>
                     <dt className="item-size-weight__data-value">
-                        10{" "}
+                        {itemSizes.heightCm}{" "}
                         <span className="item-size-weight__data-value-measurement">
                             cm
                         </span>
@@ -20,7 +20,7 @@ const ItemSizeWeight = ({ data }) => {
                 <div className="item-size-weight__data-pair">
                     <dd className="item-size-weight__data-title">Width</dd>
                     <dt className="item-size-weight__data-value">
-                        10{" "}
+                        {itemSizes.widthCm}{" "}
                         <span className="item-size-weight__data-value-measurement">
                             cm
                         </span>
@@ -30,7 +30,7 @@ const ItemSizeWeight = ({ data }) => {
                 <div className="item-size-weight__data-pair">
                     <dd className="item-size-weight__data-title">Depth</dd>
                     <dt className="item-size-weight__data-value">
-                        10{" "}
+                        {itemSizes.depthCm}{" "}
                         <span className="item-size-weight__data-value-measurement">
                             cm
                         </span>
@@ -40,7 +40,7 @@ const ItemSizeWeight = ({ data }) => {
                 <div className="item-size-weight__data-pair">
                     <dd className="item-size-weight__data-title">Weight</dd>
                     <dt className="item-size-weight__data-value">
-                        10{" "}
+                        {itemSizes.weightGr}{" "}
                         <span className="item-size-weight__data-value-measurement">
                             cm
                         </span>

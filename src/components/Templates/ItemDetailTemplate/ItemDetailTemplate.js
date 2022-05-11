@@ -37,7 +37,7 @@ const ItemDetailTemplate = () => {
 
                 <PinnedComment />
 
-                <ItemInfo />
+                <ItemInfo itemData={item.data} />
 
                 <CommentSection />
             </section>
