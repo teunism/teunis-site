@@ -15,7 +15,7 @@ const OverlayGrid = ({ items }) => {
                         <figure className="overlay-grid__item-figure">
                             <img
                                 className="overlay-grid__item-image"
-                                src={item.image}
+                                src={item.images.mainImage}
                                 alt=""
                             />
                         </figure>

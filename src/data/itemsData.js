@@ -7,8 +7,11 @@ export const itemsData = [
         title: "Plastic slipper",
         url: "plastic-slipper",
         patch: "pacific",
-        image: ExampleImageOne,
         intro: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.",
+        images: {
+            mainImage: ExampleImageOne,
+            allImages: [ExampleImageOne, ExampleImageTwo, ExampleImageThree],
+        },
         data: {
             sizes: {
                 heightCm: "10",
@@ -77,8 +80,11 @@ export const itemsData = [
         title: "Head of doll",
         url: "doll-head",
         patch: "pacific",
-        image: ExampleImageTwo,
         intro: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.",
+        images: {
+            mainImage: ExampleImageTwo,
+            allImages: [ExampleImageTwo, ExampleImageThree, ExampleImageOne],
+        },
         data: {
             sizes: {
                 heightCm: "10",
@@ -147,8 +153,11 @@ export const itemsData = [
         title: "Giant dart",
         url: "giant-dart",
         patch: "test",
-        image: ExampleImageThree,
         intro: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.",
+        images: {
+            mainImage: ExampleImageThree,
+            allImages: [ExampleImageThree, ExampleImageOne, ExampleImageTwo],
+        },
         data: {
             sizes: {
                 heightCm: "10",

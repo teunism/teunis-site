@@ -6,6 +6,7 @@ import { itemsData } from "../../../data/itemsData";
 import ItemInfo from "../../Molecules/ItemInfo/ItemInfo";
 import PinnedComment from "../../Molecules/PinnedComment/PinnedComment";
 import CommentSection from "../../Molecules/CommentSection/CommentSection";
+import ItemImages from "../../Molecules/ItemImages/ItemImages";
 
 import "./ItemDetailTemplate.scss";
 
@@ -14,18 +15,11 @@ const ItemDetailTemplate = () => {
     const item = itemsData.find((item) => item.url == itemUrl);
 
     const pinnedComment = item.comments.find((comment) => comment.pinned);
-
     return (
         <div className="item-detail-template">
             <div className="item-detail-template__images">
                 <div className="item-detail-template__images-inner">
-                    <figure className="item-detail-template__figure">
-                        <img
-                            className="item-detail-template__big-image"
-                            src={item.image}
-                            alt=""
-                        />
-                    </figure>
+                    <ItemImages images={item.images} />
                 </div>
             </div>
 

@@ -1,0 +1,33 @@
+@import "../../../styles/global.scss";
+
+.item-images {
+}
+
+.item-images__big-image-figure {
+    position: relative;
+    width: 100%;
+    margin-bottom: gap(3);
+    padding-top: 100%;
+}
+.item-images__big-image {
+    position: absolute;
+    top: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.item-images__small-images-container {
+    display: flex;
+    gap: gap(2);
+}
+
+.item-images__small-image-figure {
+    width: 60px;
+    height: 60px;
+}
+.item-images__small-image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
