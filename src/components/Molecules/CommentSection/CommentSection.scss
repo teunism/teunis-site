@@ -1,0 +1,34 @@
+@import "../../../styles/global.scss";
+
+.comment-section {
+    @include constrain(small-medium);
+    border-top: 1px solid $blue;
+    padding-top: gap(5);
+}
+
+.comment-section__title {
+    @include heading-medium;
+    font-weight: 800;
+    margin-bottom: gap(4);
+}
+
+.comment-section__comment-field {
+    display: block;
+    overflow: hidden;
+    resize: none;
+    width: 100%;
+    padding: gap(3);
+    background-color: $blue-dark;
+    color: $white;
+    font-family: proxima-nova;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+}
+.comment-section__comment-field:focus {
+    outline: 1px solid $blue;
+}
+
+::placeholder {
+    color: $blue;
+}

@@ -5,6 +5,7 @@ import { itemsData } from "../../../data/itemsData";
 
 import ItemInfo from "../../Molecules/ItemInfo/ItemInfo";
 import PinnedComment from "../../Molecules/PinnedComment/PinnedComment";
+import CommentSection from "../../Molecules/CommentSection/CommentSection";
 
 import "./ItemDetailTemplate.scss";
 
@@ -37,6 +38,8 @@ const ItemDetailTemplate = () => {
                 <PinnedComment />
 
                 <ItemInfo />
+
+                <CommentSection />
             </section>
         </div>
     );

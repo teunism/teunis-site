@@ -2,6 +2,7 @@
 
 .item-info {
     @include constrain(small-medium);
+    margin-bottom: gap(9);
 }
 .item-info__title {
     @include heading-medium;
