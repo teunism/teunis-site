@@ -12,11 +12,11 @@ const Comments = ({ allComments }) => {
         const likesOfCommentA = commentA.likes ? commentA.likes : 0;
         const likesOfCommentB = commentB.likes ? commentB.likes : 0;
 
-        if (commentA.pinned) {
-            return -1;
-        }
         if (commentB.pinned) {
             return 1;
+        }
+        if (commentA.pinned) {
+            return -1;
         }
         if (likesOfCommentA < likesOfCommentB) {
             return 1;
