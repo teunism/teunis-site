@@ -1,8 +1,5 @@
 @import "../../../styles/global.scss";
 
-.item-images {
-}
-
 .item-images__big-image-figure {
     position: relative;
     width: 100%;
@@ -23,8 +20,13 @@
 }
 
 .item-images__small-image-figure {
+    box-sizing: content-box;
     width: 60px;
     height: 60px;
+}
+.item-images__small-image-figure--active {
+    padding-bottom: gap(1);
+    border-bottom: 1px solid $blue;
 }
 .item-images__small-image {
     object-fit: cover;

@@ -13,7 +13,13 @@ const ItemImages = ({ images }) => {
 
             <div className="item-images__small-images-container">
                 {images.allImages.map((image) => (
-                    <figure className="item-images__small-image-figure">
+                    <figure
+                        className={
+                            image == bigImage
+                                ? "item-images__small-image-figure item-images__small-image-figure--active"
+                                : "item-images__small-image-figure"
+                        }
+                    >
                         <img
                             className="item-images__small-image"
                             src={image}
