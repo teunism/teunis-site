@@ -11,12 +11,14 @@
 
 .overlay-grid__item-link {
     display: block;
+    text-decoration: none;
+    padding-bottom: gap(1);
 }
 .overlay-grid__item-link:hover,
 .overlay-grid__item-link:focus {
     text-decoration: underline;
     color: $white;
-    text-decoration-thickness: 0.1rem;
+    text-decoration-thickness: 0.13rem;
     text-underline-offset: 0.05rem;
 }
 

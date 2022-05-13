@@ -22,9 +22,6 @@
     width: 100%;
     padding-top: 100%;
 }
-.item-detail-template__figure:hover {
-    cursor: pointer;
-}
 .item-detail-template__big-image {
     position: absolute;
     top: 0;
@@ -35,7 +32,6 @@
 
 .item-detail-template__info {
     width: 50%;
-    padding-top: gap(5);
 }
 
 .item-detail-template__text {
@@ -49,4 +45,16 @@
 }
 .item-detail-template__intro {
     margin-bottom: gap(4);
+}
+
+.item-detail-template__link {
+    display: block;
+    margin-bottom: gap(4);
+}
+.item-detail-template__arrow-icon {
+    width: 40px;
+    transition: transform 0.4s;
+}
+.item-detail-template__arrow-icon:hover {
+    transform: translateX(-20%);
 }

@@ -1,7 +1,9 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 import { itemsData } from "../../../data/itemsData";
+
+import ArrowIcon from "../../../img/arrow-left.svg";
 
 import ItemInfo from "../../Molecules/ItemInfo/ItemInfo";
 import PinnedComment from "../../Molecules/PinnedComment/PinnedComment";
@@ -15,6 +17,7 @@ const ItemDetailTemplate = () => {
     const item = itemsData.find((item) => item.url == itemUrl);
 
     const pinnedComment = item.comments.find((comment) => comment.pinned);
+
     return (
         <div className="item-detail-template">
             <div className="item-detail-template__images">
@@ -25,6 +28,13 @@ const ItemDetailTemplate = () => {
 
             <section className="item-detail-template__info">
                 <div className="item-detail-template__text">
+                    <Link className="item-detail-template__link" to="/">
+                        <img
+                            className="item-detail-template__arrow-icon"
+                            src={ArrowIcon}
+                            alt=""
+                        />
+                    </Link>
                     <h1 className="item-detail-template__title">
                         {item.title}
                     </h1>
