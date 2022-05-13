@@ -75,18 +75,28 @@ const GlobeModel = () => {
 const Patch = () => {
     const { setActivePatch } = useContext(ActivePatchContext);
 
+    const [hovered, setHovered] = useState(false);
+    const [border, setBorder] = useState(false);
+
+    useEffect(() => {
+        document.body.style.cursor = hovered ? "pointer" : "auto";
+    }, [hovered]);
+
     return (
         <mesh
             onClick={(e) => {
                 e.stopPropagation();
                 setActivePatch("test");
+                setBorder(true);
             }}
+            onPointerEnter={(e) => setHovered(true)}
+            onPointerLeave={(e) => setHovered(false)}
             position={[0.7, 0.56, 0.6]}
         >
             <sphereBufferGeometry args={[0.045, 32, 32]} />
             <meshBasicMaterial color="#01cbe1" />
 
-            <SphereBorder />
+            {border && <SphereBorder />}
         </mesh>
     );
 };
