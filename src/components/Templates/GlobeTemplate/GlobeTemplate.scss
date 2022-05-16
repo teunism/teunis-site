@@ -10,7 +10,8 @@
 }
 
 .globe-template__text {
-    width: 40%;
+    // width: 40%;
+    width: 550px;
     max-height: calc(100vh - #{gap(6)});
     height: 100%;
 }

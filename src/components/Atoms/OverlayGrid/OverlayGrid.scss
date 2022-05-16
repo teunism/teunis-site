@@ -6,7 +6,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: gap(3) gap(4);
+    gap: gap(3);
 }
 
 .overlay-grid__item-link {
@@ -23,7 +23,7 @@
 }
 
 .overlay-grid__item {
-    width: calc(50% - #{gap(4)} / 2);
+    width: calc(50% - #{gap(3)} / 2);
 }
 .overlay-grid__item-figure {
     display: block;

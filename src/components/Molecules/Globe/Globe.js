@@ -33,7 +33,7 @@ const Globe = () => {
                         rotateSpeed={0.25}
                         // autoRotate
                         // autoRotateSpeed={0.2}
-                        enableZoom={false}
+                        enableZoom={true}
                     />
                     <PerspectiveCamera makeDefault position={[1, 0, 2.2]} />
 
