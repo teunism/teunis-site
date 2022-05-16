@@ -3,17 +3,16 @@
 .globe-template {
     display: flex;
     justify-content: space-between;
-    gap: gap(8);
-    padding: gap(6);
+    gap: gap(7);
     height: 100vh;
     max-height: 100vh;
 }
 
 .globe-template__text {
-    // width: 40%;
-    width: 550px;
-    max-height: calc(100vh - #{gap(6)});
+    width: 50%;
+    padding: gap(6) gap(3) 0 gap(5);
     height: 100%;
+    overflow: scroll;
 }
 
 .globe-template__globe-overlay {

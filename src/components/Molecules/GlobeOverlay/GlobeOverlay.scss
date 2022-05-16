@@ -4,12 +4,11 @@
     @include constrain(small);
     width: 100%;
     min-width: 300px;
-    padding: gap(4);
-    border: 1px solid $blue;
+    padding: gap(2) gap(4) gap(4) 0;
 }
-.globe-overlay--scroll {
-    padding: gap(4) gap(4) 0 gap(4);
-}
+// .globe-overlay--scroll {
+//     padding: gap(4) gap(4) gap(4) 0;
+// }
 
 .globe-overlay__title {
     @include heading-medium;
@@ -18,14 +17,4 @@
 .globe-overlay__sub-title {
     @include sub-title-small;
     margin-bottom: gap(4);
-}
-
-.globe-overlay__items {
-    max-height: 400px;
-    overflow: scroll;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-.globe-overlay__items::-webkit-scrollbar {
-    display: none;
 }
