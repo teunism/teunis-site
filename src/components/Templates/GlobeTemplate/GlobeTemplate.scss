@@ -6,15 +6,24 @@
     gap: gap(7);
     height: 100vh;
     max-height: 100vh;
+    overflow: hidden;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 .globe-template__text {
     width: 50%;
-    padding: gap(6) gap(3) 0 gap(5);
+    padding: gap(5) gap(3) 0 gap(5);
     height: 100%;
     overflow: scroll;
 }
 
 .globe-template__globe-overlay {
     width: 100%;
+    height: 100vh;
+    padding: gap(6) gap(4) 0 0;
 }

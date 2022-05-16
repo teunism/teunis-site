@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 
 import { patchesData } from "../../../data/patches";
+import nextButton from "../../../img/button-next.svg";
+import previousButton from "../../../img/button-previous.svg";
 
 import { ActivePatchContext } from "../../../App";
 
@@ -20,8 +22,19 @@ const GlobeOverlay = () => {
 
     return (
         <section className={classNames}>
-            <h2 className="globe-overlay__title">{patch.title}</h2>
-            <p className="globe-overlay__sub-title">Found items</p>
+            <div className="globe-overlay__text">
+                <div className="globe-overlay__title-container">
+                    <button className="globe-overlay__button">
+                        <img src={previousButton} alt="" />
+                    </button>
+                    <h2 className="globe-overlay__title">{patch.title}</h2>
+                    <button className="globe-overlay__button">
+                        <img src={nextButton} alt="" />
+                    </button>
+                </div>
+                <p className="globe-overlay__sub-title">Found items</p>
+            </div>
+
             <div className="globe-overlay__items">
                 <OverlayGrid items={patch.items} />
             </div>

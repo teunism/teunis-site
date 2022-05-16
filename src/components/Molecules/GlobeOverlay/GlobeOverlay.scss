@@ -6,9 +6,22 @@
     min-width: 300px;
     padding: gap(2) gap(4) gap(4) 0;
 }
-// .globe-overlay--scroll {
-//     padding: gap(4) gap(4) gap(4) 0;
-// }
+
+.globe-overlay__text {
+    text-align: center;
+}
+
+.globe-overlay__title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.globe-overlay__button {
+    width: 30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
 
 .globe-overlay__title {
     @include heading-medium;
