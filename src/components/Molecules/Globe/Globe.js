@@ -1,13 +1,12 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import { ActivePatchContext } from "../../../App";
 
 import { TextureLoader } from "three/src/loaders/TextureLoader";
-import { Canvas, useFrame, useLoader, useThree } from "@react-three/fiber";
+import { Canvas, useLoader } from "@react-three/fiber";
 import {
     OrbitControls,
     PerspectiveCamera,
-    QuadraticBezierLine,
     useContextBridge,
 } from "@react-three/drei";
 import {
@@ -15,9 +14,10 @@ import {
     Outline,
     Select,
     Selection,
+    HueSaturation,
 } from "@react-three/postprocessing";
 
-import BlueMap from "../../../img/blue-world.png";
+import BlueMap from "../../../img/blue-world-2.png";
 
 import "./Globe.scss";
 
@@ -28,21 +28,24 @@ const Globe = () => {
         <div className="globe">
             <Canvas>
                 <ContextBridge>
-                    <ambientLight intensity={0.35} color="#ffffff" />
+                    <ambientLight intensity={0.29} color="#ffffff" />
+
                     <OrbitControls
                         rotateSpeed={0.25}
                         // autoRotate
-                        // autoRotateSpeed={0.2}
+                        autoRotateSpeed={0.2}
                         enableZoom={true}
                     />
                     <PerspectiveCamera makeDefault position={[1, 0, 2.2]} />
 
                     <Selection>
                         <EffectComposer autoClear={false}>
+                            <HueSaturation saturation={0.3} />
+
                             <Outline
                                 blur
                                 visibleEdgeColor="#C7E44F"
-                                edgeStrength={5}
+                                edgeStrength={4.5}
                                 width={1000}
                             />
                         </EffectComposer>
@@ -58,14 +61,23 @@ const GlobeModel = () => {
     const globeMap = useLoader(TextureLoader, BlueMap);
     const { setActivePatch } = useContext(ActivePatchContext);
 
+    const [hovered, setHovered] = useState(false);
+    useEffect(() => {
+        document.body.style.cursor = hovered ? "grab" : "auto";
+    }, [hovered]);
+
     return (
         <mesh
             onClick={(e) => {
                 e.stopPropagation();
                 setActivePatch("pacific");
             }}
+            onPointerEnter={(e) => setHovered(true)}
+            onPointerLeave={(e) => setHovered(false)}
         >
             <Patch />
+            <River />
+
             <sphereBufferGeometry args={[1, 32, 32]} />
             <meshPhongMaterial map={globeMap} />
         </mesh>
@@ -73,7 +85,7 @@ const GlobeModel = () => {
 };
 
 const Patch = () => {
-    const { setActivePatch } = useContext(ActivePatchContext);
+    const { activePatch, setActivePatch } = useContext(ActivePatchContext);
 
     const [hovered, setHovered] = useState(false);
     const [border, setBorder] = useState(false);
@@ -82,12 +94,15 @@ const Patch = () => {
         document.body.style.cursor = hovered ? "pointer" : "auto";
     }, [hovered]);
 
+    useEffect(() => {
+        setBorder(activePatch == "pacific");
+    }, [activePatch]);
+
     return (
         <mesh
             onClick={(e) => {
                 e.stopPropagation();
-                setActivePatch("test");
-                setBorder(true);
+                setActivePatch("pacific");
             }}
             onPointerEnter={(e) => setHovered(true)}
             onPointerLeave={(e) => setHovered(false)}
@@ -96,40 +111,70 @@ const Patch = () => {
             <sphereBufferGeometry args={[0.045, 32, 32]} />
             <meshBasicMaterial color="#01cbe1" />
 
-            {border && <SphereBorder />}
+            {border && <SphereBorder size="big" />}
         </mesh>
     );
 };
 
-const SphereBorder = () => {
+const River = () => {
+    const { activePatch, setActivePatch } = useContext(ActivePatchContext);
+
+    const [hovered, setHovered] = useState(false);
+    const [border, setBorder] = useState(false);
+
+    useEffect(() => {
+        document.body.style.cursor = hovered ? "pointer" : "auto";
+    }, [hovered]);
+
+    useEffect(() => {
+        setBorder(activePatch == "klang");
+    }, [activePatch]);
+
+    return (
+        <mesh
+            onClick={(e) => {
+                e.stopPropagation();
+                setActivePatch("klang");
+                console.log("hey");
+            }}
+            onPointerEnter={(e) => setHovered(true)}
+            onPointerLeave={(e) => setHovered(false)}
+            position={[0.32, 0.33, 0.9]}
+        >
+            <sphereBufferGeometry args={[0.04, 32, 32]} />
+            <meshBasicMaterial opacity={0.0} transparent />
+
+            <GreenDot />
+            {border && <SphereBorder size="small" />}
+        </mesh>
+    );
+};
+
+const SphereBorder = ({ size }) => {
+    const sphereSize = size === "big" ? [0.065, 32, 32] : [0.041, 32, 32];
     return (
         <Select enabled>
-            <mesh>
-                <sphereBufferGeometry args={[0.065, 32, 32]} />
+            <mesh
+                onPointerEnter={(e) => {
+                    e.stopPropagation();
+                    document.body.style.cursor = "auto";
+                }}
+            >
+                <sphereBufferGeometry args={sphereSize} />
                 <meshBasicMaterial color="white" opacity={0.0} transparent />
             </mesh>
         </Select>
     );
 };
 
-const DottedLine = () => {
-    const [endPosition, setEndPosition] = useState([1, 1, 0]);
-    useFrame(({ camera }) => {
-        setEndPosition([
-            camera.position.x - 1.2,
-            camera.position.y - 0.55,
-            camera.position.z - 1,
-        ]);
-    });
+const GreenDot = () => {
     return (
-        <QuadraticBezierLine
-            start={[0, 0, 0]}
-            end={endPosition}
-            segments={20}
-            color={"#C7E44F"}
-            lineWidth={1.1}
-            dashed={false}
-        ></QuadraticBezierLine>
+        <Select enabled>
+            <mesh>
+                <sphereBufferGeometry args={[0.015, 32, 32]} />
+                <meshBasicMaterial color="#C7E44F" />
+            </mesh>
+        </Select>
     );
 };
 

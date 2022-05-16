@@ -1,8 +1,6 @@
 @import "../../../styles/global.scss";
 
 .globe-overlay {
-    @include constrain(small);
-    width: 100%;
     min-width: 300px;
     padding: gap(2) gap(4) gap(4) 0;
 }

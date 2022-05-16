@@ -8,15 +8,15 @@ import { itemsData } from "./itemsData";
 
 // TODO get these patches in function
 const pacificPatchItems = itemsData.filter((item) => item.patch == "pacific");
-const restPatchItems = itemsData.filter((item) => item.patch == "test");
+const restPatchItems = itemsData.filter((item) => item.patch == "klang");
 
 export const patchesData = {
     pacific: {
         title: "Pacific patch",
         items: pacificPatchItems,
     },
-    test: {
-        title: "Test patch",
+    klang: {
+        title: "Klang",
         items: restPatchItems,
     },
 };

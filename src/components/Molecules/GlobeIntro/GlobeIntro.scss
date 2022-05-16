@@ -1,7 +1,6 @@
 @import "../../../styles/global.scss";
 
 .globe-intro {
-    @include constrain(tiny);
     margin-bottom: gap(5);
 }
 
