@@ -17,6 +17,8 @@ import {
     HueSaturation,
 } from "@react-three/postprocessing";
 
+import { riverData } from "../../../data/patches";
+
 import BlueMap from "../../../img/blue-world-2.png";
 
 import "./Globe.scss";
@@ -34,7 +36,7 @@ const Globe = () => {
                         rotateSpeed={0.25}
                         // autoRotate
                         autoRotateSpeed={0.2}
-                        enableZoom={true}
+                        enableZoom={false}
                     />
                     <PerspectiveCamera makeDefault position={[1, 0, 2.2]} />
 
@@ -59,24 +61,27 @@ const Globe = () => {
 
 const GlobeModel = () => {
     const globeMap = useLoader(TextureLoader, BlueMap);
-    const { setActivePatch } = useContext(ActivePatchContext);
-
     const [hovered, setHovered] = useState(false);
+
     useEffect(() => {
         document.body.style.cursor = hovered ? "grab" : "auto";
     }, [hovered]);
 
     return (
         <mesh
-            onClick={(e) => {
-                e.stopPropagation();
-                setActivePatch("pacific");
-            }}
             onPointerEnter={(e) => setHovered(true)}
             onPointerLeave={(e) => setHovered(false)}
+            onPointerDown={(e) => {
+                e.stopPropagation();
+                document.body.style.cursor = "grabbing";
+            }}
+            onPointerUp={(e) => (document.body.style.cursor = "grab")}
         >
             <Patch />
-            <River />
+
+            {Object.values(riverData).map((river) => (
+                <River river={river} />
+            ))}
 
             <sphereBufferGeometry args={[1, 32, 32]} />
             <meshPhongMaterial map={globeMap} />
@@ -86,7 +91,6 @@ const GlobeModel = () => {
 
 const Patch = () => {
     const { activePatch, setActivePatch } = useContext(ActivePatchContext);
-
     const [hovered, setHovered] = useState(false);
     const [border, setBorder] = useState(false);
 
@@ -116,7 +120,7 @@ const Patch = () => {
     );
 };
 
-const River = () => {
+const River = ({ river }) => {
     const { activePatch, setActivePatch } = useContext(ActivePatchContext);
 
     const [hovered, setHovered] = useState(false);
@@ -135,11 +139,10 @@ const River = () => {
             onClick={(e) => {
                 e.stopPropagation();
                 setActivePatch("klang");
-                console.log("hey");
             }}
             onPointerEnter={(e) => setHovered(true)}
             onPointerLeave={(e) => setHovered(false)}
-            position={[0.32, 0.33, 0.9]}
+            position={river.globePosition}
         >
             <sphereBufferGeometry args={[0.04, 32, 32]} />
             <meshBasicMaterial opacity={0.0} transparent />
