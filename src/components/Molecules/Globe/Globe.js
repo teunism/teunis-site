@@ -65,7 +65,6 @@ const Globe = () => {
 
 const GlobeModel = () => {
     const globeMap = useLoader(TextureLoader, BlueMap);
-    const [hovered, setHovered] = useState(false);
 
     const riverLocations = locationData.filter(
         (location) => location.type == "river"
@@ -75,14 +74,10 @@ const GlobeModel = () => {
         (location) => location.type == "ocean"
     );
 
-    useEffect(() => {
-        document.body.style.cursor = hovered ? "grab" : "auto";
-    }, [hovered]);
-
     return (
         <mesh
-            onPointerEnter={(e) => setHovered(true)}
-            onPointerLeave={(e) => setHovered(false)}
+            onPointerEnter={(e) => (document.body.style.cursor = "grab")}
+            onPointerLeave={(e) => (document.body.style.cursor = "auto")}
             onPointerDown={(e) => {
                 e.stopPropagation();
                 document.body.style.cursor = "grabbing";
@@ -105,16 +100,7 @@ const GlobeModel = () => {
 
 const Patch = ({ patch }) => {
     const { activePatch, setActivePatch } = useContext(ActivePatchContext);
-    const [hovered, setHovered] = useState(false);
-    const [border, setBorder] = useState(false);
-
-    useEffect(() => {
-        document.body.style.cursor = hovered ? "pointer" : "auto";
-    }, [hovered]);
-
-    useEffect(() => {
-        setBorder(activePatch == patch.name);
-    }, [activePatch]);
+    const locationIsActive = activePatch == patch.name;
 
     return (
         <mesh
@@ -122,31 +108,21 @@ const Patch = ({ patch }) => {
                 e.stopPropagation();
                 setActivePatch(patch.name);
             }}
-            onPointerEnter={(e) => setHovered(true)}
-            onPointerLeave={(e) => setHovered(false)}
+            onPointerEnter={(e) => (document.body.style.cursor = "pointer")}
+            onPointerLeave={(e) => (document.body.style.cursor = "auto")}
             position={patch.globePosition}
         >
             <sphereBufferGeometry args={[0.035, 32, 32]} />
             <meshBasicMaterial color="#01cbe1" />
 
-            {border && <SphereBorder size="big" />}
+            {locationIsActive && <SphereBorder size="big" />}
         </mesh>
     );
 };
 
 const River = ({ river }) => {
     const { activePatch, setActivePatch } = useContext(ActivePatchContext);
-
-    const [hovered, setHovered] = useState(false);
-    const [border, setBorder] = useState(false);
-
-    useEffect(() => {
-        document.body.style.cursor = hovered ? "pointer" : "auto";
-    }, [hovered]);
-
-    useEffect(() => {
-        setBorder(activePatch == river.name);
-    }, [activePatch]);
+    const locationIsActive = activePatch == river.name;
 
     return (
         <mesh
@@ -154,15 +130,15 @@ const River = ({ river }) => {
                 e.stopPropagation();
                 setActivePatch(river.name);
             }}
-            onPointerEnter={(e) => setHovered(true)}
-            onPointerLeave={(e) => setHovered(false)}
+            onPointerEnter={(e) => (document.body.style.cursor = "pointer")}
+            onPointerLeave={(e) => (document.body.style.cursor = "auto")}
             position={river.globePosition}
         >
             <sphereBufferGeometry args={[0.04, 32, 32]} />
             <meshBasicMaterial opacity={0.0} transparent />
 
             <GreenDot />
-            {border && <SphereBorder size="small" />}
+            {locationIsActive && <SphereBorder size="small" />}
         </mesh>
     );
 };
