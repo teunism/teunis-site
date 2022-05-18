@@ -3,7 +3,7 @@
 .globe-template {
     display: flex;
     justify-content: space-between;
-    gap: gap(7);
+    gap: gap(4);
     height: 100vh;
     max-height: 100vh;
     overflow: hidden;
@@ -16,7 +16,8 @@
 }
 
 .globe-template__text {
-    width: 50%;
+    width: 45%;
+    min-width: 350px;
     padding: gap(5) gap(3) 0 gap(5);
     height: 100%;
     overflow: scroll;
@@ -24,6 +25,6 @@
 
 .globe-template__globe-overlay {
     width: 100%;
-    height: 100vh;
-    padding: gap(6) gap(4) 0 0;
+    // height: 100%;
+    padding: gap(6) gap(4) gap(2) 0;
 }

@@ -15,7 +15,7 @@ const GlobeIntro = () => {
             <p className="globe-intro__text">
                 Explore the interesting plastic finds of The Ocean Cleanup.
                 Rotate the globe to select the different locations and find out
-                what was found in that location.
+                what was found there.
             </p>
         </div>
     );

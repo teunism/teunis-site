@@ -27,38 +27,40 @@ const Globe = () => {
     const ContextBridge = useContextBridge(ActivePatchContext);
     return (
         <div className="globe">
-            <Canvas>
-                <ContextBridge>
-                    <ambientLight intensity={0.29} color="#ffffff" />
-                    {/* <pointLight
+            <div className="globe__inner">
+                <Canvas>
+                    <ContextBridge>
+                        <ambientLight intensity={0.29} color="#ffffff" />
+                        {/* <pointLight
                         color="white"
                         intensity={0.1}
                         position={[5, 9, 10]}
                     /> */}
 
-                    <OrbitControls
-                        rotateSpeed={0.25}
-                        // autoRotate
-                        autoRotateSpeed={0.2}
-                        enableZoom={false}
-                    />
-                    <PerspectiveCamera makeDefault position={[1, 0, 2.2]} />
+                        <OrbitControls
+                            rotateSpeed={0.25}
+                            // autoRotate
+                            autoRotateSpeed={0.2}
+                            enableZoom={false}
+                        />
+                        <PerspectiveCamera makeDefault position={[1, 0, 2.2]} />
 
-                    <Selection>
-                        <EffectComposer autoClear={false}>
-                            <HueSaturation saturation={0.3} />
+                        <Selection>
+                            <EffectComposer autoClear={false}>
+                                <HueSaturation saturation={0.3} />
 
-                            <Outline
-                                blur
-                                visibleEdgeColor="#C7E44F"
-                                edgeStrength={4.5}
-                                width={1000}
-                            />
-                        </EffectComposer>
-                        <GlobeModel />
-                    </Selection>
-                </ContextBridge>
-            </Canvas>
+                                <Outline
+                                    blur
+                                    visibleEdgeColor="#C7E44F"
+                                    edgeStrength={4.5}
+                                    width={1000}
+                                />
+                            </EffectComposer>
+                            <GlobeModel />
+                        </Selection>
+                    </ContextBridge>
+                </Canvas>
+            </div>
         </div>
     );
 };
