@@ -7,7 +7,7 @@ export const itemsData = [
     {
         title: "Plastic slipper",
         url: "plastic-slipper",
-        patch: "pacific",
+        location: "pacific",
         intro: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.",
         images: {
             mainImage: ExampleImageOne,
@@ -80,7 +80,7 @@ export const itemsData = [
     {
         title: "Head of doll",
         url: "doll-head",
-        patch: "pacific",
+        location: "pacific",
         intro: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.",
         images: {
             mainImage: ExampleImageTwo,
@@ -153,7 +153,7 @@ export const itemsData = [
     {
         title: "Tambourine",
         url: "tambourine",
-        patch: "pacific",
+        location: "pacific",
         intro: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.",
         images: {
             mainImage: ExampleImageFour,
@@ -226,7 +226,7 @@ export const itemsData = [
     {
         title: "Plastic slipper",
         url: "plastic-slipper",
-        patch: "pacific",
+        location: "pacific",
         intro: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.",
         images: {
             mainImage: ExampleImageOne,
@@ -299,7 +299,7 @@ export const itemsData = [
     {
         title: "Head of doll",
         url: "doll-head",
-        patch: "pacific",
+        location: "pacific",
         intro: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.",
         images: {
             mainImage: ExampleImageTwo,
@@ -372,7 +372,7 @@ export const itemsData = [
     {
         title: "Tambourine",
         url: "tambourine",
-        patch: "pacific",
+        location: "pacific",
         intro: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.",
         images: {
             mainImage: ExampleImageFour,
@@ -445,7 +445,7 @@ export const itemsData = [
     {
         title: "Giant dart",
         url: "giant-dart",
-        patch: "klang",
+        location: "klang",
         intro: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.",
         images: {
             mainImage: ExampleImageThree,

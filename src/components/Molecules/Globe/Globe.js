@@ -17,7 +17,7 @@ import {
     HueSaturation,
 } from "@react-three/postprocessing";
 
-import { riverData } from "../../../data/patches";
+import { locationData } from "../../../data/patches";
 
 import BlueMap from "../../../img/blue-world-2.png";
 
@@ -63,6 +63,14 @@ const GlobeModel = () => {
     const globeMap = useLoader(TextureLoader, BlueMap);
     const [hovered, setHovered] = useState(false);
 
+    const riverLocations = locationData.filter(
+        (location) => location.type == "river"
+    );
+
+    const oceanLocations = locationData.filter(
+        (location) => location.type == "ocean"
+    );
+
     useEffect(() => {
         document.body.style.cursor = hovered ? "grab" : "auto";
     }, [hovered]);
@@ -77,9 +85,11 @@ const GlobeModel = () => {
             }}
             onPointerUp={(e) => (document.body.style.cursor = "grab")}
         >
-            <Patch />
+            {oceanLocations.map((patch) => (
+                <Patch patch={patch} />
+            ))}
 
-            {Object.values(riverData).map((river) => (
+            {riverLocations.map((river) => (
                 <River river={river} />
             ))}
 
@@ -89,7 +99,7 @@ const GlobeModel = () => {
     );
 };
 
-const Patch = () => {
+const Patch = ({ patch }) => {
     const { activePatch, setActivePatch } = useContext(ActivePatchContext);
     const [hovered, setHovered] = useState(false);
     const [border, setBorder] = useState(false);
@@ -99,18 +109,18 @@ const Patch = () => {
     }, [hovered]);
 
     useEffect(() => {
-        setBorder(activePatch == "pacific");
+        setBorder(activePatch == patch.name);
     }, [activePatch]);
 
     return (
         <mesh
             onClick={(e) => {
                 e.stopPropagation();
-                setActivePatch("pacific");
+                setActivePatch(patch.name);
             }}
             onPointerEnter={(e) => setHovered(true)}
             onPointerLeave={(e) => setHovered(false)}
-            position={[0.7, 0.56, 0.6]}
+            position={patch.globePosition}
         >
             <sphereBufferGeometry args={[0.045, 32, 32]} />
             <meshBasicMaterial color="#01cbe1" />
@@ -131,14 +141,14 @@ const River = ({ river }) => {
     }, [hovered]);
 
     useEffect(() => {
-        setBorder(activePatch == "klang");
+        setBorder(activePatch == river.name);
     }, [activePatch]);
 
     return (
         <mesh
             onClick={(e) => {
                 e.stopPropagation();
-                setActivePatch("klang");
+                setActivePatch(river.name);
             }}
             onPointerEnter={(e) => setHovered(true)}
             onPointerLeave={(e) => setHovered(false)}
@@ -155,6 +165,7 @@ const River = ({ river }) => {
 
 const SphereBorder = ({ size }) => {
     const sphereSize = size === "big" ? [0.065, 32, 32] : [0.041, 32, 32];
+
     return (
         <Select enabled>
             <mesh

@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 
-import { patchesData } from "../../../data/patches";
+import { locationData, patchesData } from "../../../data/patches";
 import nextButton from "../../../img/button-next.svg";
 import previousButton from "../../../img/button-previous.svg";
 
@@ -13,15 +13,12 @@ import "./GlobeOverlay.scss";
 const GlobeOverlay = () => {
     const { activePatch } = useContext(ActivePatchContext);
 
-    const patch = patchesData[activePatch] || patchesData["pacific"];
-
-    const classNames =
-        patch.items.length > 4
-            ? "globe-overlay globe-overlay--scroll"
-            : "globe-overlay";
+    const patch =
+        locationData.find((location) => location.name == activePatch) ||
+        locationData[0];
 
     return (
-        <section className={classNames}>
+        <section className="globe-overlay">
             <div className="globe-overlay__text">
                 <div className="globe-overlay__title-container">
                     <button className="globe-overlay__button">
