@@ -25,12 +25,16 @@ import "./Globe.scss";
 
 const Globe = () => {
     const ContextBridge = useContextBridge(ActivePatchContext);
-
     return (
         <div className="globe">
             <Canvas>
                 <ContextBridge>
                     <ambientLight intensity={0.29} color="#ffffff" />
+                    {/* <pointLight
+                        color="white"
+                        intensity={0.1}
+                        position={[5, 9, 10]}
+                    /> */}
 
                     <OrbitControls
                         rotateSpeed={0.25}
@@ -122,7 +126,7 @@ const Patch = ({ patch }) => {
             onPointerLeave={(e) => setHovered(false)}
             position={patch.globePosition}
         >
-            <sphereBufferGeometry args={[0.045, 32, 32]} />
+            <sphereBufferGeometry args={[0.035, 32, 32]} />
             <meshBasicMaterial color="#01cbe1" />
 
             {border && <SphereBorder size="big" />}
@@ -164,7 +168,7 @@ const River = ({ river }) => {
 };
 
 const SphereBorder = ({ size }) => {
-    const sphereSize = size === "big" ? [0.065, 32, 32] : [0.041, 32, 32];
+    const sphereSize = size === "big" ? [0.055, 32, 32] : [0.041, 32, 32];
 
     return (
         <Select enabled>

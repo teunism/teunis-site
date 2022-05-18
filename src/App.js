@@ -7,10 +7,10 @@ import ItemDetailTemplate from "./components/Templates/ItemDetailTemplate/ItemDe
 
 import "App.scss";
 
-export const ActivePatchContext = React.createContext("atlantic");
+export const ActivePatchContext = React.createContext();
 
 const App = () => {
-    const [activePatch, setActivePatch] = useState();
+    const [activePatch, setActivePatch] = useState("pacific");
     return (
         <div className="app">
             <ActivePatchContext.Provider

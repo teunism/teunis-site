@@ -4,9 +4,6 @@ const getLocationitems = (patchName) => {
     return itemsData.filter((item) => item.location == patchName);
 };
 
-const pacificPatchItems = itemsData.filter((item) => item.patch == "pacific");
-const restPatchItems = itemsData.filter((item) => item.patch == "klang");
-
 export const locationData = [
     {
         name: "pacific",

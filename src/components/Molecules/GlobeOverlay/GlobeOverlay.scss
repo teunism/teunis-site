@@ -20,6 +20,12 @@
     border: none;
     cursor: pointer;
 }
+.globe-overlay__button:first-of-type {
+    margin-right: gap(3);
+}
+.globe-overlay__button:last-of-type {
+    margin-left: gap(3);
+}
 
 .globe-overlay__title {
     @include heading-medium;
