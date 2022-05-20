@@ -9,12 +9,12 @@ import "./OverviewGrid.scss";
 const OverviewGrid = () => {
     return (
         <section className="overview-grid">
-            <div>
-                <h2>View the Collection</h2>
-                <ul>
+            <div className="overview-grid__title-container">
+                <h2 className="overview-grid__title">View the Collection</h2>
+                <ul className="overview-grid__condition-list">
                     <li>Filter</li>
                 </ul>
-                <ul>
+                <ul className="overview-grid__condition-list">
                     <li>Sort</li>
                 </ul>
             </div>

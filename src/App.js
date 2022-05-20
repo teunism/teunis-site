@@ -24,10 +24,7 @@ const App = () => {
                         path="overview"
                         element={<OverviewTemplate />}
                     ></Route>
-                    <Route
-                        path="items/:itemUrl"
-                        element={<ItemDetailTemplate />}
-                    />
+                    <Route path=":itemUrl" element={<ItemDetailTemplate />} />
                 </Routes>
             </ActivePatchContext.Provider>
         </div>

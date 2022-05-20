@@ -2,3 +2,15 @@
 
 .overview-grid {
 }
+
+.overview-grid__title-container {
+    display: flex;
+}
+
+.overview-grid__title {
+    @include heading-medium-big;
+}
+
+.overview-grid__condition-list {
+    @include bare-list;
+}

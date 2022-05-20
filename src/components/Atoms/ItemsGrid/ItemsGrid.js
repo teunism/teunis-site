@@ -13,7 +13,7 @@ const ItemsGrid = ({ items, size }) => {
                 <li className="items-grid__item">
                     <Link
                         className="items-grid__item-link"
-                        to={`/items/${item.url}`}
+                        to={`/${item.url}`}
                         replace
                     >
                         <figure className="items-grid__item-figure">
