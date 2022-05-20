@@ -57,6 +57,7 @@
 .globe-template--mobile .items-grid {
     @include bare-list;
     gap: 15px;
+    min-height: 400px;
 }
 
 .globe-template--mobile .items-grid__item {
