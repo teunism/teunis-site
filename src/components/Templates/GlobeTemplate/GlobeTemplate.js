@@ -8,6 +8,11 @@ import GlobeOverlay from "../../Molecules/GlobeOverlay/GlobeOverlay";
 import "./GlobeTemplate.scss";
 
 const GlobeTemplate = () => {
+    const mobileScreen = window.innerWidth < 640;
+    const classes = mobileScreen
+        ? "globe-template globe-template--mobile"
+        : "globe-template";
+
     return (
         <>
             <nav class="globe-template__overview-link">
@@ -15,14 +20,26 @@ const GlobeTemplate = () => {
                     <p>yo</p>
                 </Link>
             </nav>
-            <section className="globe-template">
-                <div className="globe-template__text">
-                    <GlobeIntro />
-                    <GlobeOverlay />
-                </div>
-                <div className="globe-template__globe-overlay">
-                    <Globe />
-                </div>
+            <section className={classes}>
+                {!mobileScreen ? (
+                    <>
+                        <div className="globe-template__text">
+                            <GlobeIntro />
+                            <GlobeOverlay />
+                        </div>
+                        <div className="globe-template__globe-container">
+                            <Globe />
+                        </div>
+                    </>
+                ) : (
+                    <>
+                        <GlobeIntro />
+                        <div className="globe-template__globe-container">
+                            <Globe />
+                        </div>
+                        <GlobeOverlay />
+                    </>
+                )}
             </section>
         </>
     );

@@ -27,8 +27,29 @@
     overflow: scroll;
 }
 
-.globe-template__globe-overlay {
+.globe-template__globe-container {
     width: 100%;
-    // height: 100%;
     padding: gap(6) gap(4) gap(2) 0;
+}
+
+/**
+ * Mobile globe page
+ */
+
+.globe-template--mobile {
+    display: block;
+    height: auto;
+    max-height: none;
+    padding: gap(4) gap(3);
+}
+
+.globe-template--mobile .globe-template__globe-container {
+    width: 150%;
+    margin-bottom: gap(5);
+    margin-left: -25%;
+    padding: 0;
+}
+
+.globe-template--mobile .globe-overlay {
+    padding: 0;
 }
