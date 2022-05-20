@@ -6,7 +6,7 @@ import previousButton from "../../../img/button-previous.svg";
 
 import { ActivePatchContext } from "../../../App";
 
-import OverlayGrid from "../../Atoms/OverlayGrid/OverlayGrid";
+import ItemsGrid from "../../Atoms/ItemsGrid/ItemsGrid";
 
 import "./GlobeOverlay.scss";
 
@@ -59,7 +59,7 @@ const GlobeOverlay = () => {
             </div>
 
             <div className="globe-overlay__items">
-                <OverlayGrid items={patch.items} />
+                <ItemsGrid items={patch.items} />
             </div>
         </section>
     );

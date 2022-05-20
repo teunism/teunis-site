@@ -1,0 +1,13 @@
+@import "../../../styles/global.scss";
+
+.overview-template {
+    padding: gap(6) gap(4);
+    @include bp-min(small) {
+        padding: gap(6);
+    }
+}
+
+.overview-template__intro {
+    width: 31%;
+    min-width: 350px;
+}

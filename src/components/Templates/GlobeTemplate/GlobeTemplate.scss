@@ -9,6 +9,10 @@
     overflow: hidden;
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
+
+    @include bp-min(huge) {
+        gap: gap(6);
+    }
 }
 
 ::-webkit-scrollbar {
@@ -16,7 +20,7 @@
 }
 
 .globe-template__text {
-    width: 45%;
+    width: 50%;
     min-width: 350px;
     padding: gap(5) gap(3) 0 gap(5);
     height: 100%;
