@@ -515,4 +515,77 @@ export const itemsData = [
             },
         ],
     },
+    {
+        title: "Giant dart",
+        url: "giant-dart",
+        location: "kingston",
+        intro: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.",
+        images: {
+            mainImage: ExampleImageThree,
+            allImages: [ExampleImageThree, ExampleImageOne, ExampleImageTwo],
+        },
+        data: {
+            sizes: {
+                heightCm: "10",
+                depthCm: "41",
+                widthCm: "33",
+                weightGr: "40",
+            },
+            materials: {
+                material: "plastic",
+                category: "footwear",
+            },
+            optional: [
+                {
+                    title: "Material",
+                    properties: [
+                        {
+                            title: "Material",
+                            value: "Plastic",
+                        },
+                        {
+                            title: "Category",
+                            value: "Footwear",
+                        },
+                    ],
+                },
+                {
+                    title: "Rest",
+                    properties: [
+                        {
+                            title: "Produced in",
+                            value: "China",
+                        },
+                        {
+                            title: "Brand name",
+                            value: "Baby",
+                        },
+                    ],
+                },
+            ],
+        },
+        comments: [
+            {
+                content:
+                    "This is actually not a plastic penguiño but a rare Malasian baby slipper. Around 2004 it was a limited edition release with 5000 items. Still very popular in Japan!",
+                name: "Brecon Philips",
+                pinned: false,
+                likes: 2,
+            },
+            {
+                content:
+                    "This is actually not a plastic penguiño but a rare Malasian baby slipper. Around 2004 it was a limited edition release with 5000 items. Still very popular in Japan!",
+                name: "Mr. Pinned",
+                pinned: true,
+                likes: 43,
+            },
+            {
+                content:
+                    "This item is very popular in my country. I own two of them. They make a funny sounds when you squeeze it",
+                name: "Not pinned",
+                pinned: false,
+                likes: 38,
+            },
+        ],
+    },
 ];

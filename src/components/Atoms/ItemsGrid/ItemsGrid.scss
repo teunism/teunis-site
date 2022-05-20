@@ -64,9 +64,18 @@
     }
 
     @include bp-min(small) {
-        grid-gap: gap(5);
+        // grid-gap: gap(5);
     }
 }
 .items-grid--big .items-grid__item {
     width: 100%;
+}
+.items-grid--big .items-grid__item-title {
+    font-size: 0.9rem;
+    @include bp-min(tiny) {
+        font-size: 1rem;
+    }
+    @include bp-min(medium) {
+        font-size: 1.1rem;
+    }
 }
