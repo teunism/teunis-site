@@ -53,3 +53,12 @@
 .globe-template--mobile .globe-overlay {
     padding: 0;
 }
+
+.globe-template--mobile .items-grid {
+    @include bare-list;
+    gap: 15px;
+}
+
+.globe-template--mobile .items-grid__item {
+    width: calc(50% - 15px / 2);
+}
