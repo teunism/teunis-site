@@ -25,17 +25,15 @@ import "./Globe.scss";
 
 const Globe = () => {
     const ContextBridge = useContextBridge(ActivePatchContext);
+    const mobileScreen = window.innerWidth < 640;
+
+
     return (
         <div className="globe">
             <div className="globe__inner">
                 <Canvas>
                     <ContextBridge>
                         <ambientLight intensity={0.29} color="#ffffff" />
-                        {/* <pointLight
-                        color="white"
-                        intensity={0.1}
-                        position={[5, 9, 10]}
-                    /> */}
 
                         <OrbitControls
                             rotateSpeed={0.25}
@@ -52,7 +50,7 @@ const Globe = () => {
                                 <Outline
                                     blur
                                     visibleEdgeColor="#C7E44F"
-                                    edgeStrength={4.5}
+                                    edgeStrength={mobileScreen ? 50 : 10}
                                     width={1000}
                                 />
                             </EffectComposer>
@@ -103,6 +101,7 @@ const GlobeModel = () => {
 const Patch = ({ patch }) => {
     const { activePatch, setActivePatch } = useContext(ActivePatchContext);
     const locationIsActive = activePatch == patch.name;
+    const mobileScreen = window.innerWidth < 640;
 
     return (
         <mesh
@@ -114,7 +113,7 @@ const Patch = ({ patch }) => {
             onPointerLeave={(e) => (document.body.style.cursor = "auto")}
             position={patch.globePosition}
         >
-            <sphereBufferGeometry args={[0.035, 32, 32]} />
+            <sphereBufferGeometry args={ mobileScreen ? [0.045, 32, 32] : [0.035, 32, 32]} />
             <meshBasicMaterial color="#01cbe1" />
 
             {locationIsActive && <SphereBorder size="big" />}
@@ -125,6 +124,7 @@ const Patch = ({ patch }) => {
 const River = ({ river }) => {
     const { activePatch, setActivePatch } = useContext(ActivePatchContext);
     const locationIsActive = activePatch == river.name;
+    const mobileScreen = window.innerWidth < 640;
 
     return (
         <mesh
@@ -136,7 +136,7 @@ const River = ({ river }) => {
             onPointerLeave={(e) => (document.body.style.cursor = "auto")}
             position={river.globePosition}
         >
-            <sphereBufferGeometry args={[0.04, 32, 32]} />
+            <sphereBufferGeometry args={ mobileScreen ? [0.05, 32, 32] : [0.04, 32, 32]} />
             <meshBasicMaterial opacity={0.0} transparent />
 
             <GreenDot />
@@ -146,7 +146,21 @@ const River = ({ river }) => {
 };
 
 const SphereBorder = ({ size }) => {
-    const sphereSize = size === "big" ? [0.055, 32, 32] : [0.041, 32, 32];
+    const mobileScreen = window.innerWidth < 640;
+    const sphereSize = () => {
+        if (size === "big" && mobileScreen) {
+            return [0.065, 32, 32]
+        }
+        if (size === "big" && !mobileScreen) {
+            return [0.055, 32, 32]
+        }
+        if (size !== "big" && mobileScreen) {
+            return [0.051, 32, 32]
+        }
+        if (size !== "big" && !mobileScreen) {
+            return [0.041, 32, 32]
+        }
+    };
 
     return (
         <Select enabled>
@@ -156,7 +170,7 @@ const SphereBorder = ({ size }) => {
                     document.body.style.cursor = "auto";
                 }}
             >
-                <sphereBufferGeometry args={sphereSize} />
+                <sphereBufferGeometry args={sphereSize()} />
                 <meshBasicMaterial color="white" opacity={0.0} transparent />
             </mesh>
         </Select>
@@ -164,10 +178,12 @@ const SphereBorder = ({ size }) => {
 };
 
 const GreenDot = () => {
+    const mobileScreen = window.innerWidth < 640;
+
     return (
         <Select enabled>
             <mesh>
-                <sphereBufferGeometry args={[0.015, 32, 32]} />
+                <sphereBufferGeometry args={mobileScreen ? [0.025, 32, 32] : [0.015, 32, 32]} />
                 <meshBasicMaterial color="#C7E44F" />
             </mesh>
         </Select>
