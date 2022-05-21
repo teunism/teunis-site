@@ -37,7 +37,7 @@ const Globe = () => {
 
                         <OrbitControls
                             rotateSpeed={0.25}
-                            // autoRotate
+                            autoRotate
                             autoRotateSpeed={0.2}
                             enableZoom={false}
                         />
@@ -84,6 +84,7 @@ const GlobeModel = () => {
             }}
             onPointerUp={(e) => (document.body.style.cursor = "grab")}
         >
+
             {oceanLocations.map((patch) => (
                 <Patch patch={patch} />
             ))}
@@ -93,6 +94,8 @@ const GlobeModel = () => {
             ))}
 
             <sphereBufferGeometry args={[1, 32, 32]} />
+            {/* <meshBasicMaterial color="black" /> */}
+
             <meshPhongMaterial map={globeMap} />
         </mesh>
     );
