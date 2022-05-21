@@ -44,14 +44,18 @@
 }
 
 .globe-template--mobile .globe-template__globe-container {
-    width: 150%;
+    width: 100%;
     margin-bottom: gap(5);
-    margin-left: -25%;
     padding: 0;
 }
 
 .globe-template--mobile .globe-overlay {
     padding: 0;
+}
+
+.globe-template--mobile .globe-intro {
+    padding: 0 gap(2);
+    margin-bottom: gap(6);
 }
 
 .globe-template--mobile .items-grid {
@@ -62,4 +66,10 @@
 
 .globe-template--mobile .items-grid__item {
     width: calc(50% - 15px / 2);
+}
+
+.globe-template--mobile .globe-intro__text {
+    color: $text-dark;
+    font-size: 1rem;
+    line-height: 1.4;
 }
