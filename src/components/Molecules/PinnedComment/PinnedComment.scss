@@ -4,8 +4,14 @@
     @include constrain(small-medium);
     box-sizing: content-box;
     padding: gap(3) gap(4);
-    margin-left: -#{gap(4)};
-    border: 1px solid $blue;
+    margin: 0 -#{gap(4)};
+    border-top: 1px solid $blue;
+    border-bottom: 1px solid $blue;
+
+    @include bp-min(small) {
+        margin-left: -#{gap(4)};
+        border: 1px solid $blue;
+    }
 }
 
 .pinned-comment__supertitle {

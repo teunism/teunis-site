@@ -14,20 +14,19 @@ import "./ItemDetailTemplate.scss";
 
 const ItemDetailTemplate = () => {
     const { itemUrl } = useParams();
-    const item = itemsData.find((item) => item.url == itemUrl);
 
+    const item = itemsData.find((item) => item.url == itemUrl);
     const pinnedComment = item.comments.find((comment) => comment.pinned);
+    const mobileScreen = window.innerWidth < 640;
+
+    const classes = mobileScreen
+        ? "item-detail-template item-detail-template--mobile"
+        : "item-detail-template";
 
     return (
-        <div className="item-detail-template">
-            <div className="item-detail-template__images">
-                <div className="item-detail-template__images-inner">
-                    <ItemImages images={item.images} />
-                </div>
-            </div>
-
-            <section className="item-detail-template__info">
-                <div className="item-detail-template__text">
+        <div className={classes}>
+            {mobileScreen && (
+                <>
                     <Link className="item-detail-template__link" to="/">
                         <img
                             className="item-detail-template__arrow-icon"
@@ -38,6 +37,30 @@ const ItemDetailTemplate = () => {
                     <h1 className="item-detail-template__title">
                         {item.title}
                     </h1>
+                </>
+            )}
+            <div className="item-detail-template__images">
+                <div className="item-detail-template__images-inner">
+                    <ItemImages images={item.images} />
+                </div>
+            </div>
+
+            <section className="item-detail-template__info">
+                <div className="item-detail-template__text">
+                    {!mobileScreen && (
+                        <>
+                            <Link className="item-detail-template__link" to="/">
+                                <img
+                                    className="item-detail-template__arrow-icon"
+                                    src={ArrowIcon}
+                                    alt=""
+                                />
+                            </Link>
+                            <h1 className="item-detail-template__title">
+                                {item.title}
+                            </h1>
+                        </>
+                    )}
                     <p className="item-detail-template__intro">{item.intro}</p>
 
                     {pinnedComment && (

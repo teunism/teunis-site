@@ -51,6 +51,10 @@ main {
 
 p {
     font-weight: 300;
-    line-height: 1.5;
+    line-height: 1.4;
     font-size: 1.1rem;
+
+    @include bp-min(small) {
+        line-height: 1.5;
+    }
 }

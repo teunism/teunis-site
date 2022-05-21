@@ -35,7 +35,6 @@
 /**
  * Mobile globe page
  */
-
 .globe-template--mobile {
     display: block;
     height: auto;
@@ -71,5 +70,8 @@
 .globe-template--mobile .globe-intro__text {
     color: $text-dark;
     font-size: 1rem;
-    line-height: 1.4;
+}
+
+.item-detail-template__intro {
+    color: $off-white;
 }
