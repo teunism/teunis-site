@@ -25,8 +25,11 @@
 }
 
 .comments__comment-name {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 600;
+    @include bp-min(small) {
+        font-size: 1.2rem;
+    }
 }
 
 .comments__comment-likes {
@@ -37,6 +40,9 @@
     align-items: center;
 }
 .comments__heart-icon {
-    height: 25px;
+    height: 20px;
     margin-right: gap(2);
+    @include bp-min(small) {
+        height: 25px;
+    }
 }

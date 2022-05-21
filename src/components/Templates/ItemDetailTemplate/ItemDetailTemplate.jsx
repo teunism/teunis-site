@@ -19,12 +19,8 @@ const ItemDetailTemplate = () => {
     const pinnedComment = item.comments.find((comment) => comment.pinned);
     const mobileScreen = window.innerWidth < 640;
 
-    const classes = mobileScreen
-        ? "item-detail-template item-detail-template--mobile"
-        : "item-detail-template";
-
     return (
-        <div className={classes}>
+        <div className="item-detail-template">
             {mobileScreen && (
                 <>
                     <Link className="item-detail-template__link" to="/">

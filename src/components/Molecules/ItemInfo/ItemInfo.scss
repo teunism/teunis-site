@@ -2,7 +2,11 @@
 
 .item-info {
     @include constrain(small-medium);
-    margin-bottom: gap(9);
+    margin-bottom: gap(7);
+
+    @include bp-min(small) {
+        margin-bottom: gap(9);
+    }
 }
 .item-info__title {
     @include heading-medium;

@@ -9,9 +9,6 @@ import "./GlobeTemplate.scss";
 
 const GlobeTemplate = () => {
     const mobileScreen = window.innerWidth < 640;
-    const classes = mobileScreen
-        ? "globe-template globe-template--mobile"
-        : "globe-template";
 
     return (
         <>
@@ -20,7 +17,7 @@ const GlobeTemplate = () => {
                     <p>yo</p>
                 </Link>
             </nav>
-            <section className={classes}>
+            <section className="globe-template">
                 {!mobileScreen ? (
                     <>
                         <div className="globe-template__text">

@@ -3,7 +3,13 @@
 .comment-section {
     @include constrain(small-medium);
     border-top: 1px solid $blue;
-    padding-top: gap(5);
+    margin: 0 -#{gap(4)};
+    padding: gap(5) gap(4) 0;
+
+    @include bp-min(small) {
+        margin: 0;
+        padding: gap(5) 0 0;
+    }
 }
 
 .comment-section__title {
