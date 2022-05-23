@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
 
 import GlobeIntro from "../../Molecules/GlobeIntro/GlobeIntro";
 import Globe from "../../Molecules/Globe/Globe";
@@ -11,11 +10,10 @@ import "./GlobeTemplate.scss";
 const GlobeTemplate = () => {
     const mobileScreen = window.innerWidth < 640;
 
-
     return (
         <>
             <section className="globe-template">
-            <Navigation />
+            <Navigation icon={"overview"} />
                 {!mobileScreen ? (
                     <>
                         <div className="globe-template__text">
@@ -29,9 +27,9 @@ const GlobeTemplate = () => {
                 ) : (
                     <>
                         <GlobeIntro />
-                        <div className="globe-template__globe-container">
-                            <Globe />
-                        </div>
+                            <div className="globe-template__globe-container">
+                                <Globe />
+                            </div>
                         <GlobeOverlay />
                     </>
                 )}

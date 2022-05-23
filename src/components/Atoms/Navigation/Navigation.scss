@@ -7,8 +7,8 @@
     margin: 0 0 gap(4) auto;
     @include bp-min(small) {
         position: absolute;
-        top: gap(4);
-        right: gap(4);
+        top: gap(5);
+        right: gap(5);
         margin: 0;
         padding: 0;
     }
@@ -16,11 +16,16 @@
 .navigation__link {
     display: inline;
 }
+.navigation__globe {
+    width: 100%;
+    transform: scale(1.4);
+}
 .navigation__icon {
     width: 25px;
     height: 25px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: gap(1);
     transition: transform 0.2s ease-out;
 }
