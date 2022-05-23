@@ -42,7 +42,7 @@ const ItemSizeWeight = ({ itemSizes }) => {
                     <dt className="item-size-weight__data-value">
                         {itemSizes.weightGr}{" "}
                         <span className="item-size-weight__data-value-measurement">
-                            cm
+                            gr
                         </span>
                     </dt>
                 </div>
