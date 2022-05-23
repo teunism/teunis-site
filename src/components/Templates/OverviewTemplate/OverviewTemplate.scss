@@ -3,7 +3,7 @@
 .overview-template {
     padding: gap(6) gap(4);
     @include bp-min(small) {
-        padding: gap(6);
+        padding: gap(5);
     }
 }
 
