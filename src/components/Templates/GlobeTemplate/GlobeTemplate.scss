@@ -44,3 +44,25 @@
         margin: 0;
     }
 }
+
+.globe-template__overview-link {
+    position: absolute;
+    top: gap(4);
+    right: gap(4);
+}
+.globe-template__overview-icon {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: gap(1);
+    transition: transform 0.2s ease-out;
+}
+.globe-template__overview-icon:hover,
+.globe-template__overview-icon:focus {
+    transform: scale(1.2);
+}
+.globe-template__overview-icon-inner {
+    width: calc(50% - #{gap(1)} / 2);
+    background-color: $blue;
+}

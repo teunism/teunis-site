@@ -14,7 +14,12 @@ const GlobeTemplate = () => {
         <>
             <nav class="globe-template__overview-link">
                 <Link to="overview">
-                    <p>yo</p>
+                    <div className="globe-template__overview-icon">
+                        <div className="globe-template__overview-icon-inner"></div>
+                        <div className="globe-template__overview-icon-inner"></div>
+                        <div className="globe-template__overview-icon-inner"></div>
+                        <div className="globe-template__overview-icon-inner"></div>
+                    </div>
                 </Link>
             </nav>
             <section className="globe-template">
