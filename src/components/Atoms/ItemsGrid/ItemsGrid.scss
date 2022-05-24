@@ -65,19 +65,18 @@
     place-items: start;
 
     @include bp-min(small) {
-        grid-gap: gap(4);
+        grid-gap: gap(5) gap(4);
         grid-template-columns: repeat(
             auto-fit,
             minmax(max(200px, (100% - ((4 - 1) * #{gap(5)})) / 4), 1fr)
         );
     }
-
-    @include bp-min(small) {
-        // grid-gap: gap(5);
-    }
 }
 .items-grid--big .items-grid__item {
     width: 100%;
+}
+.items-grid--big .items-grid__item-figure {
+    margin-bottom: gap(2);
 }
 .items-grid--big .items-grid__item-title {
     font-size: 0.9rem;
@@ -85,6 +84,6 @@
         font-size: 1rem;
     }
     @include bp-min(medium) {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 }

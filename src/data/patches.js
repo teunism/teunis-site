@@ -56,7 +56,7 @@ export const locationData = [
     {
         name: "chao-phraya",
         type: "river",
-        title: "Chao Praya",
+        title: "Chao Phraya",
         items: getLocationitems("chao-phraya"),
         globePosition: [-0.2, 0.23, -0.96],
     },
