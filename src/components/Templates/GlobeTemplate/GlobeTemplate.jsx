@@ -17,7 +17,7 @@ const GlobeTemplate = () => {
                 {!mobileScreen ? (
                     <>
                         <div className="globe-template__text">
-                            <GlobeIntro />
+                            <GlobeIntro page="globe" />
                             <GlobeOverlay />
                         </div>
                         <div className="globe-template__globe-container">

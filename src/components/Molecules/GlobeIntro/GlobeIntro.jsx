@@ -4,7 +4,7 @@ import ExploreLogo from "../../../img/explore-the-garbage.svg";
 
 import "./GlobeIntro.scss";
 
-const GlobeIntro = () => {
+const GlobeIntro = ({page}) => {
     return (
         <div className="globe-intro">
             <img
@@ -12,11 +12,21 @@ const GlobeIntro = () => {
                 src={ExploreLogo}
                 alt="Explore the garbage logo"
             />
-            <p className="globe-intro__text">
-                Explore the interesting plastic finds of The Ocean Cleanup.
-                Rotate the globe to select the different locations and find out
-                what was found there.
-            </p>
+
+            {page === "globe" ? (
+                <p className="globe-intro__text">
+                    Trash or treasure? Explore some of the strangest items that The Ocean Cleanup crew recovered during the plastic cleanup. 
+                    Spin the globe and view all the locations where our crew is actively cleaning up the trash. 
+
+                    {/* Explore the interesting plastic items of The Ocean Cleanup.
+                    Rotate the globe to select the different locations and find out
+                    what was found there. */}
+                </p>
+            ) : (
+                <p className="globe-intro__text">
+                    View the entire collection of the . 
+                </p>
+            )}
         </div>
     );
 };

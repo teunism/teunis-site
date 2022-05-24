@@ -16,7 +16,7 @@ export const itemsData = [
         title: "Plastic slipper",
         url: "plastic-slipper",
         location: "pacific",
-        intro: "This item was found in the pacific garbage patch. ",
+        intro: "This item was found in the pacific garbage patch during extraction #28. We believe it to be an Asian slipper from the brand \"Baby\". The slipper is still in very good condition. That's why we guess that the slipper couldn't be more then 2 years in the water",
         images: {
             mainImage: ExampleImageOne,
             allImages: [ExampleImageOne, ExampleImageTwo, ExampleImageThree],

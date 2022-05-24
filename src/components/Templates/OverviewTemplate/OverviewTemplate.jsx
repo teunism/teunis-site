@@ -11,7 +11,7 @@ const OverviewTemplate = () => {
         <div className="overview-template">
             <Navigation />
             <section className="overview-template__intro">
-                <GlobeIntro />
+                <GlobeIntro page="overview" />
             </section>
             <OverviewGrid />
         </div>
