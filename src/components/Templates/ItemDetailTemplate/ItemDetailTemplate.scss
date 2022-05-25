@@ -67,9 +67,14 @@
     }
 }
 
+.item-detail-template__link-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 -#{gap(4)} gap(5) 0;
+}
 .item-detail-template__link {
     display: block;
-    margin-bottom: gap(4);
 }
 .item-detail-template__arrow-icon {
     width: 40px;

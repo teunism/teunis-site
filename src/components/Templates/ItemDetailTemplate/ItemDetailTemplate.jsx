@@ -9,6 +9,7 @@ import ItemInfo from "../../Molecules/ItemInfo/ItemInfo";
 import PinnedComment from "../../Molecules/PinnedComment/PinnedComment";
 import CommentSection from "../../Molecules/CommentSection/CommentSection";
 import ItemImages from "../../Molecules/ItemImages/ItemImages";
+import ShareButton from "../../Atoms/ShareButton/ShareButton";
 
 import "./ItemDetailTemplate.scss";
 
@@ -23,13 +24,17 @@ const ItemDetailTemplate = () => {
         <div className="item-detail-template">
             {mobileScreen && (
                 <>
-                    <Link className="item-detail-template__link" to="/">
-                        <img
-                            className="item-detail-template__arrow-icon"
-                            src={ArrowIcon}
-                            alt=""
-                        />
-                    </Link>
+                    <div className="item-detail-template__link-container">
+                        <Link className="item-detail-template__link" to="/">
+                            <img
+                                className="item-detail-template__arrow-icon"
+                                src={ArrowIcon}
+                                alt=""
+                            />
+                        </Link>
+                        <ShareButton />
+                    </div>
+
                     <h1 className="item-detail-template__title">
                         {item.title}
                     </h1>
@@ -45,13 +50,20 @@ const ItemDetailTemplate = () => {
                 <div className="item-detail-template__text">
                     {!mobileScreen && (
                         <>
-                            <Link className="item-detail-template__link" to="/">
-                                <img
-                                    className="item-detail-template__arrow-icon"
-                                    src={ArrowIcon}
-                                    alt=""
-                                />
-                            </Link>
+                            <div className="item-detail-template__link-container">
+                                <Link
+                                    className="item-detail-template__link"
+                                    to="/"
+                                >
+                                    <img
+                                        className="item-detail-template__arrow-icon"
+                                        src={ArrowIcon}
+                                        alt=""
+                                    />
+                                </Link>
+                                <ShareButton />
+                            </div>
+
                             <h1 className="item-detail-template__title">
                                 {item.title}
                             </h1>
