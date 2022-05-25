@@ -24,7 +24,8 @@ const GlobeIntro = ({page}) => {
                 </p>
             ) : (
                 <p className="globe-intro__text">
-                    View the entire collection of the . 
+                    View the complete collection of the strangest items of The Ocean Cleanup. 
+                    Use the filter and sort dropdowns to explore the collection in multiple ways. 
                 </p>
             )}
         </div>
