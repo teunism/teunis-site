@@ -27,13 +27,12 @@ const Globe = () => {
     const ContextBridge = useContextBridge(ActivePatchContext);
     const mobileScreen = window.innerWidth < 640;
 
-
     return (
         <div className="globe">
             <div className="globe__inner">
                 <Canvas>
                     <ContextBridge>
-                        <ambientLight intensity={0.29} color="#ffffff" />
+                        <ambientLight intensity={0.32} color="#ffffff" />
 
                         <OrbitControls
                             rotateSpeed={0.25}
@@ -84,7 +83,6 @@ const GlobeModel = () => {
             }}
             onPointerUp={(e) => (document.body.style.cursor = "grab")}
         >
-
             {oceanLocations.map((patch) => (
                 <Patch patch={patch} />
             ))}
@@ -116,7 +114,9 @@ const Patch = ({ patch }) => {
             onPointerLeave={(e) => (document.body.style.cursor = "auto")}
             position={patch.globePosition}
         >
-            <sphereBufferGeometry args={ mobileScreen ? [0.045, 32, 32] : [0.035, 32, 32]} />
+            <sphereBufferGeometry
+                args={mobileScreen ? [0.045, 32, 32] : [0.035, 32, 32]}
+            />
             <meshBasicMaterial color="#01cbe1" />
 
             {locationIsActive && <SphereBorder size="big" />}
@@ -139,7 +139,9 @@ const River = ({ river }) => {
             onPointerLeave={(e) => (document.body.style.cursor = "auto")}
             position={river.globePosition}
         >
-            <sphereBufferGeometry args={ mobileScreen ? [0.05, 32, 32] : [0.04, 32, 32]} />
+            <sphereBufferGeometry
+                args={mobileScreen ? [0.05, 32, 32] : [0.04, 32, 32]}
+            />
             <meshBasicMaterial opacity={0.0} transparent />
 
             <GreenDot />
@@ -152,16 +154,16 @@ const SphereBorder = ({ size }) => {
     const mobileScreen = window.innerWidth < 640;
     const sphereSize = () => {
         if (size === "big" && mobileScreen) {
-            return [0.065, 32, 32]
+            return [0.065, 32, 32];
         }
         if (size === "big" && !mobileScreen) {
-            return [0.055, 32, 32]
+            return [0.055, 32, 32];
         }
         if (size !== "big" && mobileScreen) {
-            return [0.051, 32, 32]
+            return [0.051, 32, 32];
         }
         if (size !== "big" && !mobileScreen) {
-            return [0.041, 32, 32]
+            return [0.041, 32, 32];
         }
     };
 
@@ -186,7 +188,9 @@ const GreenDot = () => {
     return (
         <Select enabled>
             <mesh>
-                <sphereBufferGeometry args={mobileScreen ? [0.025, 32, 32] : [0.015, 32, 32]} />
+                <sphereBufferGeometry
+                    args={mobileScreen ? [0.025, 32, 32] : [0.015, 32, 32]}
+                />
                 <meshBasicMaterial color="#C7E44F" />
             </mesh>
         </Select>
