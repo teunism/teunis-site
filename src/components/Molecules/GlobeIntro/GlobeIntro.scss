@@ -1,12 +1,12 @@
 @import "../../../styles/global.scss";
 
 .globe-intro {
-    // padding: 0 gap(2);
     margin-bottom: gap(6);
+    padding: 0;
 
     @include bp-min(small) {
         margin-bottom: gap(5);
-        padding: 0;
+        padding: 0 gap(5) 0 0;
     }
 }
 
