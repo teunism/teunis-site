@@ -3,12 +3,13 @@
  */
 @mixin heading-big {
     font-weight: 900;
-    font-size: 3.7rem;
+    font-size: 3.3rem;
     color: $blue;
     line-height: 0.85;
     text-transform: uppercase;
+    word-break: break-word;
     @include bp-min(medium) {
-        font-size: 3.8em;
+        font-size: 3.6em;
     }
     @include bp-min(large) {
         font-size: 4rem;

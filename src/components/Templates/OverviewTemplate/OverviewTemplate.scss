@@ -1,14 +1,17 @@
 @import "../../../styles/global.scss";
 
 .overview-template {
-    padding: gap(6) gap(4);
+    padding: gap(4) gap(4);
     @include bp-min(small) {
         padding: gap(5);
     }
 }
 
 .overview-template__intro {
-    width: 30.85%;
-    min-width: 350px;
+    width: 100%;
     margin-bottom: gap(6);
+    @include bp-min(small) {
+        width: 30.85%;
+        min-width: 350px;
+    }
 }
