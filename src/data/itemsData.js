@@ -13,8 +13,17 @@ import ToyWheel from "../img/items/toy-wheel.png";
 import LandBorder from "../img/items/land-border.png";
 import Buoy from "../img/items/buoy-1966.png";
 import BikePedal from "../img/items/bike-pedal.png";
+import BikePedalTwo from "../img/items/bike-pedal-2.png";
 import MonsterHead from "../img/items/monster-head.png";
 import Glasses from "../img/items/glasses.png";
+import BlueToyMan from "../img/items/blue-toy.png";
+import BlueToyManTwo from "../img/items/blue-toy-2.png";
+import ToyBear from "../img/items/toy-bear.png";
+import Crate from "../img/items/crate.png";
+import RollerScate from "../img/items/roller-scate.png";
+import ToyMoney from "../img/items/toy-money.png";
+import KiteHandle from "../img/items/kite-handle.png";
+import GlassBuoy from "../img/items/glass-buoy.png";
 
 // Ugly images
 export const itemsData = [
@@ -542,8 +551,8 @@ export const itemsData = [
             "We are not certain what the item is used for or what it’s origin is. We do know that is was in the ocean for over 1 year based on the damaged caused by the salt water of the ocean and the sunlight.",
         ],
         images: {
-            mainImage: BikePedal,
-            allImages: [BikePedal],
+            mainImage: BikePedalTwo,
+            allImages: [BikePedalTwo, BikePedal],
         },
         data: {
             sizes: {
@@ -722,6 +731,517 @@ export const itemsData = [
                         {
                             title: "Condition",
                             value: "Bad",
+                        },
+                    ],
+                },
+            ],
+        },
+        comments: [
+            {
+                content:
+                    "This is actually not a plastic penguiño but a rare Malasian baby slipper. Around 2004 it was a limited edition release with 5000 items. Still very popular in Japan!",
+                name: "Brecon Philips",
+                pinned: false,
+                likes: 2,
+            },
+            {
+                content:
+                    "This is actually not a plastic penguiño but a rare Malasian baby slipper. Around 2004 it was a limited edition release with 5000 items. Still very popular in Japan!",
+                name: "Mr. Pinned",
+                pinned: true,
+                likes: 43,
+            },
+            {
+                content:
+                    "This item is very popular in my country. I own two of them. They make a funny sounds when you squeeze it",
+                name: "Not pinned",
+                pinned: false,
+                likes: 38,
+            },
+        ],
+    },
+    // Blue Toy Man
+    {
+        title: "Blue toy man",
+        url: "blue-toy-man",
+        location: "pacific",
+        intro: [
+            "This item was part of extraction number 19 on the 21st of January 2021. During this extraction we fished 21.893 kg of plastic out of the North Pacific Patch. This item was remarkable because we actually found a pair of these items together which is special because they would need to be together for multiple months if not years.",
+            "We are not certain what the item is used for or what it’s origin is. We do know that is was in the ocean for over 1 year based on the damaged caused by the salt water of the ocean and the sunlight.",
+        ],
+        images: {
+            mainImage: BlueToyMan,
+            allImages: [BlueToyMan, BlueToyManTwo],
+        },
+        data: {
+            sizes: {
+                heightCm: "14",
+                depthCm: "7",
+                widthCm: "11",
+                weightGr: "34",
+            },
+            optional: [
+                {
+                    title: "Material",
+                    properties: [
+                        {
+                            title: "Material",
+                            value: "Plastic",
+                        },
+                        {
+                            title: "Category",
+                            value: "Toys",
+                        },
+                    ],
+                },
+                {
+                    title: "Rest",
+                    properties: [
+                        {
+                            title: "Color",
+                            value: "Blue",
+                        },
+                        {
+                            title: "Condition",
+                            value: "Bad",
+                        },
+                    ],
+                },
+            ],
+        },
+        comments: [
+            {
+                content:
+                    "This is actually not a plastic penguiño but a rare Malasian baby slipper. Around 2004 it was a limited edition release with 5000 items. Still very popular in Japan!",
+                name: "Brecon Philips",
+                pinned: false,
+                likes: 2,
+            },
+            {
+                content:
+                    "This is actually not a plastic penguiño but a rare Malasian baby slipper. Around 2004 it was a limited edition release with 5000 items. Still very popular in Japan!",
+                name: "Mr. Pinned",
+                pinned: true,
+                likes: 43,
+            },
+            {
+                content:
+                    "This item is very popular in my country. I own two of them. They make a funny sounds when you squeeze it",
+                name: "Not pinned",
+                pinned: false,
+                likes: 38,
+            },
+        ],
+    },
+    // Toy Bear
+    {
+        title: "Toy Bear",
+        url: "toy-bear",
+        location: "pacific",
+        intro: [
+            "This item was part of extraction number 19 on the 21st of January 2021. During this extraction we fished 21.893 kg of plastic out of the North Pacific Patch. This item was remarkable because we actually found a pair of these items together which is special because they would need to be together for multiple months if not years.",
+            "We are not certain what the item is used for or what it’s origin is. We do know that is was in the ocean for over 1 year based on the damaged caused by the salt water of the ocean and the sunlight.",
+        ],
+        images: {
+            mainImage: ToyBear,
+            allImages: [ToyBear],
+        },
+        data: {
+            sizes: {
+                heightCm: "26",
+                depthCm: "20",
+                widthCm: "19",
+                weightGr: "102",
+            },
+            optional: [
+                {
+                    title: "Material",
+                    properties: [
+                        {
+                            title: "Material",
+                            value: "Plastic",
+                        },
+                        {
+                            title: "Category",
+                            value: "Toys",
+                        },
+                    ],
+                },
+                {
+                    title: "Rest",
+                    properties: [
+                        {
+                            title: "Color",
+                            value: "Blue",
+                        },
+                        {
+                            title: "Condition",
+                            value: "Bad",
+                        },
+                    ],
+                },
+            ],
+        },
+        comments: [
+            {
+                content:
+                    "This is actually not a plastic penguiño but a rare Malasian baby slipper. Around 2004 it was a limited edition release with 5000 items. Still very popular in Japan!",
+                name: "Brecon Philips",
+                pinned: false,
+                likes: 2,
+            },
+            {
+                content:
+                    "This is actually not a plastic penguiño but a rare Malasian baby slipper. Around 2004 it was a limited edition release with 5000 items. Still very popular in Japan!",
+                name: "Mr. Pinned",
+                pinned: true,
+                likes: 43,
+            },
+            {
+                content:
+                    "This item is very popular in my country. I own two of them. They make a funny sounds when you squeeze it",
+                name: "Not pinned",
+                pinned: false,
+                likes: 38,
+            },
+        ],
+    },
+    // Crate
+    {
+        title: "Crate",
+        url: "crate",
+        location: "pacific",
+        intro: [
+            "This item was part of extraction number 19 on the 21st of January 2021. During this extraction we fished 21.893 kg of plastic out of the North Pacific Patch. This item was remarkable because we actually found a pair of these items together which is special because they would need to be together for multiple months if not years.",
+            "We are not certain what the item is used for or what it’s origin is. We do know that is was in the ocean for over 1 year based on the damaged caused by the salt water of the ocean and the sunlight.",
+        ],
+        images: {
+            mainImage: Crate,
+            allImages: [Crate],
+        },
+        data: {
+            sizes: {
+                heightCm: "51",
+                depthCm: "3",
+                widthCm: "73",
+                weightGr: "256",
+            },
+            optional: [
+                {
+                    title: "Material",
+                    properties: [
+                        {
+                            title: "Material",
+                            value: "Plastic",
+                        },
+                        {
+                            title: "Category",
+                            value: "Rest",
+                        },
+                    ],
+                },
+                {
+                    title: "Rest",
+                    properties: [
+                        {
+                            title: "Color",
+                            value: "Blue",
+                        },
+                        {
+                            title: "Condition",
+                            value: "Bad",
+                        },
+                    ],
+                },
+            ],
+        },
+        comments: [
+            {
+                content:
+                    "This is actually not a plastic penguiño but a rare Malasian baby slipper. Around 2004 it was a limited edition release with 5000 items. Still very popular in Japan!",
+                name: "Brecon Philips",
+                pinned: false,
+                likes: 2,
+            },
+            {
+                content:
+                    "This is actually not a plastic penguiño but a rare Malasian baby slipper. Around 2004 it was a limited edition release with 5000 items. Still very popular in Japan!",
+                name: "Mr. Pinned",
+                pinned: true,
+                likes: 43,
+            },
+            {
+                content:
+                    "This item is very popular in my country. I own two of them. They make a funny sounds when you squeeze it",
+                name: "Not pinned",
+                pinned: false,
+                likes: 38,
+            },
+        ],
+    },
+    // Roller Scate
+    {
+        title: "Roller scate",
+        url: "roller-scate",
+        location: "pacific",
+        intro: [
+            "This item was part of extraction number 19 on the 21st of January 2021. During this extraction we fished 21.893 kg of plastic out of the North Pacific Patch. This item was remarkable because we actually found a pair of these items together which is special because they would need to be together for multiple months if not years.",
+            "We are not certain what the item is used for or what it’s origin is. We do know that is was in the ocean for over 1 year based on the damaged caused by the salt water of the ocean and the sunlight.",
+        ],
+        images: {
+            mainImage: RollerScate,
+            allImages: [RollerScate],
+        },
+        data: {
+            sizes: {
+                heightCm: "34",
+                depthCm: "24",
+                widthCm: "39",
+                weightGr: "240",
+            },
+            optional: [
+                {
+                    title: "Material",
+                    properties: [
+                        {
+                            title: "Material",
+                            value: "Plastic",
+                        },
+                        {
+                            title: "Category",
+                            value: "Rest",
+                        },
+                    ],
+                },
+                {
+                    title: "Rest",
+                    properties: [
+                        {
+                            title: "Color",
+                            value: "Mixed",
+                        },
+                        {
+                            title: "Condition",
+                            value: "Bad",
+                        },
+                    ],
+                },
+            ],
+        },
+        comments: [
+            {
+                content:
+                    "This is actually not a plastic penguiño but a rare Malasian baby slipper. Around 2004 it was a limited edition release with 5000 items. Still very popular in Japan!",
+                name: "Brecon Philips",
+                pinned: false,
+                likes: 2,
+            },
+            {
+                content:
+                    "This is actually not a plastic penguiño but a rare Malasian baby slipper. Around 2004 it was a limited edition release with 5000 items. Still very popular in Japan!",
+                name: "Mr. Pinned",
+                pinned: true,
+                likes: 43,
+            },
+            {
+                content:
+                    "This item is very popular in my country. I own two of them. They make a funny sounds when you squeeze it",
+                name: "Not pinned",
+                pinned: false,
+                likes: 38,
+            },
+        ],
+    },
+    // Toy Money
+    {
+        title: "Toy money",
+        url: "toy-money",
+        location: "pacific",
+        intro: [
+            "This item was part of extraction number 19 on the 21st of January 2021. During this extraction we fished 21.893 kg of plastic out of the North Pacific Patch. This item was remarkable because we actually found a pair of these items together which is special because they would need to be together for multiple months if not years.",
+            "We are not certain what the item is used for or what it’s origin is. We do know that is was in the ocean for over 1 year based on the damaged caused by the salt water of the ocean and the sunlight.",
+        ],
+        images: {
+            mainImage: ToyMoney,
+            allImages: [ToyMoney],
+        },
+        data: {
+            sizes: {
+                heightCm: "9",
+                depthCm: "1",
+                widthCm: "9",
+                weightGr: "11",
+            },
+            optional: [
+                {
+                    title: "Material",
+                    properties: [
+                        {
+                            title: "Material",
+                            value: "Plastic",
+                        },
+                        {
+                            title: "Category",
+                            value: "Toys",
+                        },
+                    ],
+                },
+                {
+                    title: "Rest",
+                    properties: [
+                        {
+                            title: "Color",
+                            value: "Blue",
+                        },
+                        {
+                            title: "Condition",
+                            value: "Bad",
+                        },
+                    ],
+                },
+            ],
+        },
+        comments: [
+            {
+                content:
+                    "This is actually not a plastic penguiño but a rare Malasian baby slipper. Around 2004 it was a limited edition release with 5000 items. Still very popular in Japan!",
+                name: "Brecon Philips",
+                pinned: false,
+                likes: 2,
+            },
+            {
+                content:
+                    "This is actually not a plastic penguiño but a rare Malasian baby slipper. Around 2004 it was a limited edition release with 5000 items. Still very popular in Japan!",
+                name: "Mr. Pinned",
+                pinned: true,
+                likes: 43,
+            },
+            {
+                content:
+                    "This item is very popular in my country. I own two of them. They make a funny sounds when you squeeze it",
+                name: "Not pinned",
+                pinned: false,
+                likes: 38,
+            },
+        ],
+    },
+    // Kite Handle
+    {
+        title: "Kite handle",
+        url: "kite-handle",
+        location: "pacific",
+        intro: [
+            "This item was part of extraction number 19 on the 21st of January 2021. During this extraction we fished 21.893 kg of plastic out of the North Pacific Patch. This item was remarkable because we actually found a pair of these items together which is special because they would need to be together for multiple months if not years.",
+            "We are not certain what the item is used for or what it’s origin is. We do know that is was in the ocean for over 1 year based on the damaged caused by the salt water of the ocean and the sunlight.",
+        ],
+        images: {
+            mainImage: KiteHandle,
+            allImages: [KiteHandle],
+        },
+        data: {
+            sizes: {
+                heightCm: "9",
+                depthCm: "1",
+                widthCm: "17",
+                weightGr: "27",
+            },
+            optional: [
+                {
+                    title: "Material",
+                    properties: [
+                        {
+                            title: "Material",
+                            value: "Plastic",
+                        },
+                        {
+                            title: "Category",
+                            value: "Toys",
+                        },
+                    ],
+                },
+                {
+                    title: "Rest",
+                    properties: [
+                        {
+                            title: "Color",
+                            value: "Yellow",
+                        },
+                        {
+                            title: "Condition",
+                            value: "Pretty Okay",
+                        },
+                    ],
+                },
+            ],
+        },
+        comments: [
+            {
+                content:
+                    "This is actually not a plastic penguiño but a rare Malasian baby slipper. Around 2004 it was a limited edition release with 5000 items. Still very popular in Japan!",
+                name: "Brecon Philips",
+                pinned: false,
+                likes: 2,
+            },
+            {
+                content:
+                    "This is actually not a plastic penguiño but a rare Malasian baby slipper. Around 2004 it was a limited edition release with 5000 items. Still very popular in Japan!",
+                name: "Mr. Pinned",
+                pinned: true,
+                likes: 43,
+            },
+            {
+                content:
+                    "This item is very popular in my country. I own two of them. They make a funny sounds when you squeeze it",
+                name: "Not pinned",
+                pinned: false,
+                likes: 38,
+            },
+        ],
+    },
+    // Glass Buoy
+    {
+        title: "Glass buoy",
+        url: "glass-buoy",
+        location: "pacific",
+        intro: [
+            "This item was part of extraction number 19 on the 21st of January 2021. During this extraction we fished 21.893 kg of plastic out of the North Pacific Patch. This item was remarkable because we actually found a pair of these items together which is special because they would need to be together for multiple months if not years.",
+            "We are not certain what the item is used for or what it’s origin is. We do know that is was in the ocean for over 1 year based on the damaged caused by the salt water of the ocean and the sunlight.",
+        ],
+        images: {
+            mainImage: GlassBuoy,
+            allImages: [GlassBuoy],
+        },
+        data: {
+            sizes: {
+                heightCm: "12",
+                depthCm: "12",
+                widthCm: "31",
+                weightGr: "196",
+            },
+            optional: [
+                {
+                    title: "Material",
+                    properties: [
+                        {
+                            title: "Material",
+                            value: "Glass",
+                        },
+                        {
+                            title: "Category",
+                            value: "Fisher items",
+                        },
+                    ],
+                },
+                {
+                    title: "Rest",
+                    properties: [
+                        {
+                            title: "Color",
+                            value: "Yellow",
+                        },
+                        {
+                            title: "Condition",
+                            value: "Pretty Okay",
                         },
                     ],
                 },
