@@ -69,7 +69,17 @@ const ItemDetailTemplate = () => {
                             </h1>
                         </>
                     )}
-                    <p className="item-detail-template__intro">{item.intro}</p>
+
+                    {item.intro.map((paragraph) => (
+                        <p className="item-detail-template__intro">
+                            {paragraph}
+                        </p>
+                    ))}
+                    <p className="item-detail-template__intro">
+                        If you know more about this item please leave a comment
+                        below! This helps us get a greater understanding of the
+                        age and origins of the plastic in the ocean.
+                    </p>
 
                     {pinnedComment && (
                         <PinnedComment commentContent={pinnedComment} />

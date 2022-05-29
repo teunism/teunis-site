@@ -60,11 +60,14 @@
 }
 .item-detail-template__intro {
     color: $off-white;
-    margin-bottom: gap(4);
+    margin-bottom: gap(3);
 
     @include bp-min(small) {
         color: $white;
     }
+}
+.item-detail-template__intro:last-of-type {
+    margin-bottom: gap(4);
 }
 
 .item-detail-template__link-container {
@@ -75,7 +78,7 @@
     margin: 0 0 gap(5) 0;
 
     @include bp-min(small) {
-        margin: 0 -#{gap(4)} gap(5) 0;
+        margin: 0 -#{gap(4)} gap(4) 0;
     }
 }
 .item-detail-template__link {
