@@ -63,6 +63,8 @@
     grid-template-columns: 1fr 1fr;
     grid-gap: gap(3);
     place-items: start;
+    max-width: 1300px;
+    margin: 0 auto;
 
     @include bp-min(small) {
         grid-gap: gap(5) gap(4);
