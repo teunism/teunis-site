@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 
 import { ActivePatchContext } from "../../../App";
-
 import { TextureLoader } from "three/src/loaders/TextureLoader";
 import { Canvas, useLoader } from "@react-three/fiber";
 import {
@@ -20,6 +19,7 @@ import {
 import { locationData } from "../../../data/patches";
 
 import BlueMap from "../../../img/blue-world-2.png";
+import GlobeLegend from "../../Atoms/GlobeLegend/GlobeLegend";
 
 import "./Globe.scss";
 
@@ -30,6 +30,7 @@ const Globe = () => {
     return (
         <div className="globe">
             <div className="globe__inner">
+                <GlobeLegend />
                 <Canvas>
                     <ContextBridge>
                         <ambientLight intensity={0.38} color="#ffffff" />

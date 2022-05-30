@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import GlobeIntro from "../../Molecules/GlobeIntro/GlobeIntro";
 import Globe from "../../Molecules/Globe/Globe";
@@ -13,7 +13,7 @@ const GlobeTemplate = () => {
     return (
         <>
             <section className="globe-template">
-            <Navigation icon={"overview"} />
+                <Navigation icon={"overview"} />
                 {!mobileScreen ? (
                     <>
                         <div className="globe-template__text">
@@ -27,9 +27,9 @@ const GlobeTemplate = () => {
                 ) : (
                     <>
                         <GlobeIntro />
-                            <div className="globe-template__globe-container">
-                                <Globe />
-                            </div>
+                        <div className="globe-template__globe-container">
+                            <Globe />
+                        </div>
                         <GlobeOverlay />
                     </>
                 )}

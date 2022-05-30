@@ -1,0 +1,39 @@
+@import "../../../styles/global.scss";
+
+.globe-legend {
+    position: absolute;
+    pointer-events: none;
+    user-select: none;
+    z-index: 2;
+    bottom: gap(4);
+    left: gap(6);
+    color: $white;
+}
+
+.globe-legend__list {
+    @include bare-list;
+}
+
+.globe-legend__list-item {
+    margin: gap(1) 0;
+    position: relative;
+}
+
+.globe-legend__image {
+    position: absolute;
+    left: -1.2em;
+    bottom: 0.3rem;
+    font-size: 1.2em;
+}
+.globe-legend__list-item:last-of-type .globe-legend__image {
+    bottom: 0rem;
+    font-size: 1.4em;
+}
+
+.globe-legend__text {
+    @include label;
+    line-height: 1.5;
+    @include bp-min(medium) {
+        font-size: 0.7rem;
+    }
+}
