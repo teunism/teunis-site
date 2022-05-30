@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import "./ItemImages.scss";
 
 const ItemImages = ({ images }) => {
     const [bigImage, setBigImage] = useState(images.mainImage);
+
+    useEffect(() => {
+        setBigImage(images.mainImage);
+    }, [images]);
 
     return (
         <div classNames="item-images">

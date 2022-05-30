@@ -63,7 +63,7 @@ const ItemDetailTemplate = () => {
                                     />
                                 </Link> */}
 
-                                <ItemNavigationButtons />
+                                <ItemNavigationButtons item={item} />
                                 <ShareButton />
                             </div>
 
