@@ -27,7 +27,7 @@
 }
 
 .globe-template__text {
-    width: 50%;
+    width: 55%;
     min-width: 350px;
     padding: gap(5) gap(3) 0 gap(5);
     height: 100%;
@@ -35,9 +35,10 @@
 }
 
 .globe-template__globe-container {
+    position: relative;
     margin-bottom: gap(5);
     padding: 0;
-    width: 90%;
+    width: 100%;
 
     @include bp-min(small) {
         padding: gap(6) gap(4) gap(2) 0;

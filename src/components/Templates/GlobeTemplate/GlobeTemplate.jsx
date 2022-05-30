@@ -4,6 +4,7 @@ import GlobeIntro from "../../Molecules/GlobeIntro/GlobeIntro";
 import Globe from "../../Molecules/Globe/Globe";
 import GlobeOverlay from "../../Molecules/GlobeOverlay/GlobeOverlay";
 import Navigation from "../../Atoms/Navigation/Navigation";
+import DisabledGlobe from "../../Atoms/DisabledGlobe/DisabledGlobe";
 
 import "./GlobeTemplate.scss";
 
@@ -28,6 +29,7 @@ const GlobeTemplate = () => {
                     <>
                         <GlobeIntro />
                         <div className="globe-template__globe-container">
+                            <DisabledGlobe />
                             <Globe />
                         </div>
                         <GlobeOverlay />
