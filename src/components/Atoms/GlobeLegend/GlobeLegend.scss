@@ -1,13 +1,20 @@
 @import "../../../styles/global.scss";
 
 .globe-legend {
+    display: none;
     position: absolute;
     pointer-events: none;
     user-select: none;
     z-index: 2;
-    bottom: gap(4);
-    left: gap(6);
-    color: $white;
+    bottom: gap(3);
+    left: gap(4);
+    @include bp-min(medium) {
+        display: block;
+    }
+    @include bp-min(large) {
+        bottom: gap(5);
+        left: 90px;
+    }
 }
 
 .globe-legend__list {
@@ -33,7 +40,9 @@
 .globe-legend__text {
     @include label;
     line-height: 1.5;
+    // color: $off-white;
+    font-weight: 500;
     @include bp-min(medium) {
-        font-size: 0.7rem;
+        font-size: 0.65rem;
     }
 }
