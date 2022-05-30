@@ -59,16 +59,11 @@
     }
 }
 .item-detail-template__intro {
-    color: $off-white;
     margin-bottom: gap(3);
-
-    @include bp-min(small) {
-        color: $white;
-    }
 }
-.item-detail-template__intro:last-of-type {
-    margin-bottom: gap(4);
-}
+// .item-detail-template__intro:last-of-type {
+//     margin-bottom: gap(5);
+// }
 
 .item-detail-template__link-container {
     display: flex;

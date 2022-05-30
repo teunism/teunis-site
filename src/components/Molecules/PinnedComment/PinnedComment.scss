@@ -9,7 +9,7 @@
     border-bottom: 1px solid $blue;
 
     @include bp-min(small) {
-        margin-left: -#{gap(4)};
+        margin: gap(5) 0;
         border: 1px solid $blue;
     }
 }
@@ -26,9 +26,11 @@
 
 .pinned-comment__comment-content {
     margin-bottom: gap(2);
+    color: $off-white;
 }
 
 .pinned-comment__comment-name {
     font-size: 1.2rem;
     font-weight: 600;
+    color: $off-white;
 }

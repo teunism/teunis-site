@@ -15,8 +15,10 @@ const PinnedComment = ({ commentContent }) => {
                 />
                 Pinned comment by The Ocean Cleanup
             </p>
-            <blockquote className="pinned-comment__comment-content">
-                <p>{commentContent.content}</p>
+            <blockquote>
+                <p className="pinned-comment__comment-content">
+                    {commentContent.content}
+                </p>
             </blockquote>
             <figcaption className="pinned-comment__comment-name">
                 - {commentContent.name}

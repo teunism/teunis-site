@@ -50,9 +50,10 @@ p {
     font-weight: 300;
     line-height: 1.4;
     font-size: 1.1rem;
+    color: $off-white;
 
     @include bp-min(small) {
         line-height: 1.4;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 }
