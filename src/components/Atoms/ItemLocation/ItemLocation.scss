@@ -1,0 +1,11 @@
+@import "../../../styles/global.scss";
+
+.item-location__image {
+    width: 100%;
+    max-width: 350px;
+}
+
+.item-location__title {
+    @include heading-small;
+    margin-bottom: gap(4);
+}

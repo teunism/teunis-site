@@ -15,20 +15,13 @@
 }
 
 .item-info__content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: gap(5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.item-info__location-image {
-    max-width: 200px;
-}
-
-.item-info__category-title {
-    @include heading-small;
-    margin-bottom: gap(3);
-}
-
-.item-info__location-image {
+.item-info__category {
+    margin-bottom: gap(6);
     width: 100%;
+    text-align: center;
 }

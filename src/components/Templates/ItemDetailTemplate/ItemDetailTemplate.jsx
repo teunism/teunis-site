@@ -42,6 +42,7 @@ const ItemDetailTemplate = () => {
                                 alt=""
                             />
                         </Link>
+                        <ItemNavigationButtons item={item} />
                         <ShareButton />
                     </div>
 
@@ -63,17 +64,6 @@ const ItemDetailTemplate = () => {
                         {!mobileScreen && (
                             <>
                                 <div className="item-detail-template__link-container">
-                                    {/* <Link
-                                    className="item-detail-template__link"
-                                    to="/"
-                                >
-                                    <img
-                                        className="item-detail-template__arrow-icon"
-                                        src={ArrowIcon}
-                                        alt=""
-                                    />
-                                </Link> */}
-
                                     <ItemNavigationButtons item={item} />
                                     <ShareButton />
                                 </div>
