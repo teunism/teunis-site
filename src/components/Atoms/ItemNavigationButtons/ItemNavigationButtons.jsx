@@ -23,7 +23,7 @@ const ItemNavigationButtons = ({ item }) => {
             : activeLocationItems.length - 1;
 
     const nextItemIndex =
-        activeItemIndex < locationData.length - 1 ? activeItemIndex + 1 : 0;
+        activeItemIndex < activeLocationItems.length - 1 ? activeItemIndex + 1 : 0;
 
     const previousItem = activeLocationItems[previousItemIndex];
     const nextItem = activeLocationItems[nextItemIndex];

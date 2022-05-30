@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import { itemsData } from "../../../data/itemsData";
 
 import ArrowIcon from "../../../img/arrow-left.svg";
+import ExploreLogo from "../../../img/explore-the-garbage.svg";
 
 import ItemInfo from "../../Molecules/ItemInfo/ItemInfo";
 import PinnedComment from "../../Molecules/PinnedComment/PinnedComment";
@@ -23,6 +24,14 @@ const ItemDetailTemplate = () => {
 
     return (
         <div className="item-detail-template">
+            <Link to="/" className="item-detail-template__home-logo">
+                <img
+                    className="item-detail-template__home-image"
+                    src={ExploreLogo}
+                    alt=""
+                />
+            </Link>
+
             {mobileScreen && (
                 <>
                     <div className="item-detail-template__link-container">
@@ -41,18 +50,20 @@ const ItemDetailTemplate = () => {
                     </h1>
                 </>
             )}
-            <div className="item-detail-template__images">
-                <div className="item-detail-template__images-inner">
-                    <ItemImages images={item.images} />
-                </div>
-            </div>
 
-            <section className="item-detail-template__info">
-                <div className="item-detail-template__text">
-                    {!mobileScreen && (
-                        <>
-                            <div className="item-detail-template__link-container">
-                                {/* <Link
+            <div className="item-detail-template__inner">
+                <div className="item-detail-template__images">
+                    <div className="item-detail-template__images-inner">
+                        <ItemImages images={item.images} />
+                    </div>
+                </div>
+
+                <section className="item-detail-template__info">
+                    <div className="item-detail-template__text">
+                        {!mobileScreen && (
+                            <>
+                                <div className="item-detail-template__link-container">
+                                    {/* <Link
                                     className="item-detail-template__link"
                                     to="/"
                                 >
@@ -63,37 +74,39 @@ const ItemDetailTemplate = () => {
                                     />
                                 </Link> */}
 
-                                <ItemNavigationButtons item={item} />
-                                <ShareButton />
-                            </div>
+                                    <ItemNavigationButtons item={item} />
+                                    <ShareButton />
+                                </div>
 
-                            <h1 className="item-detail-template__title">
-                                {item.title}
-                            </h1>
-                        </>
-                    )}
+                                <h1 className="item-detail-template__title">
+                                    {item.title}
+                                </h1>
+                            </>
+                        )}
 
-                    {item.intro.map((paragraph) => (
+                        {item.intro.map((paragraph) => (
+                            <p className="item-detail-template__intro">
+                                {paragraph}
+                            </p>
+                        ))}
+
+                        {pinnedComment && (
+                            <PinnedComment commentContent={pinnedComment} />
+                        )}
+
                         <p className="item-detail-template__intro">
-                            {paragraph}
+                            If you know more about this item please leave a
+                            comment below! This helps us to get a greater
+                            understanding of the age and origins of the plastic
+                            in the ocean.
                         </p>
-                    ))}
+                    </div>
 
-                    {pinnedComment && (
-                        <PinnedComment commentContent={pinnedComment} />
-                    )}
+                    <ItemInfo itemData={item.data} />
 
-                    <p className="item-detail-template__intro">
-                        If you know more about this item please leave a comment
-                        below! This helps us to get a greater understanding of
-                        the age and origins of the plastic in the ocean.
-                    </p>
-                </div>
-
-                <ItemInfo itemData={item.data} />
-
-                <CommentSection allComments={item.comments} />
-            </section>
+                    <CommentSection allComments={item.comments} />
+                </section>
+            </div>
         </div>
     );
 };

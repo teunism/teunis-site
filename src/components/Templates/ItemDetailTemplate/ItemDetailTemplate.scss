@@ -4,10 +4,25 @@
     padding: gap(4);
     @include bp-min(small) {
         max-width: 100vw;
+        padding: 0 gap(6) gap(6) gap(6);
+    }
+}
+
+.item-detail-template__inner {
+    @include bp-min(small) {
         display: flex;
         gap: gap(7);
-        padding: gap(6);
     }
+}
+
+.item-detail-template__home-logo {
+    position: sticky;
+    top: 0;
+}
+.item-detail-template__home-image {
+    display: block;
+    width: 150px;
+    padding: gap(3) 0;
 }
 
 .item-detail-template__images {
@@ -22,7 +37,7 @@
 }
 .item-detail-template__images-inner {
     position: sticky;
-    top: gap(6);
+    top: 83px;
 }
 
 .item-detail-template__figure {
