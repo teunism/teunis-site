@@ -21,6 +21,9 @@
 }
 
 .item-info__category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: gap(6);
     width: 100%;
     text-align: center;

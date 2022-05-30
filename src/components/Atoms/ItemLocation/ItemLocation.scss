@@ -1,11 +1,17 @@
 @import "../../../styles/global.scss";
 
-.item-location__image {
-    width: 100%;
-    max-width: 350px;
-}
-
 .item-location__title {
     @include heading-small;
-    margin-bottom: gap(4);
+    // margin-bottom: gap(4);
+}
+.item-location__figure {
+    width: 100%;
+    max-width: 500px;
+}
+.item-location__text {
+    @include heading-tiny;
+    font-weight: 600;
+    @include bp-min(medium) {
+        font-size: 1.4rem;
+    }
 }
