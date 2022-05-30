@@ -15,14 +15,12 @@ const ItemInfo = ({ itemData }) => {
                 </div>
 
                 <div className="item-info__category">
-                    <ItemSizeWeight itemSizes={itemData.data.sizes} />
+                    <ItemOptionalData optionalData={itemData.data.optional} />
                 </div>
 
-                {itemData.data.optional.map((data) => (
-                    <div className="item-info__category">
-                        <ItemOptionalData optionalData={data} />
-                    </div>
-                ))}
+                <div className="item-info__category">
+                    <ItemSizeWeight itemSizes={itemData.data.sizes} />
+                </div>
             </div>
         </section>
     );

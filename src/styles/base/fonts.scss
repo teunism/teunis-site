@@ -43,16 +43,16 @@
 }
 
 @mixin heading-small {
-    font-weight: 600;
-    font-size: 1.7rem;
+    font-weight: 800;
+    font-size: 1.8rem;
     color: $blue;
     line-height: 0.85;
     text-transform: uppercase;
     @include bp-min(medium) {
-        font-size: 1.9rem;
+        font-size: 2rem;
     }
     @include bp-min(large) {
-        font-size: 2rem;
+        font-size: 2.1rem;
     }
 }
 
@@ -63,10 +63,10 @@
     line-height: 0.85;
     text-transform: uppercase;
     @include bp-min(medium) {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     @include bp-min(large) {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 }
 

@@ -62,6 +62,10 @@ export const itemsData = [
                             title: "Category",
                             value: "Devices",
                         },
+                        {
+                            title: "Weight (grams)",
+                            value: "3145",
+                        },
                     ],
                 },
                 {
@@ -74,6 +78,10 @@ export const itemsData = [
                         {
                             title: "Production date",
                             value: "Early 2000's",
+                        },
+                        {
+                            title: "Time in water",
+                            value: "~15 years",
                         },
                     ],
                 },

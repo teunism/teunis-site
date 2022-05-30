@@ -6,20 +6,25 @@
 }
 
 .item-optional-data__table {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: gap(4);
     width: 100%;
+    max-width: 500px;
+    text-align: left;
 }
 
-.item-optional-data__data-pair:first-of-type {
-    padding-bottom: 15px;
+.item-optional-data__data-pair {
+    padding: gap(4) 0 gap(4) gap(4);
     border-bottom: 2px solid $blue-dark;
 }
-.item-optional-data__data-pair:last-of-type {
-    padding-top: 15px;
-}
+// .item-optional-data__data-pair:last-of-type {
+//     padding-top: 15px;
+// }
 
 .item-optional-data__data-title {
     @include heading-tiny;
-    margin-bottom: gap(2);
+    margin-bottom: 15px;
 }
 .item-optional-data__data-value {
     @include data-value-text;
