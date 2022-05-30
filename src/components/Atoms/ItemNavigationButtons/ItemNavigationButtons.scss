@@ -1,0 +1,27 @@
+@import "../../../styles/global.scss";
+
+.item-navigation-buttons {
+    display: flex;
+    gap: gap(3);
+}
+
+.item-navigation-buttons__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background-color: #003856;
+    padding: 12px 12px 12px 12px;
+    border-radius: 100%;
+    transition: background-color 0.3s;
+}
+
+.item-navigation-buttons__button:hover,
+.item-navigation-buttons__button:focus {
+    background-color: $blue-2;
+}
+
+.item-navigation-buttons__icon {
+    width: 30px;
+}

@@ -10,6 +10,7 @@ import PinnedComment from "../../Molecules/PinnedComment/PinnedComment";
 import CommentSection from "../../Molecules/CommentSection/CommentSection";
 import ItemImages from "../../Molecules/ItemImages/ItemImages";
 import ShareButton from "../../Atoms/ShareButton/ShareButton";
+import ItemNavigationButtons from "../../Atoms/ItemNavigationButtons/ItemNavigationButtons";
 
 import "./ItemDetailTemplate.scss";
 
@@ -51,7 +52,7 @@ const ItemDetailTemplate = () => {
                     {!mobileScreen && (
                         <>
                             <div className="item-detail-template__link-container">
-                                <Link
+                                {/* <Link
                                     className="item-detail-template__link"
                                     to="/"
                                 >
@@ -60,7 +61,9 @@ const ItemDetailTemplate = () => {
                                         src={ArrowIcon}
                                         alt=""
                                     />
-                                </Link>
+                                </Link> */}
+
+                                <ItemNavigationButtons />
                                 <ShareButton />
                             </div>
 
