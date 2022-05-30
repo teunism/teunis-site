@@ -2,37 +2,21 @@
 
 .item-size-weight__title {
     @include heading-small;
-    margin-bottom: gap(3);
 }
 
-.item-size-weight__data {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-.item-size-weight__data-pair {
-    padding: gap(3) 0;
+.item-size-weight__image {
+    max-width: 400px;
 }
 
-.item-size-weight__data-title {
+.item-size-weight__text {
     @include heading-tiny;
-    margin-bottom: gap(2);
+    font-weight: 600;
+    @include bp-min(medium) {
+        font-size: 1.4rem;
+    }
 }
-.item-size-weight__data-value {
-    @include data-value-text;
-}
-.item-size-weight__data-value-measurement {
+
+.item-size-weight__measurement {
     font-weight: 300;
     text-transform: lowercase;
-}
-
-.item-size-weight__data-pair:nth-of-type(1),
-.item-size-weight__data-pair:nth-of-type(2) {
-    border-bottom: 2px solid $blue-dark;
-}
-.item-size-weight__data-pair:nth-of-type(odd) {
-    border-right: 2px solid $blue-dark;
-    padding-left: gap(2);
-}
-.item-size-weight__data-pair:nth-of-type(even) {
-    padding-left: gap(3);
 }

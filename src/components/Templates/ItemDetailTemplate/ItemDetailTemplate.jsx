@@ -92,7 +92,7 @@ const ItemDetailTemplate = () => {
                         </p>
                     </div>
 
-                    <ItemInfo itemData={item.data} />
+                    <ItemInfo itemData={item} />
 
                     <CommentSection allComments={item.comments} />
                 </section>

@@ -11,14 +11,14 @@ const ItemInfo = ({ itemData }) => {
         <section className="item-info">
             <div className="item-info__content">
                 <div className="item-info__category">
-                    <ItemLocation />
+                    <ItemLocation location={itemData.location} />
                 </div>
 
                 <div className="item-info__category">
-                    <ItemSizeWeight itemSizes={itemData.sizes} />
+                    <ItemSizeWeight itemSizes={itemData.data.sizes} />
                 </div>
 
-                {itemData.optional.map((data) => (
+                {itemData.data.optional.map((data) => (
                     <div className="item-info__category">
                         <ItemOptionalData optionalData={data} />
                     </div>

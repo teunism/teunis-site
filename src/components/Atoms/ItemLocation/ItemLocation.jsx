@@ -2,7 +2,7 @@ import React from "react";
 
 import "./ItemLocation.scss";
 
-const ItemLocation = () => {
+const ItemLocation = ({ location }) => {
     return (
         <>
             <h3 className="item-location__title">Location</h3>
@@ -35,9 +35,9 @@ const ItemLocation = () => {
                             className="item-location__text"
                             href="#MyPath"
                             fill="white"
-                            startOffset="600"
+                            startOffset="650"
                         >
-                            Pacific Patch
+                            {location}
                         </textPath>
                     </text>
 
