@@ -13,6 +13,7 @@
 html,
 body {
     @include constrain(huge);
+    position: relative;
     max-width: 100vw;
     color: $white;
     background-color: $blue-darker;

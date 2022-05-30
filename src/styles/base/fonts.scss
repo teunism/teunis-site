@@ -109,3 +109,14 @@
         font-size: 1.4rem;
     }
 }
+
+@mixin label {
+    font-weight: 600;
+    font-size: 0.6rem;
+    color: $white;
+    line-height: 1;
+    text-transform: uppercase;
+    @include bp-min(medium) {
+        font-size: 0.6rem;
+    }
+}
