@@ -22,13 +22,10 @@ const App = () => {
                 <ScrollToTop>
                     <Routes>
                         <Route path="/" exact element={<GlobeTemplate />} />
-                        <Route
-                            path="overview"
-                            element={<OverviewTemplate />}
-                        ></Route>
+                        <Route path="overview" element={<OverviewTemplate />} />
                         <Route
                             path=":itemUrl"
-                            element={<ItemDetailTemplate />}
+                            element={<ItemDetailTemplate previousPage={this} />}
                         />
                     </Routes>
                 </ScrollToTop>

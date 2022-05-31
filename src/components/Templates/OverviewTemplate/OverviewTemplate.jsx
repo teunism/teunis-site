@@ -25,7 +25,7 @@ const OverviewTemplate = () => {
                 <Navigation />
             </div>
 
-            <section>
+            <section className="overview-template__content">
                 <div className="overview-template__title-container">
                     <h2 className="overview-template__title">
                         The entire collection
@@ -50,7 +50,7 @@ const OverviewTemplate = () => {
                     </div>
                 </div>
 
-                <ItemsGrid items={itemsData} size="big" />
+                <ItemsGrid items={itemsData} size="big" page="overview" />
             </section>
         </div>
     );

@@ -7,13 +7,13 @@
     user-select: none;
     z-index: 2;
     bottom: gap(3);
-    left: gap(4);
+    right: gap(4);
     @include bp-min(medium) {
         display: block;
     }
     @include bp-min(large) {
         bottom: gap(5);
-        left: 90px;
+        right: gap(3);
     }
 }
 

@@ -8,7 +8,7 @@ import { locationData } from "../../../data/patches";
 
 import "./ItemNavigationButtons.scss";
 
-const ItemNavigationButtons = ({ item }) => {
+const ItemNavigationButtons = ({ item, icon }) => {
     const activeLocationItems = locationData.find(
         (location) => location.name === item.location
     ).items;
@@ -23,14 +23,21 @@ const ItemNavigationButtons = ({ item }) => {
             : activeLocationItems.length - 1;
 
     const nextItemIndex =
-        activeItemIndex < activeLocationItems.length - 1 ? activeItemIndex + 1 : 0;
+        activeItemIndex < activeLocationItems.length - 1
+            ? activeItemIndex + 1
+            : 0;
 
     const previousItem = activeLocationItems[previousItemIndex];
     const nextItem = activeLocationItems[nextItemIndex];
 
     return (
         <div className="item-navigation-buttons">
-            <Link to={`/${previousItem.url}`}>
+            <Link
+                to={{
+                    pathname: `/${previousItem.url}`,
+                    search: icon,
+                }}
+            >
                 <div className="item-navigation-buttons__button">
                     <img
                         className="item-navigation-buttons__icon"
@@ -39,7 +46,12 @@ const ItemNavigationButtons = ({ item }) => {
                     />
                 </div>
             </Link>
-            <Link to={`/${nextItem.url}`}>
+            <Link
+                to={{
+                    pathname: `/${nextItem.url}`,
+                    search: icon,
+                }}
+            >
                 <div className="item-navigation-buttons__button">
                     <img
                         className="item-navigation-buttons__icon"

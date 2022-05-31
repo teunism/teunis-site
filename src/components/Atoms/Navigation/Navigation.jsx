@@ -10,7 +10,7 @@ const Navigation = ({ icon }) => {
         <nav className="navigation">
             {icon === "overview" ? (
                 <Link
-                    to="overview"
+                    to="/overview"
                     className="navigation__link navigation__link--grid"
                 >
                     <div className="navigation__icon">
@@ -29,7 +29,6 @@ const Navigation = ({ icon }) => {
                             src={GlobeIcon}
                             alt=""
                         />
-                        {/* <p className="navigation__icon-label">Globe</p> */}
                     </div>
                 </Link>
             )}

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import "./ItemsGrid.scss";
 
-const ItemsGrid = ({ items, size }) => {
+const ItemsGrid = ({ items, size, page }) => {
     const classes =
         size === "big" ? "items-grid items-grid--big" : "items-grid";
 
@@ -13,7 +13,11 @@ const ItemsGrid = ({ items, size }) => {
                 <li className="items-grid__item">
                     <Link
                         className="items-grid__item-link"
-                        to={`/${item.url}`}
+                        to={{
+                            pathname: `/${item.url}`,
+                            search: page,
+                        }}
+                        previousPage="overview"
                         replace
                     >
                         <figure className="items-grid__item-figure">

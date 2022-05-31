@@ -59,7 +59,7 @@ const GlobeOverlay = () => {
             </div>
 
             <div className="globe-overlay__items">
-                <ItemsGrid items={patch.items} />
+                <ItemsGrid items={patch.items} page="globe" />
             </div>
         </section>
     );

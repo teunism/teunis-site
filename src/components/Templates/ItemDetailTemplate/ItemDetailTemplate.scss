@@ -1,7 +1,7 @@
 @import "../../../styles/global.scss";
 
 .item-detail-template {
-    padding: gap(4);
+    padding: 0 gap(4) gap(4) gap(4);
     @include bp-min(small) {
         max-width: 100vw;
         padding: 0 gap(6) gap(6) gap(6);
@@ -16,12 +16,14 @@
 }
 
 .item-detail-template__home-logo {
-    position: sticky;
-    top: 0;
+    @include bp-min(small) {
+        position: sticky;
+        top: 0;
+    }
 }
 .item-detail-template__home-image {
     display: block;
-    width: 150px;
+    width: 125px;
     padding: gap(3) 0;
 }
 

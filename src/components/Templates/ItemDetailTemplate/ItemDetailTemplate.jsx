@@ -1,9 +1,8 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 
 import { itemsData } from "../../../data/itemsData";
 
-import ArrowIcon from "../../../img/arrow-left.svg";
 import ExploreLogo from "../../../img/explore-the-garbage.svg";
 
 import ItemInfo from "../../Molecules/ItemInfo/ItemInfo";
@@ -18,11 +17,14 @@ import "./ItemDetailTemplate.scss";
 
 const ItemDetailTemplate = () => {
     const { itemUrl } = useParams();
+    const { search } = useLocation();
 
     const item = itemsData.find((item) => item.url == itemUrl);
     const pinnedComment = item.comments.find((comment) => comment.pinned);
     const mobileScreen = window.innerWidth < 640;
+    const icon = search === "?overview" ? "overview" : "globe";
 
+    console.log("search", search);
     return (
         <div className="item-detail-template">
             <Link to="/" className="item-detail-template__home-logo">
@@ -36,17 +38,11 @@ const ItemDetailTemplate = () => {
             {mobileScreen && (
                 <>
                     <div className="item-detail-template__link-container">
-                        <Link className="item-detail-template__link" to="/">
-                            <img
-                                className="item-detail-template__arrow-icon"
-                                src={ArrowIcon}
-                                alt=""
-                            />
-                        </Link>
-
-                        <ItemNavigationButtons item={item} />
-                        <Navigation />
-                        <ShareButton />
+                        <ItemNavigationButtons item={item} icon={icon} />
+                        <div className="item-detail-template__share-container">
+                            <ShareButton />
+                            <Navigation icon={icon} />
+                        </div>
                     </div>
 
                     <h1 className="item-detail-template__title">
@@ -67,10 +63,13 @@ const ItemDetailTemplate = () => {
                         {!mobileScreen && (
                             <>
                                 <div className="item-detail-template__link-container">
-                                    <ItemNavigationButtons item={item} />
+                                    <ItemNavigationButtons
+                                        item={item}
+                                        icon={icon}
+                                    />
                                     <div className="item-detail-template__share-container">
                                         <ShareButton />
-                                        <Navigation />
+                                        <Navigation icon={icon} />
                                     </div>
                                 </div>
 
