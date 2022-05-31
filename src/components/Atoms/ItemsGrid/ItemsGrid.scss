@@ -63,14 +63,13 @@
     grid-template-columns: 1fr 1fr;
     grid-gap: gap(3);
     place-items: start;
-    max-width: 1300px;
     margin: 0 auto;
 
     @include bp-min(small) {
         grid-gap: gap(5) gap(4);
         grid-template-columns: repeat(
             auto-fit,
-            minmax(max(200px, (100% - ((4 - 1) * #{gap(5)})) / 4), 1fr)
+            minmax(max(200px, (100% - ((5 - 1) * #{gap(5)})) / 5), 1fr)
         );
     }
 }
