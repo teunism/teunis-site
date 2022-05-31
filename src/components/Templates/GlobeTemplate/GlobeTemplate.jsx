@@ -14,7 +14,9 @@ const GlobeTemplate = () => {
     return (
         <>
             <section className="globe-template">
-                <Navigation icon={"overview"} />
+                <div className="globe-template__navigation">
+                    <Navigation icon={"overview"} />
+                </div>
                 {!mobileScreen ? (
                     <>
                         <div className="globe-template__text">

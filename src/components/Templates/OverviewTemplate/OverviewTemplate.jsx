@@ -9,7 +9,9 @@ import "./OverviewTemplate.scss";
 const OverviewTemplate = () => {
     return (
         <div className="overview-template">
-            <Navigation />
+            <div className="overview-template__navigation">
+                <Navigation />
+            </div>
             <section className="overview-template__intro">
                 <GlobeIntro page="overview" />
             </section>

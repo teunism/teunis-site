@@ -12,6 +12,7 @@ import CommentSection from "../../Molecules/CommentSection/CommentSection";
 import ItemImages from "../../Molecules/ItemImages/ItemImages";
 import ShareButton from "../../Atoms/ShareButton/ShareButton";
 import ItemNavigationButtons from "../../Atoms/ItemNavigationButtons/ItemNavigationButtons";
+import Navigation from "../../Atoms/Navigation/Navigation";
 
 import "./ItemDetailTemplate.scss";
 
@@ -42,7 +43,9 @@ const ItemDetailTemplate = () => {
                                 alt=""
                             />
                         </Link>
+
                         <ItemNavigationButtons item={item} />
+                        <Navigation />
                         <ShareButton />
                     </div>
 
@@ -65,7 +68,10 @@ const ItemDetailTemplate = () => {
                             <>
                                 <div className="item-detail-template__link-container">
                                     <ItemNavigationButtons item={item} />
-                                    <ShareButton />
+                                    <div className="item-detail-template__share-container">
+                                        <ShareButton />
+                                        <Navigation />
+                                    </div>
                                 </div>
 
                                 <h1 className="item-detail-template__title">

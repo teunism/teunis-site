@@ -29,7 +29,7 @@ const Navigation = ({ icon }) => {
                             src={GlobeIcon}
                             alt=""
                         />
-                        <p className="navigation__icon-label">Globe</p>
+                        {/* <p className="navigation__icon-label">Globe</p> */}
                     </div>
                 </Link>
             )}

@@ -1,19 +1,19 @@
 @import "../../../styles/global.scss";
 
-.navigation {
-    position: relative;
-    width: max-content;
-    padding: 0 gap(2);
-    margin: 0 0 gap(4) auto;
-    z-index: 1;
-    @include bp-min(small) {
-        position: absolute;
-        top: gap(5);
-        right: gap(5);
-        margin: 0;
-        padding: 0;
-    }
-}
+// .navigation {
+//     position: relative;
+//     width: max-content;
+//     padding: 0 gap(2);
+//     margin: 0 0 gap(4) auto;
+//     z-index: 1;
+//     @include bp-min(small) {
+//         position: absolute;
+//         top: gap(5);
+//         right: gap(5);
+//         margin: 0;
+//         padding: 0;
+//     }
+// }
 .navigation__link {
     display: flex;
     flex-direction: column;
@@ -34,7 +34,7 @@
 }
 .navigation__globe {
     width: 100%;
-    transform: scale(1.4);
+    transform: scale(1.6);
 }
 .navigation__icon {
     width: 25px;

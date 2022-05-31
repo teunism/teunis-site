@@ -75,6 +75,7 @@
 }
 .item-detail-template__intro {
     margin-bottom: gap(3);
+    color: $off-white;
 }
 
 .item-detail-template__link-container {
@@ -87,6 +88,11 @@
     @include bp-min(small) {
         margin: 0 -#{gap(4)} gap(4) 0;
     }
+}
+.item-detail-template__share-container {
+    display: flex;
+    align-items: center;
+    gap: gap(3);
 }
 .item-detail-template__link {
     display: block;
