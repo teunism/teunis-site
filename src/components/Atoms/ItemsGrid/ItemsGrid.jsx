@@ -10,14 +10,13 @@ const ItemsGrid = ({ items, size, page }) => {
     return (
         <ul className={classes}>
             {items.map((item) => (
-                <li className="items-grid__item">
+                <li className="items-grid__item" key={item.title}>
                     <Link
                         className="items-grid__item-link"
                         to={{
                             pathname: `/${item.url}`,
                             search: page,
                         }}
-                        previousPage="overview"
                         replace
                     >
                         <figure className="items-grid__item-figure">

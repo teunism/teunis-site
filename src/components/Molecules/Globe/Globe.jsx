@@ -85,15 +85,14 @@ const GlobeModel = () => {
             onPointerUp={(e) => (document.body.style.cursor = "grab")}
         >
             {oceanLocations.map((patch) => (
-                <Patch patch={patch} />
+                <Patch patch={patch} key={patch.name} />
             ))}
 
             {riverLocations.map((river) => (
-                <River river={river} />
+                <River river={river} key={river.name} />
             ))}
 
             <sphereBufferGeometry args={[1, 32, 32]} />
-            {/* <meshBasicMaterial color="black" /> */}
 
             <meshPhongMaterial map={globeMap} />
         </mesh>

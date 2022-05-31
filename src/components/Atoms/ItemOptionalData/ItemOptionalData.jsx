@@ -7,10 +7,16 @@ const ItemOptionalData = ({ optionalData }) => {
         <>
             <h3 className="item-optional-data__title">Data</h3>
             <dl className="item-optional-data__table">
-                {optionalData.map((data) => (
-                    <div className="item-optional-data__data-row">
-                        {data.properties.map((property) => (
-                            <div className="item-optional-data__data-pair">
+                {optionalData.map((data, index) => (
+                    <div
+                        className="item-optional-data__data-row"
+                        key={`item-data-${index}`}
+                    >
+                        {data.properties.map((property, index) => (
+                            <div
+                                className="item-optional-data__data-pair"
+                                key={`item-property-${index}`}
+                            >
                                 <dd className="item-optional-data__data-title">
                                     {property.title}
                                 </dd>

@@ -88,7 +88,7 @@
     margin: 0 0 gap(5) 0;
 
     @include bp-min(small) {
-        margin: 0 0 gap(4) 0;
+        margin: gap(1) 0 40px 0;
     }
 }
 .item-detail-template__share-container {

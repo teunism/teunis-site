@@ -29,8 +29,8 @@ const Comments = ({ allComments }) => {
 
     return (
         <ol className="comments">
-            {sortedComments.map((comment) => (
-                <li className="comments__comment">
+            {sortedComments.map((comment, index) => (
+                <li className="comments__comment" key={`comment-${index}`}>
                     {comment.pinned && (
                         <p className="comments__comment-supertitle">
                             <img

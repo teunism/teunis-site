@@ -10,19 +10,20 @@ const ItemImages = ({ images }) => {
     }, [images]);
 
     return (
-        <div classNames="item-images">
+        <div className="item-images">
             <figure className="item-images__big-image-figure">
                 <img className="item-images__big-image" src={bigImage} alt="" />
             </figure>
 
             <div className="item-images__small-images-container">
-                {images.allImages.map((image) => (
+                {images.allImages.map((image, index) => (
                     <figure
                         className={
                             image == bigImage
                                 ? "item-images__small-image-figure item-images__small-image-figure--active"
                                 : "item-images__small-image-figure"
                         }
+                        key={`image-${index}`}
                     >
                         <img
                             className="item-images__small-image"

@@ -23,6 +23,7 @@ const ItemDetailTemplate = () => {
     const pinnedComment = item.comments.find((comment) => comment.pinned);
     const mobileScreen = window.innerWidth < 640;
     const goToPage = search === "?overview" ? "overview" : "globe";
+
     return (
         <div className="item-detail-template">
             <Link to="/" className="item-detail-template__home-logo">
@@ -77,8 +78,11 @@ const ItemDetailTemplate = () => {
                             </>
                         )}
 
-                        {item.intro.map((paragraph) => (
-                            <p className="item-detail-template__intro">
+                        {item.intro.map((paragraph, index) => (
+                            <p
+                                className="item-detail-template__intro"
+                                key={`paragraph-${index}`}
+                            >
                                 {paragraph}
                             </p>
                         ))}
