@@ -10,8 +10,8 @@ import PinnedComment from "../../Molecules/PinnedComment/PinnedComment";
 import CommentSection from "../../Molecules/CommentSection/CommentSection";
 import ItemImages from "../../Molecules/ItemImages/ItemImages";
 import ShareButton from "../../Atoms/ShareButton/ShareButton";
+import CloseButton from "../../Atoms/CloseButton/CloseButton";
 import ItemNavigationButtons from "../../Atoms/ItemNavigationButtons/ItemNavigationButtons";
-import Navigation from "../../Atoms/Navigation/Navigation";
 
 import "./ItemDetailTemplate.scss";
 
@@ -22,9 +22,7 @@ const ItemDetailTemplate = () => {
     const item = itemsData.find((item) => item.url == itemUrl);
     const pinnedComment = item.comments.find((comment) => comment.pinned);
     const mobileScreen = window.innerWidth < 640;
-    const icon = search === "?overview" ? "overview" : "globe";
-
-    console.log("search", search);
+    const goToPage = search === "?overview" ? "overview" : "globe";
     return (
         <div className="item-detail-template">
             <Link to="/" className="item-detail-template__home-logo">
@@ -38,10 +36,10 @@ const ItemDetailTemplate = () => {
             {mobileScreen && (
                 <>
                     <div className="item-detail-template__link-container">
-                        <ItemNavigationButtons item={item} icon={icon} />
+                        <ItemNavigationButtons item={item} icon={goToPage} />
                         <div className="item-detail-template__share-container">
                             <ShareButton />
-                            <Navigation icon={icon} />
+                            <CloseButton goTo={goToPage} />
                         </div>
                     </div>
 
@@ -65,11 +63,11 @@ const ItemDetailTemplate = () => {
                                 <div className="item-detail-template__link-container">
                                     <ItemNavigationButtons
                                         item={item}
-                                        icon={icon}
+                                        icon={goToPage}
                                     />
                                     <div className="item-detail-template__share-container">
                                         <ShareButton />
-                                        <Navigation icon={icon} />
+                                        <CloseButton goTo={goToPage} />
                                     </div>
                                 </div>
 
