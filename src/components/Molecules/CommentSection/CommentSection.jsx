@@ -12,7 +12,9 @@ const CommentSection = ({ allComments }) => {
 
     return (
         <section className="comment-section">
-            <h2 className="comment-section__title">Share your thoughts</h2>
+            <h2 className="comment-section__title">
+                Hey, do you know more about this item?
+            </h2>
             <textarea
                 className="comment-section__comment-field"
                 name=""
