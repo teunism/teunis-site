@@ -2,7 +2,7 @@
 
 .item-info {
     @include constrain(small-medium);
-    margin-bottom: gap(7);
+    margin-bottom: gap(6);
 
     @include bp-min(small) {
         margin-bottom: gap(7);
@@ -28,7 +28,11 @@
     width: 100%;
 }
 .item-info__category:nth-of-type(2) {
-    margin-bottom: gap(7);
+    margin-bottom: gap(6);
+
+    @include bp-min(small) {
+        margin-bottom: gap(7);
+    }
 }
 .item-info__category:last-of-type {
     margin-bottom: gap(1);

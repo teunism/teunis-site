@@ -64,16 +64,16 @@
 
 .item-detail-template__text {
     @include constrain(small-medium);
-    margin-bottom: gap(7);
+    margin-bottom: gap(6);
+
+    @include bp-min(small) {
+        margin-bottom: gap(7);
+    }
 }
 
 .item-detail-template__title {
     @include heading-big;
-    margin-bottom: gap(5);
-
-    @include bp-min(small) {
-        margin-bottom: gap(4);
-    }
+    margin-bottom: gap(4);
 }
 .item-detail-template__intro {
     margin-bottom: gap(3);
