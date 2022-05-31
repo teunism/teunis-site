@@ -1,0 +1,45 @@
+@import "../../../styles/global.scss";
+
+.link-section {
+    margin-bottom: gap(6);
+}
+
+.link-section__title {
+    @include heading-small;
+    margin-bottom: gap(3);
+}
+
+.link-section__list {
+    @include bare-list;
+    margin-left: gap(2);
+}
+
+.link-section__item {
+    list-style-position: inside;
+    margin: gap(1) 0;
+}
+
+.link-section__link {
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: $white;
+    text-decoration: none;
+}
+
+.link-section__arrow {
+    width: 20px;
+    margin-right: 15px;
+    transition: transform 0.15s ease-out;
+}
+
+.link-section__link:hover .link-section__arrow,
+.link-section__link:focus .link-section__arrow {
+    transform: translateX(30%);
+}
+
+.link-section__link:hover,
+.link-section__link:focus {
+    text-decoration: underline;
+    text-underline-offset: 0.1em;
+    text-decoration-thickness: 0.05em;
+}

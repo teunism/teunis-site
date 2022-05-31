@@ -12,6 +12,7 @@ import ItemImages from "../../Molecules/ItemImages/ItemImages";
 import ShareButton from "../../Atoms/ShareButton/ShareButton";
 import CloseButton from "../../Atoms/CloseButton/CloseButton";
 import ItemNavigationButtons from "../../Atoms/ItemNavigationButtons/ItemNavigationButtons";
+import LinkSection from "../../Molecules/LinkSection/LinkSection";
 
 import "./ItemDetailTemplate.scss";
 
@@ -100,6 +101,8 @@ const ItemDetailTemplate = () => {
                     </div>
 
                     <ItemInfo itemData={item} />
+
+                    <LinkSection />
 
                     <CommentSection allComments={item.comments} />
                 </section>
