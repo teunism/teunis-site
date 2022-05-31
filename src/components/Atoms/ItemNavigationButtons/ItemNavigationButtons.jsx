@@ -7,35 +7,41 @@ import ArrowRight from "../../../img/icons/arrow-right-white.svg";
 import { locationData } from "../../../data/patches";
 
 import "./ItemNavigationButtons.scss";
+import { itemsData } from "../../../data/itemsData";
 
-const ItemNavigationButtons = ({ item, icon }) => {
+const ItemNavigationButtons = ({ item, goTo }) => {
     const activeLocationItems = locationData.find(
         (location) => location.name === item.location
     ).items;
 
-    const activeItemIndex = activeLocationItems.findIndex(
+    const locationOrAllItems =
+        goTo === "overview" ? itemsData : activeLocationItems;
+
+    const activeItemIndex = locationOrAllItems.findIndex(
         (locationItem) => locationItem === item
     );
+
+    console.log(goTo);
 
     const previousItemIndex =
         activeItemIndex > 0
             ? activeItemIndex - 1
-            : activeLocationItems.length - 1;
+            : locationOrAllItems.length - 1;
 
     const nextItemIndex =
-        activeItemIndex < activeLocationItems.length - 1
+        activeItemIndex < locationOrAllItems.length - 1
             ? activeItemIndex + 1
             : 0;
 
-    const previousItem = activeLocationItems[previousItemIndex];
-    const nextItem = activeLocationItems[nextItemIndex];
+    const previousItem = locationOrAllItems[previousItemIndex];
+    const nextItem = locationOrAllItems[nextItemIndex];
 
     return (
         <div className="item-navigation-buttons">
             <Link
                 to={{
                     pathname: `/${previousItem.url}`,
-                    search: icon,
+                    search: goTo,
                 }}
             >
                 <div className="item-navigation-buttons__button">
@@ -49,7 +55,7 @@ const ItemNavigationButtons = ({ item, icon }) => {
             <Link
                 to={{
                     pathname: `/${nextItem.url}`,
-                    search: icon,
+                    search: goTo,
                 }}
             >
                 <div className="item-navigation-buttons__button">

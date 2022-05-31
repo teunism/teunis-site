@@ -702,7 +702,7 @@ export const itemsData = [
     // Crate
     {
         title: "Crate",
-        url: "crate",
+        url: "crate-2",
         location: "north-atlantic",
         intro: [
             "This item was part of extraction number 19 on the 21st of January 2021. During this extraction we fished 21.893 kg of plastic out of the North Pacific Patch. This item was remarkable because we actually found a pair of these items together which is special because they would need to be together for multiple months if not years.",
@@ -852,7 +852,7 @@ export const itemsData = [
     // Toy Money
     {
         title: "Toy money",
-        url: "toy-money",
+        url: "toy-money-2",
         location: "south-atlantic",
         intro: [
             "This item was part of extraction number 19 on the 21st of January 2021. During this extraction we fished 21.893 kg of plastic out of the North Pacific Patch. This item was remarkable because we actually found a pair of these items together which is special because they would need to be together for multiple months if not years.",
@@ -1079,7 +1079,7 @@ export const itemsData = [
     // Toy Wheel
     {
         title: "Toy wheel",
-        url: "toy-wheel",
+        url: "toy-wheel-2",
         location: "kingston",
         intro: [
             "The crew of extraction number 16 found this toy wheel in the Great Pacific Gabrage Patch. It was part of a 11.982 kg extraction on the 29th of Febuary 2018. During some rough wheater this item was fished out of the water. It was picked because of the text on the wheel, which gives it a greater chance of being traced back to it’s origin.",
@@ -1229,7 +1229,7 @@ export const itemsData = [
     // Broken Tiara
     {
         title: "Broken tiara",
-        url: "broken-tiara",
+        url: "broken-tiara-2",
         location: "la-county",
         intro: [
             "This broken tiara was part of extraction number 19 on the 22nd of June 2019. We cleared 14.003 kg of trash out of the Klang using Interceptor 002. Parts of toys are very commonly intercepted in rivers.",
@@ -1456,7 +1456,7 @@ export const itemsData = [
     // Roller Scate
     {
         title: "Roller scate",
-        url: "roller-scate",
+        url: "roller-scate-2",
         location: "can-tho",
         intro: [
             "This item was part of extraction number 19 on the 21st of January 2021. During this extraction we fished 21.893 kg of plastic out of the North Pacific Patch. This item was remarkable because we actually found a pair of these items together which is special because they would need to be together for multiple months if not years.",
@@ -1529,7 +1529,7 @@ export const itemsData = [
     // Backside of Television
     {
         title: "Backside of Television",
-        url: "television",
+        url: "television-2",
         location: "can-tho",
         intro: [
             "On May the 2nd 2021 this television was found in the Pacific Garbage Patch. It was part of extraction 18 on which we removed 13.987 kg of  plastic out of the ocean. This television stood out because of the remarkable corosion on plastic, which is caused by years of  laying in the salt water combined with sunlight.",
@@ -1764,7 +1764,7 @@ export const itemsData = [
     // Glass Buoy
     {
         title: "Glass buoy",
-        url: "glass-buoy",
+        url: "glass-buoy-2",
         location: "chengkareng-drain",
         intro: [
             "This item was part of extraction number 19 on the 21st of January 2021. During this extraction we fished 21.893 kg of plastic out of the North Pacific Patch. This item was remarkable because we actually found a pair of these items together which is special because they would need to be together for multiple months if not years.",

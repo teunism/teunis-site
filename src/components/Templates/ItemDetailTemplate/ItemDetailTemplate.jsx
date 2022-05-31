@@ -38,7 +38,7 @@ const ItemDetailTemplate = () => {
             {mobileScreen && (
                 <>
                     <div className="item-detail-template__link-container">
-                        <ItemNavigationButtons item={item} icon={goToPage} />
+                        <ItemNavigationButtons item={item} goTo={goToPage} />
                         <div className="item-detail-template__share-container">
                             <ShareButton />
                             <CloseButton goTo={goToPage} />
@@ -65,7 +65,7 @@ const ItemDetailTemplate = () => {
                                 <div className="item-detail-template__link-container">
                                     <ItemNavigationButtons
                                         item={item}
-                                        icon={goToPage}
+                                        goTo={goToPage}
                                     />
                                     <div className="item-detail-template__share-container">
                                         <ShareButton />
