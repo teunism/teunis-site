@@ -7,7 +7,8 @@ import ArrowRight from "../../../img/icons/arrow-right-white.svg";
 import { locationData } from "../../../data/patches";
 
 import "./ItemNavigationButtons.scss";
-import { itemsData } from "../../../data/itemsData";
+// import { itemsData } from "../../../data/itemsData";
+import { itemsData } from "../../../data/itemsDataNice";
 
 const ItemNavigationButtons = ({ item, goTo }) => {
     const activeLocationItems = locationData.find(
