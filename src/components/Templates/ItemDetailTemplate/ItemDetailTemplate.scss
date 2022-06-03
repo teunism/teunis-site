@@ -71,6 +71,13 @@
     }
 }
 
+.item-detail-template__super-title {
+    @include sub-title-small;
+    color: $off-white;
+    margin-bottom: gap(2);
+    font-weight: 600;
+    letter-spacing: 0.25rem;
+}
 .item-detail-template__title {
     @include heading-big;
     margin-bottom: gap(4);

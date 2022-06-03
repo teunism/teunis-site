@@ -74,6 +74,10 @@ const ItemDetailTemplate = () => {
                                     </div>
                                 </div>
 
+                                <p className="item-detail-template__super-title">
+                                    {item.location}
+                                </p>
+
                                 <h1 className="item-detail-template__title">
                                     {item.title}
                                 </h1>
