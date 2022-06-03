@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 
+import { filterIsOpenContext } from "../../../App";
+
 import ExploreLogo from "../../../img/explore-the-garbage.svg";
-// import DropdownIcon from "../../../img/dropdown-icon.svg";
 import FilterIcon from "../../../img/icons/filter-icon.svg";
 
 import OverviewFilter from "../../Molecules/OverviewFilter/OverviewFilter";
@@ -15,8 +16,14 @@ import { itemsData } from "../../../data/itemsData";
 import "./OverviewTemplate.scss";
 
 const OverviewTemplate = () => {
+    const { filterIsOpen, setFilterIsOpen } = useContext(filterIsOpenContext);
+
+    const classes = filterIsOpen
+        ? "overview-template overview-template--filter-open"
+        : "overview-template";
+
     return (
-        <div className="overview-template">
+        <div className={classes}>
             <OverviewFilter />
 
             <div className="overview-template__content">
@@ -38,23 +45,21 @@ const OverviewTemplate = () => {
                         </h2>
                         <div className="overview-template__filter-container">
                             <ul className="overview-template__filter-list">
-                                <li className="overview-template__filter-item">
+                                <li
+                                    className="overview-template__filter-item"
+                                    onClick={(e) => {
+                                        setFilterIsOpen(true);
+                                    }}
+                                >
                                     Filter
-                                    {/* <span className="overview-template__dropdown-icon"> */}
                                     <img
                                         className="overview-template__dropdown-icon"
                                         src={FilterIcon}
                                     ></img>
-                                    {/* </span> */}
                                 </li>
                             </ul>
                             <ul className="overview-template__filter-list">
-                                <li>
-                                    Sort
-                                    <span className="overview-template__dropdown-icon">
-                                        {/* <img src={DropdownIcon}></img> */}
-                                    </span>
-                                </li>
+                                <li>Sort</li>
                             </ul>
                         </div>
                     </div>

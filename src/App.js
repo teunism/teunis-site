@@ -11,25 +11,36 @@ import OverviewTemplate from "./components/Templates/OverviewTemplate/OverviewTe
 import "App.scss";
 
 export const ActivePatchContext = React.createContext();
+export const filterIsOpenContext = React.createContext();
 
 const App = () => {
     const [activePatch, setActivePatch] = useState("pacific");
+    const [filterIsOpen, setFilterIsOpen] = useState(false);
     return (
         <div className="app">
-            <ActivePatchContext.Provider
-                value={{ activePatch, setActivePatch }}
+            <filterIsOpenContext.Provider
+                value={{ filterIsOpen, setFilterIsOpen }}
             >
-                <ScrollToTop>
-                    <Routes>
-                        <Route path="/" exact element={<GlobeTemplate />} />
-                        <Route path="overview" element={<OverviewTemplate />} />
-                        <Route
-                            path=":itemUrl"
-                            element={<ItemDetailTemplate previousPage={this} />}
-                        />
-                    </Routes>
-                </ScrollToTop>
-            </ActivePatchContext.Provider>
+                <ActivePatchContext.Provider
+                    value={{ activePatch, setActivePatch }}
+                >
+                    <ScrollToTop>
+                        <Routes>
+                            <Route path="/" exact element={<GlobeTemplate />} />
+                            <Route
+                                path="overview"
+                                element={<OverviewTemplate />}
+                            />
+                            <Route
+                                path=":itemUrl"
+                                element={
+                                    <ItemDetailTemplate previousPage={this} />
+                                }
+                            />
+                        </Routes>
+                    </ScrollToTop>
+                </ActivePatchContext.Provider>
+            </filterIsOpenContext.Provider>
         </div>
     );
 };
