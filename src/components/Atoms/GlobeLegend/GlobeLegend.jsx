@@ -26,14 +26,6 @@ const GlobeLegend = () => {
                     />
                     <span className="globe-legend__text">Ocean</span>
                 </li>
-                <li className="globe-legend__list-item">
-                    <img
-                        className="globe-legend__image"
-                        src={BorderCircle}
-                        alt=""
-                    />
-                    <span className="globe-legend__text">Selected</span>
-                </li>
             </ul>
         </div>
     );

@@ -12,8 +12,8 @@
         display: block;
     }
     @include bp-min(large) {
-        bottom: gap(3);
-        right: gap(4);
+        bottom: gap(4);
+        right: gap(5);
     }
 }
 
@@ -22,7 +22,6 @@
 }
 
 .globe-legend__list-item {
-    margin: gap(1) 0;
     position: relative;
 }
 
