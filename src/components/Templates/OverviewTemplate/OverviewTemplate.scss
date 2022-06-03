@@ -1,9 +1,16 @@
 @import "../../../styles/global.scss";
 
 .overview-template {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.overview-template__content {
     padding: 0 gap(4) gap(4) gap(4);
     @include bp-min(small) {
+        width: 100%;
         max-width: 100vw;
+        margin-right: 350px;
         padding: 0 gap(6) gap(6) gap(6);
     }
 }
@@ -19,7 +26,7 @@
     padding: gap(3) 0;
 }
 
-.overview-template__content {
+.overview-template__content-inner {
     padding-top: gap(4);
 }
 
