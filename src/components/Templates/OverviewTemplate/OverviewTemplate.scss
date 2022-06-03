@@ -55,8 +55,10 @@
 }
 .overview-template__filter-item {
     display: flex;
+    align-items: center;
 }
 
 .overview-template__dropdown-icon {
+    width: 20px;
     margin-left: gap(2);
 }

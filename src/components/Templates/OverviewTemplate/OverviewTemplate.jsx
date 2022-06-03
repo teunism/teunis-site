@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import ExploreLogo from "../../../img/explore-the-garbage.svg";
 import DropdownIcon from "../../../img/dropdown-icon.svg";
+import FilterIcon from "../../../img/icons/filter-icon.svg";
 
 import Navigation from "../../Atoms/Navigation/Navigation";
 import ItemsGrid from "../../Atoms/ItemsGrid/ItemsGrid";
@@ -35,9 +36,12 @@ const OverviewTemplate = () => {
                         <ul className="overview-template__filter-list">
                             <li className="overview-template__filter-item">
                                 Filter
-                                <span className="overview-template__dropdown-icon">
-                                    <img src={DropdownIcon}></img>
-                                </span>
+                                {/* <span className="overview-template__dropdown-icon"> */}
+                                <img
+                                    className="overview-template__dropdown-icon"
+                                    src={FilterIcon}
+                                ></img>
+                                {/* </span> */}
                             </li>
                         </ul>
                         <ul className="overview-template__filter-list">
