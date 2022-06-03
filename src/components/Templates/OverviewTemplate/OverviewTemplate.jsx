@@ -7,8 +7,8 @@ import DropdownIcon from "../../../img/dropdown-icon.svg";
 import Navigation from "../../Atoms/Navigation/Navigation";
 import ItemsGrid from "../../Atoms/ItemsGrid/ItemsGrid";
 
-// import { itemsData } from "../../../data/itemsData";
-import { itemsData } from "../../../data/itemsDataNice";
+import { itemsData } from "../../../data/itemsData";
+// import { itemsData } from "../../../data/itemsDataNice";
 
 import "./OverviewTemplate.scss";
 

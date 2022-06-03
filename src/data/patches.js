@@ -1,5 +1,5 @@
-// import { itemsData } from "./itemsData";
-import { itemsData } from "./itemsDataNice";
+import { itemsData } from "./itemsData";
+// import { itemsData } from "./itemsDataNice";
 
 const getLocationitems = (patchName) => {
     return itemsData.filter((item) => item.location == patchName);

@@ -4,8 +4,10 @@ import { ActivePatchContext } from "../../../App";
 import { TextureLoader } from "three/src/loaders/TextureLoader";
 import { Canvas, useLoader } from "@react-three/fiber";
 import {
+    Billboard,
     OrbitControls,
     PerspectiveCamera,
+    Text,
     useContextBridge,
 } from "@react-three/drei";
 import {
@@ -128,25 +130,41 @@ const River = ({ river }) => {
     const { activePatch, setActivePatch } = useContext(ActivePatchContext);
     const locationIsActive = activePatch == river.name;
     const mobileScreen = window.innerWidth < 640;
-
     return (
-        <mesh
-            onClick={(e) => {
-                e.stopPropagation();
-                setActivePatch(river.name);
-            }}
-            onPointerEnter={(e) => (document.body.style.cursor = "pointer")}
-            onPointerLeave={(e) => (document.body.style.cursor = "auto")}
-            position={river.globePosition}
-        >
-            <sphereBufferGeometry
-                args={mobileScreen ? [0.05, 32, 32] : [0.04, 32, 32]}
-            />
-            <meshBasicMaterial opacity={0.0} transparent />
+        <>
+            {/* <Billboard
+                follow={true}
+                lockX={false}
+                lockY={false}
+                lockZ={false}
+                position={[
+                    river.globePosition[0],
+                    river.globePosition[1] + 0.07,
+                    river.globePosition[2],
+                ]}
+            >
+                <Text fontSize={0.04} font={"Times"}>
+                    {river.title}
+                </Text>
+            </Billboard> */}
+            <mesh
+                onClick={(e) => {
+                    e.stopPropagation();
+                    setActivePatch(river.name);
+                }}
+                onPointerEnter={(e) => (document.body.style.cursor = "pointer")}
+                onPointerLeave={(e) => (document.body.style.cursor = "auto")}
+                position={river.globePosition}
+            >
+                <sphereBufferGeometry
+                    args={mobileScreen ? [0.05, 32, 32] : [0.04, 32, 32]}
+                />
+                <meshBasicMaterial opacity={0.0} transparent />
 
-            <GreenDot />
-            {locationIsActive && <SphereBorder size="small" />}
-        </mesh>
+                <GreenDot />
+                {locationIsActive && <SphereBorder size="small" />}
+            </mesh>
+        </>
     );
 };
 

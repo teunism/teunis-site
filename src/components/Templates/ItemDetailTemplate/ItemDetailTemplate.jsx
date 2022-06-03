@@ -1,8 +1,8 @@
 import React from "react";
 import { Link, useLocation, useParams } from "react-router-dom";
 
-// import { itemsData } from "../../../data/itemsData";
-import { itemsData } from "../../../data/itemsDataNice";
+import { itemsData } from "../../../data/itemsData";
+// import { itemsData } from "../../../data/itemsDataNice";
 
 import ExploreLogo from "../../../img/explore-the-garbage.svg";
 
