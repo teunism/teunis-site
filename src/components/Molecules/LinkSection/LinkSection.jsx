@@ -1,13 +1,21 @@
 import React from "react";
 
 import ArrowRight from "../../../img/icons/arrow-right-white.svg";
+import ExternLinkIcon from "../../../img/icons/extern-link.svg";
 
 import "./LinkSection.scss";
 
 const LinkSection = () => {
     return (
         <section className="link-section">
-            <h3 className="link-section__title">Learn more</h3>
+            <div className="link-section__title-container">
+                <h3 className="link-section__title">Learn more</h3>
+                <img
+                    className="link-section__link-icon"
+                    src={ExternLinkIcon}
+                    alt=""
+                />
+            </div>
             <ul className="link-section__list">
                 <li className="link-section__item">
                     <a
