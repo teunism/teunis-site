@@ -44,23 +44,18 @@ const OverviewTemplate = () => {
                             The entire collection
                         </h2>
                         <div className="overview-template__filter-container">
-                            <ul className="overview-template__filter-list">
-                                <li
-                                    className="overview-template__filter-item"
-                                    onClick={(e) => {
-                                        setFilterIsOpen(true);
-                                    }}
-                                >
-                                    Filter
-                                    <img
-                                        className="overview-template__dropdown-icon"
-                                        src={FilterIcon}
-                                    ></img>
-                                </li>
-                            </ul>
-                            <ul className="overview-template__filter-list">
-                                <li>Sort</li>
-                            </ul>
+                            <button
+                                className="overview-template__filter-button"
+                                onClick={(e) => {
+                                    setFilterIsOpen(true);
+                                }}
+                            >
+                                Filter
+                                <img
+                                    className="overview-template__dropdown-icon"
+                                    src={FilterIcon}
+                                ></img>
+                            </button>
                         </div>
                     </div>
 

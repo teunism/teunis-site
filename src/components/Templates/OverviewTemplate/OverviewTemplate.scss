@@ -52,24 +52,19 @@
     align-items: flex-end;
 }
 
-.overview-template__filter-list {
-    @include bare-list;
-    min-width: max-content;
+.overview-template__filter-button {
     padding: gap(2) gap(3) gap(1) gap(3);
+    border: none;
     border-bottom: 1px solid $blue;
     font-size: 1.1rem;
+    color: $white;
     text-transform: uppercase;
     text-align: center;
     font-weight: 600;
-}
-.overview-template__filter-list:first-of-type {
-    margin-right: gap(4);
-}
-.overview-template__filter-item {
+    background-color: transparent;
     display: flex;
     align-items: center;
 }
-
 .overview-template__dropdown-icon {
     width: 20px;
     margin-left: gap(2);
