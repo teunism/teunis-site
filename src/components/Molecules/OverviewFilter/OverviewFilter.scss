@@ -47,39 +47,9 @@
 }
 
 .overview-filter__filter-item {
-    padding: gap(3);
+    padding: 0 gap(3);
     border-top: 1px solid $blue;
 }
 .overview-filter__filter-item:last-of-type {
     border-bottom: 1px solid $blue;
-}
-
-.overview-filter__filter-title-container {
-    display: flex;
-    justify-content: space-between;
-}
-.overview-filter__filter-title {
-    @include data-value-text;
-    font-size: 1.2rem;
-    @include bp-min(medium) {
-        font-size: 1.2rem;
-    }
-}
-
-.overview-filter__filter-options {
-    @include bare-list;
-    overflow: hidden;
-    padding: gap(2) gap(2) 0;
-    // margin-top: -#{gap(2)};
-    // height: 0;
-}
-
-.overview-filter__filter-option {
-    font-weight: 300;
-}
-.overview-filter__filter-option:hover,
-.overview-filter__filter-option:active {
-    cursor: pointer;
-    text-decoration: underline;
-    text-underline-offset: 0.1em;
 }

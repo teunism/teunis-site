@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import { filterIsOpenContext } from "../../../App";
 
 import CloseIcon from "../../../img/icons/cross.svg";
-import DropDownIcon from "../../../img/icons/dropdown-icon.svg";
+import FilterOptions from "../../Atoms/FilterOptions/FilterOptions";
 
 import "./OverviewFilter.scss";
 
@@ -37,54 +37,16 @@ const OverviewFilter = () => {
 
             <h2 className="overview-filter__title">Filter</h2>
             <ul className="overview-filter__filter-list">
-                <li className="overview-filter__filter-item">
-                    <div className="overview-filter__filter-title-container">
-                        <h3 className="overview-filter__filter-title">
-                            Category
-                        </h3>
-                        <img src={DropDownIcon} alt="" />
-                    </div>
-                    <ul className="overview-filter__filter-options">
-                        <li className="overview-filter__filter-option">Toys</li>
-                        <li className="overview-filter__filter-option">
-                            Technology
-                        </li>
-                        <li className="overview-filter__filter-option">
-                            Personal artifacts
-                        </li>
-                    </ul>
+                <li className="overview-filter__filter-item overview-filter__filter-item--open">
+                    <FilterOptions />
                 </li>
+
                 <li className="overview-filter__filter-item">
-                    <div className="overview-filter__filter-title-container">
-                        <h3 className="overview-filter__filter-title">Color</h3>
-                        <img src={DropDownIcon} alt="" />
-                    </div>
-                    <ul className="overview-filter__filter-options">
-                        <li className="overview-filter__filter-option">Blue</li>
-                        <li className="overview-filter__filter-option">
-                            Yellow
-                        </li>
-                        <li className="overview-filter__filter-option">
-                            Brown
-                        </li>
-                    </ul>
+                    <FilterOptions />
                 </li>
+
                 <li className="overview-filter__filter-item">
-                    <div className="overview-filter__filter-title-container">
-                        <h3 className="overview-filter__filter-title">
-                            Material
-                        </h3>
-                        <img src={DropDownIcon} alt="" />
-                    </div>
-                    <ul className="overview-filter__filter-options">
-                        <li className="overview-filter__filter-option">
-                            Plastic
-                        </li>
-                        <li className="overview-filter__filter-option">
-                            Glass
-                        </li>
-                        <li className="overview-filter__filter-option">Wood</li>
-                    </ul>
+                    <FilterOptions />
                 </li>
             </ul>
         </section>

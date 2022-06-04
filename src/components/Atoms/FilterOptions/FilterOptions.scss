@@ -1,0 +1,44 @@
+@import "../../../styles/global.scss";
+
+.filter-options__title-container {
+    display: flex;
+    justify-content: space-between;
+    padding: gap(3) 0;
+    cursor: pointer;
+}
+.filter-options__title {
+    @include data-value-text;
+    font-size: 1.2rem;
+    @include bp-min(medium) {
+        font-size: 1.2rem;
+    }
+}
+
+.filter-options__list {
+    @include bare-list;
+    overflow: hidden;
+    padding: 0 gap(2);
+    max-height: 0;
+    transition: max-height 0.2s, padding 0.2s;
+    will-change: max-height;
+    will-change: padding;
+}
+.filter-options__list--open {
+    max-height: 200px;
+    padding: 0 gap(2) gap(3);
+}
+
+.filter-options__item {
+    font-weight: 300;
+    line-height: 0.8;
+    padding-bottom: gap(2);
+}
+.filter-options__item:last-of-type {
+    padding-bottom: 0;
+}
+.filter-options__item:hover,
+.filter-options__item:active {
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 0.1em;
+}
