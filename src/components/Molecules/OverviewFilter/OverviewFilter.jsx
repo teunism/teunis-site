@@ -10,11 +10,20 @@ import "./OverviewFilter.scss";
 const OverviewFilter = () => {
     const { filterIsOpen, setFilterIsOpen } = useContext(filterIsOpenContext);
 
-    const filterProperties = {
-        category: ["Toys", "Technology", "Personal artifacts"],
-        color: [],
-        material: [],
-    };
+    const filterProperties = [
+        {
+            category: "category",
+            options: ["toys", "technology", "personal artifacts"],
+        },
+        {
+            category: "color",
+            options: ["blue", "yellow", "grey"],
+        },
+        {
+            category: "material",
+            options: ["plastic", "glass", "wood"],
+        },
+    ];
 
     const classes = filterIsOpen
         ? "overview-filter overview-filter--open"
@@ -37,17 +46,11 @@ const OverviewFilter = () => {
 
             <h2 className="overview-filter__title">Filter</h2>
             <ul className="overview-filter__filter-list">
-                <li className="overview-filter__filter-item overview-filter__filter-item--open">
-                    <FilterOptions />
-                </li>
-
-                <li className="overview-filter__filter-item">
-                    <FilterOptions />
-                </li>
-
-                <li className="overview-filter__filter-item">
-                    <FilterOptions />
-                </li>
+                {filterProperties.map((property) => (
+                    <li className="overview-filter__filter-item">
+                        <FilterOptions filter={property} />
+                    </li>
+                ))}
             </ul>
         </section>
     );

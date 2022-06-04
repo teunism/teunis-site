@@ -6,7 +6,7 @@ import DropDownIcon from "../../../img/icons/dropdown-icon.svg";
 
 import "./FilterOptions.scss";
 
-const FilterOptions = () => {
+const FilterOptions = ({ filter }) => {
     const { filterIsOpen, setFilterIsOpen } = useContext(filterIsOpenContext);
 
     const [optionsVisible, setOptionsVisible] = useState(false);
@@ -14,6 +14,10 @@ const FilterOptions = () => {
     const classes = optionsVisible
         ? "filter-options__list filter-options__list--open"
         : "filter-options__list";
+
+    const capitalizeFirstLetter = (string) => {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    };
 
     return (
         <>
@@ -23,13 +27,17 @@ const FilterOptions = () => {
                     setOptionsVisible(!optionsVisible);
                 }}
             >
-                <h3 className="filter-options__title">Category</h3>
+                <h3 className="filter-options__title">
+                    {capitalizeFirstLetter(filter.category)}
+                </h3>
                 <img src={DropDownIcon} alt="" />
             </div>
             <ul className={classes}>
-                <li className="filter-options__item">Toys</li>
-                <li className="filter-options__item">Technology</li>
-                <li className="filter-options__item">Personal artifacts</li>
+                {filter.options.map((option) => (
+                    <li className="filter-options__item">
+                        {capitalizeFirstLetter(option)}
+                    </li>
+                ))}
             </ul>
         </>
     );
