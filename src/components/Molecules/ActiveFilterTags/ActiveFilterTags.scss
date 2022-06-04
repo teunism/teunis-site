@@ -1,0 +1,21 @@
+@import "../../../styles/global.scss";
+
+.active-filter-tags {
+    @include bare-list;
+    // width: 100%;
+    // flex-basis: 100%;
+    display: flex;
+}
+
+.active-filter-tags__button {
+    @include text-medium;
+    color: $blue;
+    padding: gap(2);
+    margin-right: gap(3);
+    border: 1px solid $blue;
+    background-color: transparent;
+}
+
+.active-filter-tags__icon {
+    margin-left: gap(2);
+}

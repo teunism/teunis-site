@@ -7,6 +7,7 @@ import ExploreLogo from "../../../img/explore-the-garbage.svg";
 import FilterIcon from "../../../img/icons/filter-icon.svg";
 
 import OverviewFilter from "../../Molecules/OverviewFilter/OverviewFilter";
+import ActiveFilterTags from "../../Molecules/ActiveFilterTags/ActiveFilterTags";
 import Navigation from "../../Atoms/Navigation/Navigation";
 import ItemsGrid from "../../Atoms/ItemsGrid/ItemsGrid";
 
@@ -44,6 +45,7 @@ const OverviewTemplate = () => {
                             The entire collection
                         </h2>
                         <div className="overview-template__filter-container">
+                            <ActiveFilterTags />
                             <button
                                 className="overview-template__filter-button"
                                 onClick={(e) => {

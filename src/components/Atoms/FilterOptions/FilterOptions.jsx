@@ -1,13 +1,13 @@
 import React, { useContext, useState } from "react";
 
-import { filterIsOpenContext } from "../../../App";
+import { activeFilterContext } from "../../../App";
 
 import DropDownIcon from "../../../img/icons/dropdown-icon.svg";
 
 import "./FilterOptions.scss";
 
 const FilterOptions = ({ filter }) => {
-    const { filterIsOpen, setFilterIsOpen } = useContext(filterIsOpenContext);
+    const { activeFilter, setActiveFilter } = useContext(activeFilterContext);
 
     const [optionsVisible, setOptionsVisible] = useState(false);
 
@@ -34,7 +34,15 @@ const FilterOptions = ({ filter }) => {
             </div>
             <ul className={classes}>
                 {filter.options.map((option) => (
-                    <li className="filter-options__item">
+                    <li
+                        className="filter-options__item"
+                        onClick={(e) => {
+                            setActiveFilter({
+                                category: filter.category,
+                                value: option,
+                            });
+                        }}
+                    >
                         {capitalizeFirstLetter(option)}
                     </li>
                 ))}

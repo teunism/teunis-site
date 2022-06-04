@@ -12,10 +12,13 @@ import "App.scss";
 
 export const ActivePatchContext = React.createContext();
 export const filterIsOpenContext = React.createContext();
+export const activeFilterContext = React.createContext();
 
 const App = () => {
     const [activePatch, setActivePatch] = useState("pacific");
     const [filterIsOpen, setFilterIsOpen] = useState(false);
+    const [activeFilter, setActiveFilter] = useState([]);
+
     return (
         <div className="app">
             <filterIsOpenContext.Provider
@@ -24,21 +27,31 @@ const App = () => {
                 <ActivePatchContext.Provider
                     value={{ activePatch, setActivePatch }}
                 >
-                    <ScrollToTop>
-                        <Routes>
-                            <Route path="/" exact element={<GlobeTemplate />} />
-                            <Route
-                                path="overview"
-                                element={<OverviewTemplate />}
-                            />
-                            <Route
-                                path=":itemUrl"
-                                element={
-                                    <ItemDetailTemplate previousPage={this} />
-                                }
-                            />
-                        </Routes>
-                    </ScrollToTop>
+                    <activeFilterContext.Provider
+                        value={{ activeFilter, setActiveFilter }}
+                    >
+                        <ScrollToTop>
+                            <Routes>
+                                <Route
+                                    path="/"
+                                    exact
+                                    element={<GlobeTemplate />}
+                                />
+                                <Route
+                                    path="overview"
+                                    element={<OverviewTemplate />}
+                                />
+                                <Route
+                                    path=":itemUrl"
+                                    element={
+                                        <ItemDetailTemplate
+                                            previousPage={this}
+                                        />
+                                    }
+                                />
+                            </Routes>
+                        </ScrollToTop>
+                    </activeFilterContext.Provider>
                 </ActivePatchContext.Provider>
             </filterIsOpenContext.Provider>
         </div>
