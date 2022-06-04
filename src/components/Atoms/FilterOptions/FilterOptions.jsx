@@ -39,8 +39,8 @@ const FilterOptions = ({ filter }) => {
                         key={`filter-option${index}`}
                         onClick={(e) => {
                             setActiveFilter({
-                                category: filter.category,
-                                value: option,
+                                ...activeFilter,
+                                [filter.category]: option,
                             });
                         }}
                     >

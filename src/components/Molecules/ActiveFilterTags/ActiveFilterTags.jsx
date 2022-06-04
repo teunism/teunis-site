@@ -12,26 +12,21 @@ const ActiveFilterTags = () => {
 
     return (
         <ul className="active-filter-tags">
-            <li className="active-filter-tags__tag">
-                <button className="active-filter-tags__button">
-                    Color: Blue{" "}
-                    <img
-                        className="active-filter-tags__icon"
-                        src={BlueCross}
-                        alt=""
-                    />
-                </button>
-            </li>
-            <li className="active-filter-tags__tag">
-                <button className="active-filter-tags__button">
-                    Material: Plastic{" "}
-                    <img
-                        className="active-filter-tags__icon"
-                        src={BlueCross}
-                        alt=""
-                    />
-                </button>
-            </li>
+            {Object.keys(activeFilter).map((key, index) => (
+                <li
+                    className="active-filter-tags__tag"
+                    key={`active-filter-tag-${index}`}
+                >
+                    <button className="active-filter-tags__button">
+                        {`${key}: ${activeFilter[key]}`}
+                        <img
+                            className="active-filter-tags__icon"
+                            src={BlueCross}
+                            alt=""
+                        />
+                    </button>
+                </li>
+            ))}
         </ul>
     );
 };
