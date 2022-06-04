@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 
 import { activeFilterContext } from "../../../App";
 
@@ -8,7 +8,6 @@ import "./ActiveFilterTags.scss";
 
 const ActiveFilterTags = () => {
     const { activeFilter, setActiveFilter } = useContext(activeFilterContext);
-    console.log(activeFilter);
 
     return (
         <ul className="active-filter-tags">
@@ -17,7 +16,16 @@ const ActiveFilterTags = () => {
                     className="active-filter-tags__tag"
                     key={`active-filter-tag-${index}`}
                 >
-                    <button className="active-filter-tags__button">
+                    <button
+                        className="active-filter-tags__button"
+                        onClick={(e) => {
+                            setActiveFilter((currentState) => {
+                                const copy = { ...currentState };
+                                delete copy[key];
+                                return copy;
+                            });
+                        }}
+                    >
                         {`${key}: ${activeFilter[key]}`}
                         <img
                             className="active-filter-tags__icon"

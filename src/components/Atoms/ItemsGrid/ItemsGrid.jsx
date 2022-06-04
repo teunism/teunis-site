@@ -6,7 +6,6 @@ import "./ItemsGrid.scss";
 const ItemsGrid = ({ items, size, page }) => {
     const classes =
         size === "big" ? "items-grid items-grid--big" : "items-grid";
-
     return (
         <ul className={classes}>
             {items.map((item, index) => (
