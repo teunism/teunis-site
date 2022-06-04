@@ -33,9 +33,10 @@ const FilterOptions = ({ filter }) => {
                 <img src={DropDownIcon} alt="" />
             </div>
             <ul className={classes}>
-                {filter.options.map((option) => (
+                {filter.options.map((option, index) => (
                     <li
                         className="filter-options__item"
+                        key={`filter-option${index}`}
                         onClick={(e) => {
                             setActiveFilter({
                                 category: filter.category,

@@ -9,8 +9,8 @@ const ItemsGrid = ({ items, size, page }) => {
 
     return (
         <ul className={classes}>
-            {items.map((item) => (
-                <li className="items-grid__item" key={item.title}>
+            {items.map((item, index) => (
+                <li className="items-grid__item" key={`item-${index}`}>
                     <Link
                         className="items-grid__item-link"
                         to={{

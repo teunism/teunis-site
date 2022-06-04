@@ -46,8 +46,11 @@ const OverviewFilter = () => {
 
             <h2 className="overview-filter__title">Filter</h2>
             <ul className="overview-filter__filter-list">
-                {filterProperties.map((property) => (
-                    <li className="overview-filter__filter-item">
+                {filterProperties.map((property, index) => (
+                    <li
+                        className="overview-filter__filter-item"
+                        key={`filter-${index}`}
+                    >
                         <FilterOptions filter={property} />
                     </li>
                 ))}
