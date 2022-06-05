@@ -5,11 +5,17 @@
     transform: translateX(100%);
     top: 0;
     background-color: $blue-filter;
-    width: 350px;
+    width: 100vw;
     height: 100vh;
     overflow-y: scroll;
     padding: gap(3) gap(4);
     transition: transform 0.2s ease-out;
+    z-index: 5;
+
+    @include bp-min(small-medium) {
+        position: fixed;
+        width: 350px;
+    }
 }
 .overview-filter--open {
     transform: translateX(0);
