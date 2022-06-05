@@ -44,6 +44,11 @@ export const itemsData = [
             allImages: [TelevisionOne, TelevisionTwo, TelevisionThree],
         },
         data: {
+            filterOptions: {
+                category: "technology",
+                color: "blue",
+                material: "plastic",
+            },
             sizes: {
                 heightCm: "61",
                 depthCm: "41",
@@ -125,6 +130,11 @@ export const itemsData = [
             allImages: [ToyBear],
         },
         data: {
+            filterOptions: {
+                category: "toys",
+                color: "black",
+                material: "plastic",
+            },
             sizes: {
                 heightCm: "26",
                 depthCm: "20",
@@ -198,6 +208,11 @@ export const itemsData = [
             allImages: [RollerScate],
         },
         data: {
+            filterOptions: {
+                category: "personal artifacts",
+                color: "mixed",
+                material: "unknown",
+            },
             sizes: {
                 heightCm: "34",
                 depthCm: "24",
@@ -271,6 +286,11 @@ export const itemsData = [
             allImages: [Crate],
         },
         data: {
+            filterOptions: {
+                category: "other",
+                color: "blue",
+                material: "plastic",
+            },
             sizes: {
                 heightCm: "51",
                 depthCm: "3",
@@ -344,6 +364,11 @@ export const itemsData = [
             allImages: [ToyMoney],
         },
         data: {
+            filterOptions: {
+                category: "toys",
+                color: "blue",
+                material: "plastic",
+            },
             sizes: {
                 heightCm: "9",
                 depthCm: "1",
@@ -417,6 +442,11 @@ export const itemsData = [
             allImages: [KiteHandle],
         },
         data: {
+            filterOptions: {
+                category: "toys",
+                color: "yellow",
+                material: "plastic",
+            },
             sizes: {
                 heightCm: "9",
                 depthCm: "1",
@@ -490,6 +520,11 @@ export const itemsData = [
             allImages: [GlassBuoy],
         },
         data: {
+            filterOptions: {
+                category: "sea equipment",
+                color: "transparent",
+                material: "glass",
+            },
             sizes: {
                 heightCm: "12",
                 depthCm: "12",
@@ -567,6 +602,11 @@ export const itemsData = [
             allImages: [BrokenTiara],
         },
         data: {
+            filterOptions: {
+                category: "toys",
+                color: "white",
+                material: "plastic",
+            },
             sizes: {
                 heightCm: "10",
                 depthCm: "5",
@@ -640,6 +680,11 @@ export const itemsData = [
             allImages: [BlueToyMan, BlueToyManTwo],
         },
         data: {
+            filterOptions: {
+                category: "toys",
+                color: "blue",
+                material: "plastic",
+            },
             sizes: {
                 heightCm: "14",
                 depthCm: "7",
@@ -713,6 +758,11 @@ export const itemsData = [
             allImages: [Crate],
         },
         data: {
+            filterOptions: {
+                category: "other",
+                color: "blue",
+                material: "plastic",
+            },
             sizes: {
                 heightCm: "51",
                 depthCm: "3",
@@ -790,6 +840,11 @@ export const itemsData = [
             allImages: [ToyWheel],
         },
         data: {
+            filterOptions: {
+                category: "toys",
+                color: "black",
+                material: "plastic",
+            },
             sizes: {
                 heightCm: "10",
                 depthCm: "5",
@@ -863,6 +918,11 @@ export const itemsData = [
             allImages: [ToyMoney],
         },
         data: {
+            filterOptions: {
+                category: "toys",
+                color: "blue",
+                material: "plastic",
+            },
             sizes: {
                 heightCm: "9",
                 depthCm: "1",
@@ -940,6 +1000,11 @@ export const itemsData = [
             allImages: [LandBorder, ExampleImageThree],
         },
         data: {
+            filterOptions: {
+                category: "sea equipment",
+                color: "white",
+                material: "plastic",
+            },
             sizes: {
                 heightCm: "50",
                 depthCm: "18",
@@ -1017,6 +1082,11 @@ export const itemsData = [
             allImages: [Buoy],
         },
         data: {
+            filterOptions: {
+                category: "sea equipment",
+                color: "white",
+                material: "plastic",
+            },
             sizes: {
                 heightCm: "79",
                 depthCm: "79",
@@ -1090,6 +1160,11 @@ export const itemsData = [
             allImages: [ToyWheel],
         },
         data: {
+            filterOptions: {
+                category: "toys",
+                color: "black",
+                material: "plastic",
+            },
             sizes: {
                 heightCm: "10",
                 depthCm: "5",
@@ -1167,6 +1242,11 @@ export const itemsData = [
             allImages: [RanchDressing],
         },
         data: {
+            filterOptions: {
+                category: "food",
+                color: "mixed",
+                material: "plastic",
+            },
             sizes: {
                 heightCm: "53",
                 depthCm: "17",
@@ -1240,6 +1320,11 @@ export const itemsData = [
             allImages: [BrokenTiara],
         },
         data: {
+            filterOptions: {
+                category: "toys",
+                color: "white",
+                material: "plastic",
+            },
             sizes: {
                 heightCm: "10",
                 depthCm: "5",
@@ -1317,6 +1402,11 @@ export const itemsData = [
             allImages: [GolfBall],
         },
         data: {
+            filterOptions: {
+                category: "other",
+                color: "yellow",
+                material: "plastic",
+            },
             sizes: {
                 heightCm: "10",
                 depthCm: "10",
@@ -1394,6 +1484,11 @@ export const itemsData = [
             allImages: [BikePedalTwo, BikePedal],
         },
         data: {
+            filterOptions: {
+                category: "toys",
+                color: "black",
+                material: "plastic",
+            },
             sizes: {
                 heightCm: "5",
                 depthCm: "10",
@@ -1467,6 +1562,11 @@ export const itemsData = [
             allImages: [RollerScate],
         },
         data: {
+            filterOptions: {
+                category: "personal artifacts",
+                color: "mixed",
+                material: "unknown",
+            },
             sizes: {
                 heightCm: "34",
                 depthCm: "24",
@@ -1540,6 +1640,11 @@ export const itemsData = [
             allImages: [TelevisionOne, TelevisionTwo, TelevisionThree],
         },
         data: {
+            filterOptions: {
+                category: "technology",
+                color: "blue",
+                material: "plastic",
+            },
             sizes: {
                 heightCm: "61",
                 depthCm: "41",
@@ -1625,6 +1730,11 @@ export const itemsData = [
             allImages: [MonsterHead],
         },
         data: {
+            filterOptions: {
+                category: "toys",
+                color: "black",
+                material: "plastic",
+            },
             sizes: {
                 heightCm: "14",
                 depthCm: "3",
@@ -1702,6 +1812,11 @@ export const itemsData = [
             allImages: [Glasses],
         },
         data: {
+            filterOptions: {
+                category: "personal artifacts",
+                color: "black",
+                material: "plastic",
+            },
             sizes: {
                 heightCm: "14",
                 depthCm: "19",
@@ -1775,6 +1890,11 @@ export const itemsData = [
             allImages: [GlassBuoy],
         },
         data: {
+            filterOptions: {
+                category: "sea equipment",
+                color: "transparent",
+                material: "glass",
+            },
             sizes: {
                 heightCm: "12",
                 depthCm: "12",

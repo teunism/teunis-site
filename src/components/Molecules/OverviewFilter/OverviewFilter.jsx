@@ -13,15 +13,22 @@ const OverviewFilter = () => {
     const filterProperties = [
         {
             category: "category",
-            options: ["toys", "technology", "personal artifacts"],
+            options: [
+                "toys",
+                "technology",
+                "personal artifacts",
+                "sea equipment",
+                "food",
+                "other",
+            ],
         },
         {
             category: "color",
-            options: ["blue", "yellow", "grey"],
+            options: ["blue", "yellow", "white", "black", "transparent"],
         },
         {
             category: "material",
-            options: ["plastic", "glass", "wood"],
+            options: ["plastic", "glass", "unknown"],
         },
     ];
 
