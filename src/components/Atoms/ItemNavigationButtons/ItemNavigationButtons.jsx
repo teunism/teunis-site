@@ -1,39 +1,51 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 
 import ArrowLeft from "../../../img/icons/arrow-left-white.svg";
 import ArrowRight from "../../../img/icons/arrow-right-white.svg";
 
 import { locationData } from "../../../data/patches";
+import { activeFilterContext } from "../../../App";
 
 import "./ItemNavigationButtons.scss";
 import { itemsData } from "../../../data/itemsData";
 // import { itemsData } from "../../../data/itemsDataNice";
 
 const ItemNavigationButtons = ({ item, goTo }) => {
+    const { activeFilter } = useContext(activeFilterContext);
+
     const activeLocationItems = locationData.find(
         (location) => location.name === item.location
     ).items;
 
-    const locationOrAllItems =
-        goTo === "overview" ? itemsData : activeLocationItems;
+    const filteredOverviewItems = Object.keys(activeFilter).reduce(
+        (all, cur) => {
+            return all.filter(
+                (item) => item.data.filterOptions[cur] == activeFilter[cur]
+            );
+        },
+        itemsData
+    );
 
-    const activeItemIndex = locationOrAllItems.findIndex(
+    const locationOrOverviewItems =
+        goTo === "overview" ? filteredOverviewItems : activeLocationItems;
+
+    const activeItemIndex = locationOrOverviewItems.findIndex(
         (locationItem) => locationItem === item
     );
 
     const previousItemIndex =
         activeItemIndex > 0
             ? activeItemIndex - 1
-            : locationOrAllItems.length - 1;
+            : locationOrOverviewItems.length - 1;
 
     const nextItemIndex =
-        activeItemIndex < locationOrAllItems.length - 1
+        activeItemIndex < locationOrOverviewItems.length - 1
             ? activeItemIndex + 1
             : 0;
 
-    const previousItem = locationOrAllItems[previousItemIndex];
-    const nextItem = locationOrAllItems[nextItemIndex];
+    const previousItem = locationOrOverviewItems[previousItemIndex];
+    const nextItem = locationOrOverviewItems[nextItemIndex];
 
     return (
         <div className="item-navigation-buttons">
