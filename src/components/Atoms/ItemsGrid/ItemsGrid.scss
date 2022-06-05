@@ -66,7 +66,6 @@
     margin: 0 auto;
 
     @include bp-min(small) {
-        grid-gap: gap(5) gap(4);
         grid-template-columns: repeat(
             auto-fit,
             minmax(max(200px, (100% - ((5 - 1) * #{gap(5)})) / 5), 1fr)
@@ -75,6 +74,11 @@
 }
 .items-grid--big .items-grid__item {
     width: 100%;
+    transition: all 0.3s;
+}
+.items-grid__item--not-visible {
+    pointer-events: none;
+    visibility: hidden;
 }
 .items-grid--big .items-grid__item-figure {
     margin-bottom: gap(2);

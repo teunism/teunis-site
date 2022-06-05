@@ -6,7 +6,7 @@ import { activeFilterContext } from "../../../App";
 import "./ItemsGrid.scss";
 
 const ItemsGrid = ({ items, size, page }) => {
-    const { activeFilter, setActiveFilter } = useContext(activeFilterContext);
+    const { activeFilter } = useContext(activeFilterContext);
 
     const classes =
         size === "big" ? "items-grid items-grid--big" : "items-grid";
@@ -40,6 +40,10 @@ const ItemsGrid = ({ items, size, page }) => {
                     </Link>
                 </li>
             ))}
+            <li className="items-grid__item--not-visible"></li>
+            <li className="items-grid__item--not-visible"></li>
+            <li className="items-grid__item--not-visible"></li>
+            <li className="items-grid__item--not-visible"></li>
         </ul>
     );
 };
