@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import ItemSizeWeight from "../../Atoms/ItemSizeWeight/ItemSizeWeight";
 import ItemOptionalData from "../../Atoms/ItemOptionalData/ItemOptionalData";
@@ -11,7 +11,7 @@ const ItemInfo = ({ itemData }) => {
         <section className="item-info">
             <div className="item-info__content">
                 <div className="item-info__category">
-                    <ItemLocation location={itemData.location} />
+                    <ItemLocation item={itemData} />
                 </div>
 
                 <div className="item-info__category">

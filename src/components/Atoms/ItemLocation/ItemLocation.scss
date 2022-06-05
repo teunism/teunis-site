@@ -2,7 +2,6 @@
 
 .item-location__title {
     @include heading-small;
-    // margin-bottom: gap(4);
 }
 .item-location__figure {
     width: 100%;
@@ -14,4 +13,15 @@
     @include bp-min(medium) {
         font-size: 1.4rem;
     }
+}
+
+/**
+ * Animating dot
+ */
+.item-location__location-circle {
+    r: 0;
+    transition: r 0.5s cubic-bezier(0, 1.6, 1, 1.33);
+}
+.item-location__figure--in-view .item-location__location-circle {
+    r: 16;
 }

@@ -1,12 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
 
 import "./ItemLocation.scss";
 
-const ItemLocation = ({ location }) => {
+const ItemLocation = ({ item }) => {
+    const { ref, inView, entry } = useInView({
+        threshold: 0.7,
+    });
+    const [animationDone, setAnimationDone] = useState(false);
+
+    const classes = animationDone
+        ? "item-location__figure item-location__figure--in-view"
+        : "item-location__figure";
+
+    useEffect(() => {
+        setAnimationDone(false);
+    }, [item]);
+
+    useEffect(() => {
+        if (inView) {
+            setAnimationDone(true);
+        }
+    }, [inView]);
+
     return (
         <>
             <h3 className="item-location__title">Location</h3>
-            <figure className="item-location__figure">
+            <figure ref={ref} className={classes}>
                 <svg
                     width="100%"
                     viewBox="0 0 451 450"
@@ -20,6 +40,7 @@ const ItemLocation = ({ location }) => {
                         height="448.581"
                     />
                     <circle
+                        className="item-location__location-circle"
                         cx="171.656"
                         cy="155.932"
                         r="14.1581"
@@ -36,7 +57,7 @@ const ItemLocation = ({ location }) => {
                             fill="white"
                             startOffset="650"
                         >
-                            {location}
+                            {item.location}
                         </textPath>
                     </text>
 

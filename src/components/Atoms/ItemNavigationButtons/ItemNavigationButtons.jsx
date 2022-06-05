@@ -22,8 +22,6 @@ const ItemNavigationButtons = ({ item, goTo }) => {
         (locationItem) => locationItem === item
     );
 
-    console.log(goTo);
-
     const previousItemIndex =
         activeItemIndex > 0
             ? activeItemIndex - 1
