@@ -28,7 +28,7 @@
  * Animating line
  */
 .item-size-weight__image--in-view .item-size-weight__line {
-    animation: dash 1s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+    animation: dash 1.4s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
 }
 .item-size-weight__line:nth-of-type(1) {
     stroke-dasharray: 180;
