@@ -10,7 +10,7 @@ import FilterIcon from "../../../img/icons/filter-icon.svg";
 import OverviewFilter from "../../Molecules/OverviewFilter/OverviewFilter";
 import ActiveFilterTags from "../../Molecules/ActiveFilterTags/ActiveFilterTags";
 import Navigation from "../../Atoms/Navigation/Navigation";
-import ItemsGrid from "../../Atoms/ItemsGrid/ItemsGrid";
+import ItemsGridBig from "../../Atoms/ItemsGridBig/ItemsGridBig";
 
 import { itemsData } from "../../../data/itemsData";
 // import { itemsData } from "../../../data/itemsDataNice";
@@ -85,7 +85,7 @@ const OverviewTemplate = () => {
                         </button>
                     </div>
 
-                    <ItemsGrid items={itemsData} size="big" page="overview" />
+                    <ItemsGridBig items={itemsData} page="overview" />
                 </section>
             </div>
         </div>
