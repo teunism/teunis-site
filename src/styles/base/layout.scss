@@ -60,6 +60,7 @@ $breakpoints: (
     medium-large: 1100px,
     large: 1280px,
     huge: 1680px,
+    giant: 2150px,
 );
 @function breakpoint($size) {
     @return map-get($breakpoints, $size);

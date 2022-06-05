@@ -29,11 +29,27 @@ const OverviewTemplate = () => {
         ? "overview-template__filter-container overview-template__filter-container--under-title"
         : "overview-template__filter-container";
 
+    const marginRightFilter = () => {
+        if (window.screen.width < 750) {
+            return "0px";
+        }
+        if (window.screen.width < 1600) {
+            return "350px";
+        }
+        if (window.screen.width > 1600 + 350 * 2) {
+            return "0px";
+        }
+        return `${(2300 - window.screen.width) / 2}px`;
+    };
+
     return (
         <div className={classes}>
             <OverviewFilter />
 
-            <div className="overview-template__content">
+            <div
+                className="overview-template__content"
+                style={filterIsOpen ? { marginRight: marginRightFilter() } : {}}
+            >
                 <div className="overview-template__navigation">
                     <Link to="/" className="overview-template__home-logo">
                         <img
