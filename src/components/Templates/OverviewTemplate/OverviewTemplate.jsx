@@ -46,29 +46,27 @@ const OverviewTemplate = () => {
                 </div>
 
                 <section className="overview-template__content-inner">
-                    <div className="overview-template__title-container">
-                        <h2 className="overview-template__title">
-                            The entire collection
-                        </h2>
+                    <h2 className="overview-template__title">
+                        The entire collection
+                    </h2>
 
-                        <div className={filterClasses}>
-                            {!!Object.keys(activeFilter).length && (
-                                <ActiveFilterTags />
-                            )}
+                    <div className={filterClasses}>
+                        {!!Object.keys(activeFilter).length && (
+                            <ActiveFilterTags />
+                        )}
 
-                            <button
-                                className="overview-template__filter-button"
-                                onClick={(e) => {
-                                    setFilterIsOpen(true);
-                                }}
-                            >
-                                Filter
-                                <img
-                                    className="overview-template__dropdown-icon"
-                                    src={FilterIcon}
-                                ></img>
-                            </button>
-                        </div>
+                        <button
+                            className="overview-template__filter-button"
+                            onClick={(e) => {
+                                setFilterIsOpen(true);
+                            }}
+                        >
+                            Filter
+                            <img
+                                className="overview-template__dropdown-icon"
+                                src={FilterIcon}
+                            ></img>
+                        </button>
                     </div>
 
                     <ItemsGrid items={itemsData} size="big" page="overview" />

@@ -5,7 +5,10 @@
     display: flex;
     flex-wrap: wrap;
     gap: gap(2);
-    // width: 100%;
+
+    @include bp-min(small) {
+        margin-top: gap(4);
+    }
 }
 
 .active-filter-tags__button {
