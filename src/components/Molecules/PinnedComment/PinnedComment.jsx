@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import PinIcon from "../../../img/pin.svg";
 
 import "./PinnedComment.scss";
 
-const PinnedComment = ({ commentContent }) => {
+const PinnedComment = ({ commentContent, commentRef }) => {
     return (
         <>
             <figure className="pinned-comment">
@@ -26,13 +26,17 @@ const PinnedComment = ({ commentContent }) => {
                 </figcaption>
             </figure>
             <div className="pinned-comment__under">
-                <p className="pinned-comment__comments-quantity">35 comment</p>
-                <a
+                <p className="pinned-comment__comments-quantity">12 comments</p>
+                <button
                     className="pinned-comment__comments-link"
-                    href="#comment-section"
+                    onClick={(e) => {
+                        commentRef.current.scrollIntoView({
+                            behavior: "smooth",
+                        });
+                    }}
                 >
                     See all comments
-                </a>
+                </button>
             </div>
         </>
     );

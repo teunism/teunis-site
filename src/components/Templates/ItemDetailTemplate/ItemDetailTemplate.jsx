@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef, useRef } from "react";
 import { Link, useLocation, useParams } from "react-router-dom";
 
 import { itemsData } from "../../../data/itemsData";
@@ -25,6 +25,11 @@ const ItemDetailTemplate = () => {
     const pinnedComment = item.comments.find((comment) => comment.pinned);
     const mobileScreen = window.innerWidth < 640;
     const goToPage = search === "?overview" ? "overview" : "globe";
+    const ref = useRef(null);
+
+    const PinnedCommentComponent = forwardRef((props, ref) => {
+        return <PinnedComment ref={ref} {...props} />;
+    });
 
     return (
         <div className="item-detail-template">
@@ -94,7 +99,10 @@ const ItemDetailTemplate = () => {
                         ))}
 
                         {pinnedComment && (
-                            <PinnedComment commentContent={pinnedComment} />
+                            <PinnedComment
+                                commentContent={pinnedComment}
+                                commentRef={ref}
+                            />
                         )}
 
                         <p className="item-detail-template__intro">
@@ -109,7 +117,9 @@ const ItemDetailTemplate = () => {
 
                     <LinkSection />
 
-                    <CommentSection allComments={item.comments} />
+                    <div ref={ref}>
+                        <CommentSection allComments={item.comments} />
+                    </div>
                 </section>
             </div>
         </div>
