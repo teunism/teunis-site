@@ -5,37 +5,37 @@
     position: relative;
     box-sizing: content-box;
     padding: gap(3) gap(4);
-    margin: gap(4) -#{gap(2)} 40px;
+    margin: gap(4) -#{gap(2)} 0;
     border-top: 1px solid $blue;
     border-bottom: 1px solid $blue;
 
     @include bp-min(small) {
-        margin: gap(5) 0;
+        margin: gap(5) 0 0;
         border: 1px solid $blue;
     }
 }
-.pinned-comment::after {
-    content: "";
-    position: absolute;
-    bottom: -25px;
-    left: 50px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 25px 20px 0 20px;
-    border-color: $blue-darker transparent transparent transparent;
-}
-.pinned-comment::before {
-    content: "";
-    position: absolute;
-    bottom: -27px;
-    left: 48px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 27px 22px 0 22px;
-    border-color: $blue transparent transparent transparent;
-}
+// .pinned-comment::after {
+//     content: "";
+//     position: absolute;
+//     bottom: -25px;
+//     left: 50px;
+//     width: 0;
+//     height: 0;
+//     border-style: solid;
+//     border-width: 25px 20px 0 20px;
+//     border-color: $blue-darker transparent transparent transparent;
+// }
+// .pinned-comment::before {
+//     content: "";
+//     position: absolute;
+//     bottom: -27px;
+//     left: 48px;
+//     width: 0;
+//     height: 0;
+//     border-style: solid;
+//     border-width: 27px 22px 0 22px;
+//     border-color: $blue transparent transparent transparent;
+// }
 
 .pinned-comment__supertitle {
     display: flex;
@@ -57,4 +57,21 @@
     font-size: 1.2rem;
     font-weight: 600;
     color: $off-white;
+}
+
+.pinned-comment__under {
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+    line-height: 0.8;
+    margin: gap(1) 0 gap(4);
+    padding-left: gap(4);
+}
+.pinned-comment__comments-quantity {
+    margin-right: gap(2);
+    font-size: 1rem;
+    color: $blue;
+}
+.pinned-comment__comments-link {
+    color: $blue;
 }

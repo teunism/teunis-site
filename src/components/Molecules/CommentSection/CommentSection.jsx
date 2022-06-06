@@ -11,7 +11,7 @@ const CommentSection = ({ allComments }) => {
     };
 
     return (
-        <section className="comment-section">
+        <section className="comment-section" id="comment-section">
             <h2 className="comment-section__title">
                 Hey, do you know more about this item?
             </h2>

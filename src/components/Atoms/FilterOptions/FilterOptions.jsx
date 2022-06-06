@@ -8,7 +8,7 @@ import "./FilterOptions.scss";
 
 const FilterOptions = ({ filter }) => {
     const { activeFilter, setActiveFilter } = useContext(activeFilterContext);
-
+    console.log("activeFilter", activeFilter);
     const [optionsVisible, setOptionsVisible] = useState(false);
 
     const classes = optionsVisible
