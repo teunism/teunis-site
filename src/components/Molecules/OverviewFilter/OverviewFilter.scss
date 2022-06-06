@@ -51,6 +51,7 @@
 
 .overview-filter__filter-list {
     @include bare-list;
+    margin-bottom: gap(6);
 }
 
 .overview-filter__filter-item {

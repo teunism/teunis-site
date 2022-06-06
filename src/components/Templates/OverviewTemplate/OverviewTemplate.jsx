@@ -67,7 +67,7 @@ const OverviewTemplate = () => {
                     </h2>
 
                     <div className={filterClasses}>
-                        {!!Object.keys(activeFilter).length && (
+                        {!!Object.keys(activeFilter.filters).length && (
                             <ActiveFilterTags />
                         )}
 

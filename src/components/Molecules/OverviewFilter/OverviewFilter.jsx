@@ -10,27 +10,37 @@ import "./OverviewFilter.scss";
 const OverviewFilter = () => {
     const { filterIsOpen, setFilterIsOpen } = useContext(filterIsOpenContext);
 
-    const filterProperties = [
-        {
-            category: "category",
-            options: [
-                "toys",
-                "technology",
-                "personal artifacts",
-                "sea equipment",
-                "food",
-                "other",
-            ],
-        },
-        {
-            category: "color",
-            options: ["blue", "yellow", "white", "black", "transparent"],
-        },
-        {
-            category: "material",
-            options: ["plastic", "glass", "unknown"],
-        },
-    ];
+    const filterProperties = {
+        filters: [
+            {
+                category: "category",
+                options: [
+                    "toys",
+                    "technology",
+                    "personal artifacts",
+                    "sea equipment",
+                    "food",
+                    "other",
+                ],
+            },
+            {
+                category: "color",
+                options: ["blue", "yellow", "white", "black", "transparent"],
+            },
+            {
+                category: "material",
+                options: ["plastic", "glass", "unknown"],
+            },
+        ],
+        sort: [
+            {
+                category: "date of aquasition",
+                options: ["new - old", "old - new"],
+            },
+            { category: "size", options: ["small - big", "big - small"] },
+            { category: "weight", options: ["light - heavy", "heavy - light"] },
+        ],
+    };
 
     const classes = filterIsOpen
         ? "overview-filter overview-filter--open"
@@ -53,12 +63,24 @@ const OverviewFilter = () => {
 
             <h2 className="overview-filter__title">Filter</h2>
             <ul className="overview-filter__filter-list">
-                {filterProperties.map((property, index) => (
+                {filterProperties.filters.map((property, index) => (
                     <li
                         className="overview-filter__filter-item"
                         key={`filter-${index}`}
                     >
                         <FilterOptions filter={property} />
+                    </li>
+                ))}
+            </ul>
+
+            <h2 className="overview-filter__title">Sort</h2>
+            <ul className="overview-filter__filter-list">
+                {filterProperties.sort.map((property, index) => (
+                    <li
+                        className="overview-filter__filter-item"
+                        key={`filter-${index}`}
+                    >
+                        <FilterOptions sort={property} />
                     </li>
                 ))}
             </ul>

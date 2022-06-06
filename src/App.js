@@ -17,7 +17,7 @@ export const activeFilterContext = React.createContext();
 const App = () => {
     const [activePatch, setActivePatch] = useState("pacific");
     const [filterIsOpen, setFilterIsOpen] = useState(false);
-    const [activeFilter, setActiveFilter] = useState({});
+    const [activeFilter, setActiveFilter] = useState({ filters: {}, sort: {} });
 
     return (
         <div className="app">

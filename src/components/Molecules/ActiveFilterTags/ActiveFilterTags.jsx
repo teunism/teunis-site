@@ -8,10 +8,9 @@ import "./ActiveFilterTags.scss";
 
 const ActiveFilterTags = () => {
     const { activeFilter, setActiveFilter } = useContext(activeFilterContext);
-
     return (
         <ul className="active-filter-tags">
-            {Object.keys(activeFilter).map((key, index) => (
+            {Object.keys(activeFilter.filters).map((key, index) => (
                 <li
                     className="active-filter-tags__tag"
                     key={`active-filter-tag-${index}`}
@@ -21,12 +20,12 @@ const ActiveFilterTags = () => {
                         onClick={(e) => {
                             setActiveFilter((currentState) => {
                                 const copy = { ...currentState };
-                                delete copy[key];
+                                delete copy.filters[key];
                                 return copy;
                             });
                         }}
                     >
-                        {`${key}: ${activeFilter[key]}`}
+                        {`${key}: ${activeFilter.filters[key]}`}
                         <img
                             className="active-filter-tags__icon"
                             src={BlueCross}

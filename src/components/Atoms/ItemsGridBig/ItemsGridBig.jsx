@@ -8,11 +8,15 @@ import "./ItemsGridBig.scss";
 const ItemsGridBig = ({ items, page }) => {
     const { activeFilter } = useContext(activeFilterContext);
 
-    const filteredItems = Object.keys(activeFilter).reduce((all, cur) => {
-        return all.filter(
-            (item) => item.data.filterOptions[cur] == activeFilter[cur]
-        );
-    }, items);
+    const filteredItems = Object.keys(activeFilter.filters).reduce(
+        (all, cur) => {
+            return all.filter(
+                (item) =>
+                    item.data.filterOptions[cur] == activeFilter.filters[cur]
+            );
+        },
+        items
+    );
 
     return (
         <ul className="items-grid-big">
