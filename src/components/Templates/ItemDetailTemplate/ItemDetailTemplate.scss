@@ -92,7 +92,7 @@
     align-items: center;
     justify-content: space-between;
     height: 44px;
-    margin: 0 0 gap(5) 0;
+    margin: gap(3) 0 gap(4) 0;
 
     @include bp-min(small) {
         margin: gap(1) 0 40px 0;
