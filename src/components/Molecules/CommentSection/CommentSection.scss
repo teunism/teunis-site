@@ -2,12 +2,12 @@
 
 .comment-section {
     @include constrain(small-medium);
+    width: 100%;
     border-top: 1px solid $blue;
-    margin: 0 -#{gap(4)};
-    padding: gap(5) gap(4) 0;
+    padding: gap(5) gap(2) 0;
+    margin: 0;
 
     @include bp-min(small) {
-        margin: 0;
         padding: gap(5) 0 0;
     }
 }
