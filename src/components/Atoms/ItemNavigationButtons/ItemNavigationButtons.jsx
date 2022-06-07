@@ -4,29 +4,17 @@ import { Link } from "react-router-dom";
 import ArrowLeft from "../../../img/icons/arrow-left-white.svg";
 import ArrowRight from "../../../img/icons/arrow-right-white.svg";
 
+import useFilter from "../../../hooks/use-filter";
 import { locationData } from "../../../data/patches";
-import { activeFilterContext } from "../../../App";
+import { itemsData } from "../../../data/itemsData";
 
 import "./ItemNavigationButtons.scss";
-import { itemsData } from "../../../data/itemsData";
-// import { itemsData } from "../../../data/itemsDataNice";
 
 const ItemNavigationButtons = ({ item, goTo }) => {
-    const { activeFilter } = useContext(activeFilterContext);
-
+    const filteredOverviewItems = useFilter(itemsData);
     const activeLocationItems = locationData.find(
         (location) => location.name === item.location
     ).items;
-
-    const filteredOverviewItems = Object.keys(activeFilter.filters).reduce(
-        (all, cur) => {
-            return all.filter(
-                (item) =>
-                    item.data.filterOptions[cur] == activeFilter.filters[cur]
-            );
-        },
-        itemsData
-    );
 
     const locationOrOverviewItems =
         goTo === "overview" ? filteredOverviewItems : activeLocationItems;
