@@ -73,6 +73,14 @@ export const itemsData = [
                             value: "Devices",
                         },
                         {
+                            title: "Brand name",
+                            value: "Sony",
+                        },
+                        {
+                            title: "Production date",
+                            value: "Early 2000's",
+                        },
+                        {
                             title: "Weight (grams)",
                             value: "3145",
                         },
@@ -82,16 +90,24 @@ export const itemsData = [
                     title: "Rest",
                     properties: [
                         {
-                            title: "Brand name",
-                            value: "Unknown",
-                        },
-                        {
-                            title: "Production date",
-                            value: "Early 2000's",
-                        },
-                        {
                             title: "Time in water",
                             value: "~15 years",
+                        },
+                        {
+                            title: "date aquasition ",
+                            value: "22-03-2022",
+                        },
+                        {
+                            title: "location aquasition ",
+                            value: "pacific",
+                        },
+                        {
+                            title: "id of item ",
+                            value: "112",
+                        },
+                        {
+                            title: "part of extraction",
+                            value: "#21",
                         },
                     ],
                 },
