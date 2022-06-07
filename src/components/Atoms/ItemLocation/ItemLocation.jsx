@@ -5,7 +5,7 @@ import "./ItemLocation.scss";
 
 const ItemLocation = ({ item }) => {
     const { ref, inView, entry } = useInView({
-        threshold: 0.7,
+        threshold: 1,
     });
     const [animationDone, setAnimationDone] = useState(false);
 
