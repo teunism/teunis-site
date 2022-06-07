@@ -11,6 +11,14 @@ const OverviewFilter = () => {
     const { filterIsOpen, setFilterIsOpen } = useContext(filterIsOpenContext);
 
     const filterProperties = {
+        sort: [
+            {
+                category: "date of aquasition",
+                options: ["new - old", "old - new"],
+            },
+            { category: "size", options: ["small - big", "big - small"] },
+            { category: "weight", options: ["light - heavy", "heavy - light"] },
+        ],
         filters: [
             {
                 category: "category",
@@ -31,14 +39,6 @@ const OverviewFilter = () => {
                 category: "material",
                 options: ["plastic", "glass", "unknown"],
             },
-        ],
-        sort: [
-            {
-                category: "date of aquasition",
-                options: ["new - old", "old - new"],
-            },
-            { category: "size", options: ["small - big", "big - small"] },
-            { category: "weight", options: ["light - heavy", "heavy - light"] },
         ],
     };
 
@@ -68,7 +68,7 @@ const OverviewFilter = () => {
                         className="overview-filter__filter-item"
                         key={`filter-${index}`}
                     >
-                        <FilterOptions filter={property} />
+                        <FilterOptions filter={property} sort="" />
                     </li>
                 ))}
             </ul>
@@ -78,9 +78,9 @@ const OverviewFilter = () => {
                 {filterProperties.sort.map((property, index) => (
                     <li
                         className="overview-filter__filter-item"
-                        key={`filter-${index}`}
+                        key={`sort-${index}`}
                     >
-                        <FilterOptions sort={property} />
+                        <FilterOptions filter="" sort={property} />
                     </li>
                 ))}
             </ul>

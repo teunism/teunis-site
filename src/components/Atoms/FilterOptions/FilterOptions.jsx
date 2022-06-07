@@ -14,8 +14,7 @@ const FilterOptions = ({ filter, sort }) => {
         ? "filter-options__list filter-options__list--open"
         : "filter-options__list";
 
-    const filterOrSort = filter ? filter : sort;
-    const filterOrSortString = filter ? "filters" : "sort";
+    const filterOrSort = filter || sort;
 
     const capitalizeFirstLetter = (string) => {
         return string.charAt(0).toUpperCase() + string.slice(1);
@@ -38,17 +37,22 @@ const FilterOptions = ({ filter, sort }) => {
                 {filterOrSort.options.map((option, index) => (
                     <li
                         className="filter-options__item"
-                        key={`filter-option${index}`}
+                        key={`${filterOrSort}-option${index}`}
                         onClick={(e) => {
-                            setActiveFilter({
-                                ...activeFilter,
-                                [filterOrSortString]: {
-                                    ...activeFilter[filterOrSortString],
-                                    [filterOrSort.category]: option,
-                                },
-                            });
-
-                            console.log(activeFilter);
+                            filter
+                                ? setActiveFilter({
+                                      ...activeFilter,
+                                      filters: {
+                                          ...activeFilter.filters,
+                                          [filter.category]: option,
+                                      },
+                                  })
+                                : setActiveFilter({
+                                      ...activeFilter,
+                                      sort: {
+                                          [sort.category]: option,
+                                      },
+                                  });
                         }}
                     >
                         {capitalizeFirstLetter(option)}

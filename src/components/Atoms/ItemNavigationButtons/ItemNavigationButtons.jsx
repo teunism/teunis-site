@@ -18,10 +18,11 @@ const ItemNavigationButtons = ({ item, goTo }) => {
         (location) => location.name === item.location
     ).items;
 
-    const filteredOverviewItems = Object.keys(activeFilter).reduce(
+    const filteredOverviewItems = Object.keys(activeFilter.filters).reduce(
         (all, cur) => {
             return all.filter(
-                (item) => item.data.filterOptions[cur] == activeFilter[cur]
+                (item) =>
+                    item.data.filterOptions[cur] == activeFilter.filters[cur]
             );
         },
         itemsData
