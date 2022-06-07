@@ -49,6 +49,11 @@ export const itemsData = [
                 color: "blue",
                 material: "plastic",
             },
+            sortOptions: {
+                ["date of aquasition"]: "2022-03-22",
+                size: 195,
+                weight: 3145,
+            },
             sizes: {
                 heightCm: "61",
                 depthCm: "41",
@@ -135,6 +140,11 @@ export const itemsData = [
                 color: "black",
                 material: "plastic",
             },
+            sortOptions: {
+                ["date of aquasition"]: "2022-03-21",
+                size: 9.8,
+                weight: 102,
+            },
             sizes: {
                 heightCm: "26",
                 depthCm: "20",
@@ -212,6 +222,12 @@ export const itemsData = [
                 category: "personal artifacts",
                 color: "mixed",
                 material: "unknown",
+            },
+            sortOptions: {
+                ["date of aquasition"]: "2022-01-22",
+
+                size: 24.8,
+                weight: 240,
             },
             sizes: {
                 heightCm: "34",
@@ -291,11 +307,16 @@ export const itemsData = [
                 color: "blue",
                 material: "plastic",
             },
+            sortOptions: {
+                ["date of aquasition"]: "2021-03-22",
+                size: 11,
+                weight: 235,
+            },
             sizes: {
                 heightCm: "51",
                 depthCm: "3",
                 widthCm: "73",
-                weightGr: "256",
+                weightGr: "235",
             },
             optional: [
                 {
@@ -369,9 +390,14 @@ export const itemsData = [
                 color: "blue",
                 material: "plastic",
             },
+            sortOptions: {
+                ["date of aquasition"]: "2022-04-01",
+                size: 0.04,
+                weight: 11,
+            },
             sizes: {
                 heightCm: "9",
-                depthCm: "1",
+                depthCm: "0.5",
                 widthCm: "9",
                 weightGr: "11",
             },
@@ -447,11 +473,16 @@ export const itemsData = [
                 color: "yellow",
                 material: "plastic",
             },
+            sortOptions: {
+                ["date of aquasition"]: "2018-08-12",
+                size: 0.15,
+                weight: 16,
+            },
             sizes: {
                 heightCm: "9",
                 depthCm: "1",
                 widthCm: "17",
-                weightGr: "27",
+                weightGr: "16",
             },
             optional: [
                 {
@@ -525,10 +556,15 @@ export const itemsData = [
                 color: "transparent",
                 material: "glass",
             },
+            sortOptions: {
+                ["date of aquasition"]: "2019-03-22",
+                size: 1.03,
+                weight: 196,
+            },
             sizes: {
-                heightCm: "12",
-                depthCm: "12",
-                widthCm: "31",
+                heightCm: "7",
+                depthCm: "7",
+                widthCm: "21",
                 weightGr: "196",
             },
             optional: [
@@ -607,11 +643,16 @@ export const itemsData = [
                 color: "white",
                 material: "plastic",
             },
+            sortOptions: {
+                ["date of aquasition"]: "2020-08-17",
+                size: 0.2,
+                weight: 31,
+            },
             sizes: {
                 heightCm: "10",
                 depthCm: "5",
-                widthCm: "34",
-                weightGr: "40",
+                widthCm: "28",
+                weightGr: "31",
             },
             optional: [
                 {
@@ -684,6 +725,11 @@ export const itemsData = [
                 category: "toys",
                 color: "blue",
                 material: "plastic",
+            },
+            sortOptions: {
+                ["date of aquasition"]: "2021-01-29",
+                size: 1,
+                weight: 34,
             },
             sizes: {
                 heightCm: "14",
@@ -763,11 +809,16 @@ export const itemsData = [
                 color: "blue",
                 material: "plastic",
             },
+            sortOptions: {
+                ["date of aquasition"]: "2021-03-22",
+                size: 11,
+                weight: 235,
+            },
             sizes: {
                 heightCm: "51",
                 depthCm: "3",
                 widthCm: "73",
-                weightGr: "256",
+                weightGr: "235",
             },
             optional: [
                 {
@@ -845,10 +896,15 @@ export const itemsData = [
                 color: "black",
                 material: "plastic",
             },
+            sortOptions: {
+                ["date of aquasition"]: "2017-09-22",
+                size: 0.18,
+                weight: 40,
+            },
             sizes: {
-                heightCm: "10",
+                heightCm: "6",
                 depthCm: "5",
-                widthCm: "34",
+                widthCm: "6",
                 weightGr: "40",
             },
             optional: [
@@ -922,6 +978,11 @@ export const itemsData = [
                 category: "toys",
                 color: "blue",
                 material: "plastic",
+            },
+            sortOptions: {
+                ["date of aquasition"]: "2022-04-01",
+                size: 0.04,
+                weight: 11,
             },
             sizes: {
                 heightCm: "9",
@@ -1005,10 +1066,15 @@ export const itemsData = [
                 color: "white",
                 material: "plastic",
             },
+            sortOptions: {
+                ["date of aquasition"]: "2021-05-01",
+                size: 2.5,
+                weight: 230,
+            },
             sizes: {
-                heightCm: "50",
-                depthCm: "18",
-                widthCm: "18",
+                heightCm: "25",
+                depthCm: "10",
+                widthCm: "10",
                 weightGr: "230",
             },
             optional: [
@@ -1087,10 +1153,15 @@ export const itemsData = [
                 color: "white",
                 material: "plastic",
             },
+            sortOptions: {
+                ["date of aquasition"]: "2019-04-01",
+                size: 87.8,
+                weight: 424,
+            },
             sizes: {
-                heightCm: "79",
-                depthCm: "79",
-                widthCm: "79",
+                heightCm: "56",
+                depthCm: "56",
+                widthCm: "56",
                 weightGr: "424",
             },
             optional: [
@@ -1164,6 +1235,11 @@ export const itemsData = [
                 category: "toys",
                 color: "black",
                 material: "plastic",
+            },
+            sortOptions: {
+                ["date of aquasition"]: "2017-09-22",
+                size: 0.18,
+                weight: 40,
             },
             sizes: {
                 heightCm: "10",
@@ -1247,11 +1323,16 @@ export const itemsData = [
                 color: "mixed",
                 material: "plastic",
             },
+            sortOptions: {
+                ["date of aquasition"]: "2018-11-21",
+                size: 3,
+                weight: 845,
+            },
             sizes: {
-                heightCm: "53",
-                depthCm: "17",
-                widthCm: "17",
-                weightGr: "970",
+                heightCm: "33",
+                depthCm: "10",
+                widthCm: "10",
+                weightGr: "845",
             },
             optional: [
                 {
@@ -1325,11 +1406,16 @@ export const itemsData = [
                 color: "white",
                 material: "plastic",
             },
+            sortOptions: {
+                ["date of aquasition"]: "2020-08-17",
+                size: 0.2,
+                weight: 31,
+            },
             sizes: {
                 heightCm: "10",
                 depthCm: "5",
                 widthCm: "34",
-                weightGr: "40",
+                weightGr: "31",
             },
             optional: [
                 {
@@ -1407,11 +1493,16 @@ export const itemsData = [
                 color: "yellow",
                 material: "plastic",
             },
+            sortOptions: {
+                ["date of aquasition"]: "2021-03-13",
+                size: 0.5,
+                weight: 50,
+            },
             sizes: {
                 heightCm: "10",
                 depthCm: "10",
                 widthCm: "10",
-                weightGr: "30",
+                weightGr: "50",
             },
             optional: [
                 {
@@ -1489,11 +1580,16 @@ export const itemsData = [
                 color: "black",
                 material: "plastic",
             },
+            sortOptions: {
+                ["date of aquasition"]: "2020-03-12",
+                size: 0.9,
+                weight: 109,
+            },
             sizes: {
                 heightCm: "5",
                 depthCm: "10",
                 widthCm: "19",
-                weightGr: "45",
+                weightGr: "109",
             },
             optional: [
                 {
@@ -1566,6 +1662,11 @@ export const itemsData = [
                 category: "personal artifacts",
                 color: "mixed",
                 material: "unknown",
+            },
+            sortOptions: {
+                ["date of aquasition"]: "2022-01-22",
+                size: 24.8,
+                weight: 240,
             },
             sizes: {
                 heightCm: "34",
@@ -1644,6 +1745,11 @@ export const itemsData = [
                 category: "technology",
                 color: "blue",
                 material: "plastic",
+            },
+            sortOptions: {
+                ["date of aquasition"]: "2022-03-22",
+                size: 195,
+                weight: 3145,
             },
             sizes: {
                 heightCm: "61",
@@ -1735,6 +1841,11 @@ export const itemsData = [
                 color: "black",
                 material: "plastic",
             },
+            sortOptions: {
+                ["date of aquasition"]: "2022-03-20",
+                size: 0.38,
+                weight: 24,
+            },
             sizes: {
                 heightCm: "14",
                 depthCm: "3",
@@ -1817,11 +1928,16 @@ export const itemsData = [
                 color: "black",
                 material: "plastic",
             },
+            sortOptions: {
+                ["date of aquasition"]: "2019-04-23",
+                size: 0.7,
+                weight: 45,
+            },
             sizes: {
                 heightCm: "14",
                 depthCm: "19",
                 widthCm: "29",
-                weightGr: "84",
+                weightGr: "45",
             },
             optional: [
                 {
@@ -1895,10 +2011,15 @@ export const itemsData = [
                 color: "transparent",
                 material: "glass",
             },
+            sortOptions: {
+                ["date of aquasition"]: "2019-03-22",
+                size: 1.03,
+                weight: 196,
+            },
             sizes: {
-                heightCm: "12",
-                depthCm: "12",
-                widthCm: "31",
+                heightCm: "7",
+                depthCm: "7",
+                widthCm: "21",
                 weightGr: "196",
             },
             optional: [

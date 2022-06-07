@@ -9,10 +9,6 @@ import "./ActiveFilterTags.scss";
 const ActiveFilterTags = () => {
     const { activeFilter, setActiveFilter } = useContext(activeFilterContext);
 
-    useEffect(() => {
-        console.log(activeFilter);
-    }, [activeFilter]);
-
     return (
         <ul className="active-filter-tags">
             {Object.keys(activeFilter.sort).map((key, index) => {
