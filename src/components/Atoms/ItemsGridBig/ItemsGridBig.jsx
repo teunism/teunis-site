@@ -1,12 +1,14 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { activeFilterContext } from "../../../App";
+import { itemsData } from "../../../data/itemsData";
 
 import "./ItemsGridBig.scss";
 
 const ItemsGridBig = ({ items, page }) => {
     const { activeFilter } = useContext(activeFilterContext);
+    const itemsCopy = [...items];
 
     function sortItems(itemA, itemB) {
         if (!!!Object.keys(activeFilter.sort).length) return;
@@ -50,8 +52,10 @@ const ItemsGridBig = ({ items, page }) => {
                 (item) =>
                     item.data.filterOptions[cur] == activeFilter.filters[cur]
             );
-        }, items)
+        }, itemsCopy)
         .sort(sortItems);
+
+    console.log("items", items);
 
     // const sortedItems = Object.keys(activeFilter.filters)
     //     .reduce((all, cur) => {
