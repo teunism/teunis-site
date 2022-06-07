@@ -14,28 +14,29 @@ const ItemsGridBig = ({ items, page }) => {
         const sortProperty = Object.keys(activeFilter.sort)[0];
         const sortWord = Object.values(activeFilter.sort)[0].split(" ")[0];
 
-        const biggerOrSmallerSign =
-            sortWord === "light" || sortWord === "small" || sortWord === "new"
-                ? ">"
-                : "<";
-
         if (sortProperty === "date of aquasition") {
-            return (
-                new Date(itemB.data.sortOptions[sortProperty]) -
-                new Date(itemA.data.sortOptions[sortProperty])
-            );
+            return sortWord === "new"
+                ? new Date(itemA.data.sortOptions[sortProperty]) -
+                      new Date(itemB.data.sortOptions[sortProperty])
+                : new Date(itemB.data.sortOptions[sortProperty]) -
+                      new Date(itemA.data.sortOptions[sortProperty]);
         }
 
         if (sortProperty === "weight" || sortProperty === "size") {
+            const biggerOrSmallerSign =
+                sortWord === "light" || sortWord === "small"
+                    ? [itemB, itemA]
+                    : [itemA, itemB];
+
             if (
-                itemA.data.sortOptions[sortProperty] <
-                itemB.data.sortOptions[sortProperty]
+                biggerOrSmallerSign[0].data.sortOptions[sortProperty] <
+                biggerOrSmallerSign[1].data.sortOptions[sortProperty]
             ) {
                 return 1;
             }
             if (
-                itemA.data.sortOptions[sortProperty] >
-                itemB.data.sortOptions[sortProperty]
+                biggerOrSmallerSign[0].data.sortOptions[sortProperty] >
+                biggerOrSmallerSign[1].data.sortOptions[sortProperty]
             ) {
                 return -1;
             }
@@ -43,17 +44,7 @@ const ItemsGridBig = ({ items, page }) => {
         }
     }
 
-    const filteredItems = Object.keys(activeFilter.filters).reduce(
-        (all, cur) => {
-            return all.filter(
-                (item) =>
-                    item.data.filterOptions[cur] == activeFilter.filters[cur]
-            );
-        },
-        items
-    );
-
-    const sortedItems = Object.keys(activeFilter.filters)
+    const filteredItems = Object.keys(activeFilter.filters)
         .reduce((all, cur) => {
             return all.filter(
                 (item) =>
@@ -62,7 +53,16 @@ const ItemsGridBig = ({ items, page }) => {
         }, items)
         .sort(sortItems);
 
-    console.log(sortedItems);
+    // const sortedItems = Object.keys(activeFilter.filters)
+    //     .reduce((all, cur) => {
+    //         return all.filter(
+    //             (item) =>
+    //                 item.data.filterOptions[cur] == activeFilter.filters[cur]
+    //         );
+    //     }, items)
+    //     .sort(sortItems);
+
+    // console.log(sortedItems);
 
     return (
         <ul className="items-grid-big">
