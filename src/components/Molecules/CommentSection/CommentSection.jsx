@@ -42,11 +42,13 @@ const CommentSection = ({ allComments }) => {
                     placeholder="Your name (optional)"
                 ></textarea>
 
-                <button className="comment-section__post-button">
+                <button
+                    className="comment-section__post-button"
+                    onClick={(e) => {
+                        setClicked(!clicked);
+                    }}
+                >
                     <img
-                        onClick={(e) => {
-                            setClicked(!clicked);
-                        }}
                         className="comment-section__post-icon"
                         src={PostIcon}
                         alt=""
