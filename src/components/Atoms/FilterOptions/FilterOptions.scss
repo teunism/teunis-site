@@ -8,9 +8,9 @@
 }
 .filter-options__title {
     @include data-value-text;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     @include bp-min(medium) {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 }
 

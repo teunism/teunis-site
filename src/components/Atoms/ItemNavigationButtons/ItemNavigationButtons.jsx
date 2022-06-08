@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 import ArrowLeft from "../../../img/icons/arrow-left-white.svg";
@@ -12,6 +12,7 @@ import "./ItemNavigationButtons.scss";
 
 const ItemNavigationButtons = ({ item, goTo }) => {
     const filteredOverviewItems = useFilter(itemsData);
+
     const activeLocationItems = locationData.find(
         (location) => location.name === item.location
     ).items;
