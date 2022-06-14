@@ -13,12 +13,6 @@ export const locationData = [
         items: getLocationitems("pacific"),
         globePosition: [-0.67, 0.45, 0.66],
     },
-    // "south-pacific": {
-    //     name: "South Pacific patch",
-    //     type: "ocean",
-    //     items: pacificPatchItems,
-    //     globePosition: [-0.37, -0.45, 0.86],
-    // },
     {
         name: "north-atlantic",
         type: "ocean",

@@ -22,10 +22,14 @@
 }
 
 .item-detail-template__home-image {
-    position: sticky;
-    top: 0;
+    position: relative;
     width: 125px;
     padding: gap(3) 0;
+    @include bp-min(small) {
+        position: sticky;
+        z-index: 3;
+        top: 0;
+    }
 }
 
 .item-detail-template__images {

@@ -27,10 +27,6 @@ const ItemDetailTemplate = () => {
     const goToPage = search === "?overview" ? "overview" : "globe";
     const ref = useRef(null);
 
-    const PinnedCommentComponent = forwardRef((props, ref) => {
-        return <PinnedComment ref={ref} {...props} />;
-    });
-
     return (
         <div className="item-detail-template">
             <Link to="/" className="item-detail-template__home-logo">
