@@ -10,4 +10,4 @@ const ScrollToTop = (props) => {
   return <>{props.children}</>
 };
 
-export default ScrollToTop;
+export default ScrollToTop; 
