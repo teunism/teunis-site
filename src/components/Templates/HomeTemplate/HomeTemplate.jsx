@@ -5,7 +5,7 @@ import "./HomeTemplate.scss";
 const HomeTemplate = () => {
     return (
         <section className="home-template">
-            <h1 className="home-template__title">
+            {/* <h1 className="home-template__title">
                 Hallo dit is een grote titel
             </h1>
             <h2 className="home-template__second-title">
@@ -19,7 +19,7 @@ const HomeTemplate = () => {
                 Lopende tekst. Etiam sit amet orci eget eros faucibus tincidunt.
                 Ut leo. Praesent adipiscing. Duis arcu tortor, suscipit eget,
                 imperdiet nec, imperdiet iaculis, ipsum.
-            </p>
+            </p> */}
         </section>
     );
 };
