@@ -15,9 +15,9 @@ body {
     @include constrain(huge);
     position: relative;
     max-width: 100vw;
-    color: $white;
+    color: $off-black;
     background-color: $off-white;
-    font-family: proxima-nova;
+    font-family: "Chivo", sans-serif;
     line-height: 1.4;
     margin: 0 auto;
     padding: gap(10);

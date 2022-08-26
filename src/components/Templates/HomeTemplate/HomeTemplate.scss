@@ -1,1 +1,18 @@
 @import "../../../styles/global.scss";
+
+.home-template__title {
+    @include heading-big;
+    margin-bottom: gap(4);
+}
+.home-template__second-title {
+    @include heading-medium;
+    margin-bottom: gap(4);
+}
+.home-template__uppercase-title {
+    @include heading-uppercase;
+    margin-bottom: gap(4);
+}
+
+.home-template__body-text {
+    @include text-medium;
+}
