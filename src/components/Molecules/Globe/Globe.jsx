@@ -65,6 +65,8 @@ const Globe = () => {
     );
 };
 
+const yo;
+
 const GlobeModel = () => {
     const globeMap = useLoader(TextureLoader, BlueMap);
 
