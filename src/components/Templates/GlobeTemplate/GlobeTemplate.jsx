@@ -1,8 +1,8 @@
 import React from "react";
 
-import GlobeIntro from "../../Molecules/GlobeIntro/GlobeIntro";
-import Globe from "../../Molecules/Globe/Globe";
-import GlobeOverlay from "../../Molecules/GlobeOverlay/GlobeOverlay";
+import GlobeIntro from "../../Modules/GlobeIntro/GlobeIntro";
+import Globe from "../../Modules/Globe/Globe";
+import GlobeOverlay from "../../Modules/GlobeOverlay/GlobeOverlay";
 import Navigation from "../../Atoms/Navigation/Navigation";
 import DisabledGlobe from "../../Atoms/DisabledGlobe/DisabledGlobe";
 
