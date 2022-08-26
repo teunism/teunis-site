@@ -2,7 +2,7 @@
  * Headings
  */
 @mixin heading-big {
-    font-weight: 900;
+    font-weight: 300;
     font-size: 3rem;
     color: $blue;
     line-height: 0.85;
@@ -13,60 +13,6 @@
     }
     @include bp-min(large) {
         font-size: 4rem;
-    }
-}
-@mixin heading-medium-big {
-    font-weight: 900;
-    font-size: 2.6rem;
-    color: $blue;
-    line-height: 0.85;
-    text-transform: uppercase;
-    @include bp-min(medium) {
-        font-size: 2.8rem;
-    }
-    @include bp-min(large) {
-        font-size: 3rem;
-    }
-}
-@mixin heading-medium {
-    font-weight: 900;
-    font-size: 2.2rem;
-    color: $blue;
-    line-height: 0.85;
-    text-transform: uppercase;
-    @include bp-min(medium) {
-        font-size: 2.2rem;
-    }
-    @include bp-min(large) {
-        font-size: 2.3rem;
-    }
-}
-
-@mixin heading-small {
-    font-weight: 800;
-    font-size: 1.8rem;
-    color: $blue;
-    line-height: 0.85;
-    text-transform: uppercase;
-    @include bp-min(medium) {
-        font-size: 2rem;
-    }
-    @include bp-min(large) {
-        font-size: 2.1rem;
-    }
-}
-
-@mixin heading-tiny {
-    font-weight: 400;
-    font-size: 1rem;
-    color: $blue;
-    line-height: 0.85;
-    text-transform: uppercase;
-    @include bp-min(medium) {
-        font-size: 1rem;
-    }
-    @include bp-min(large) {
-        font-size: 1rem;
     }
 }
 
